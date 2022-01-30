@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/itInicio"
+        android:icon="@drawable/ic_list_24"
+        android:title="Inicio" />
+
+    <item android:id="@+id/itRutinas"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Rutinas" />
+
+    <item android:id="@+id/itEjercicios"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Ejercicios" />
+
+    <item android:id="@+id/itArticulos"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Articulos" />
+
+
+
+</menu>
