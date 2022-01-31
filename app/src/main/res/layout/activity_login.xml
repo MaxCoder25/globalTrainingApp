@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     android:background="@color/LoginBackground"
     android:focusableInTouchMode="false"
-    tools:context=".presentacion.LoginActivity">
+    tools:context=".presentacion.LoginActivity"
+    android:backgroundTint="">
 
-
+//saz
     <TextView
         android:id="@+id/txtIngreseSesion"
         android:layout_width="wrap_content"
