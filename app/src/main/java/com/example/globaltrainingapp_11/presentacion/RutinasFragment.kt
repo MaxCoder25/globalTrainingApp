@@ -9,7 +9,7 @@ import com.example.globaltrainingapp_11.databinding.FragmentRutinasBinding
 
 class RutinasFragment : Fragment() {
 
-
+//Prueba GIT 123
     private lateinit var binding: FragmentRutinasBinding
 
 

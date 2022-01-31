@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="72dp"
         android:text="REGISTRARSE"
         android:textColor="@color/LoginText"
         android:textSize="20sp"
@@ -117,6 +117,16 @@
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtpassword" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="64dp"
+        android:text="by Matt&Kevo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtRegistrarse" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
