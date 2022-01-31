@@ -12,7 +12,7 @@ class RutinasFragment : Fragment() {
 //Prueba GIT 123
     private lateinit var binding: FragmentRutinasBinding
 
-
+//random xD
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
