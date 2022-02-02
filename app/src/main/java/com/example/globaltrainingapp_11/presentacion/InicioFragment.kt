@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.globaltrainingapp_11.R
 
@@ -44,7 +45,7 @@ class InicioFragment: Fragment() {
 */
 
 //pasar a otro fragment o activity?
-        binding.btnAdelante.setOnClickListener()
+      /*  binding.btnAdelante.setOnClickListener()
         {
           //  FragmentTransaction trans = getFragmentManager().beginTransaction();
 
@@ -61,6 +62,18 @@ class InicioFragment: Fragment() {
            // var   intent =  Intent(this,EntrenamientoActivity.class)
             // getActivity().startActivity(intent);
           //  startActivity(intent)
+        }
+*/
+        binding.btnAdelante.setOnClickListener() {
+            val fragment2 = EjerciciosFragment()
+            val fragmentManager: FragmentManager? = parentFragmentManager
+            val fragmentTransaction = fragmentManager!!.beginTransaction()
+            fragmentTransaction.replace(R.id.FrameLayout, fragment2)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+           lstFragments.add(R.id.itEjercicios)
+
         }
 
         return binding.root
@@ -81,5 +94,14 @@ class InicioFragment: Fragment() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(R.id.fragmentContainer, fragment)
         fragmentTransaction.commit()
+    }*/
+
+
+    /*override fun onBackPressed() {
+        super.onBackPressed()
+        if (lstFragments.isNotEmpty()) {
+            lstFragments.removeLast()
+            binding.bottomNavView.menu.findItem(lstFragments.last()).setChecked(true)
+        }
     }*/
 }

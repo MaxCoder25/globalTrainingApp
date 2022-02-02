@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_login.xml" value="0.536" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_main.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_main_nav_draw.xml" value="0.2" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/app_bar_main_activity_nav_drawer.xml" value="0.13177083333333334" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/content_main_activity_nav_drawer.xml" value="0.11354166666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_inicio.xml" value="0.264" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/nav_header_main_activity_nav_drawer.xml" value="0.14719202898550723" />
       </map>
     </option>
   </component>

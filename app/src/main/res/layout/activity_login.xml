@@ -7,16 +7,16 @@
     android:layout_height="match_parent"
     android:background="@color/LoginBackground"
     android:focusableInTouchMode="false"
-    tools:context=".presentacion.LoginActivity"
-    android:backgroundTint="">
+    tools:context=".presentacion.LoginActivity">
 
-//saz
+    //saz
+
     <TextView
         android:id="@+id/txtIngreseSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="140dp"
         android:text="Iniciar sesión"
         android:textColor="@color/LoginText"
         android:textSize="25sp"

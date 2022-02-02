@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlobalTrainingApp_11">
         <activity
+            android:name=".MainActivityNavDrawer"
+            android:exported="false"
+            android:label="@string/title_activity_main_nav_drawer"
+            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" />
+        <activity
             android:name=".presentacion.MainActivity"
             android:exported="false" />
         <activity

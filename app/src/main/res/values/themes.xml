@@ -12,7 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-      <!--  <item name="android:fontFamily">@font/cabin</item>-->
+        <!--  <item name="android:fontFamily">@font/cabin</item>-->
         <item name="android:textAppearance">@style/textAppearanceCustom</item>
     </style>
 
@@ -37,7 +37,7 @@
         <item name="colorPrimary">@android:color/holo_orange_light</item>
         <item name="colorControlActivated">@android:color/holo_orange_light</item>
         <item name="colorControlHighlight">@color/LoginButton</item>
-      <!--  <item name="android:fontFamily">@font/cabin</item>-->
+        <!--  <item name="android:fontFamily">@font/cabin</item>-->
     </style>
 
     <style name="LoginInput" parent="LoginInputLayout">
@@ -54,4 +54,13 @@
         <item name="colorSurface">@color/m3_sys_color_light_surface</item>
         <item name="colorOnSurfaceVariant">@color/LoginForgot</item>
     </style>
+
+    <style name="Theme.GlobalTrainingApp_11.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GlobalTrainingApp_11.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GlobalTrainingApp_11.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
