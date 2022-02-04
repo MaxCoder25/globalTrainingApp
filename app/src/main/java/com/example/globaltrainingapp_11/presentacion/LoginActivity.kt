@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.controladores.UsuarioController
 import com.example.globaltrainingapp_11.databinding.ActivityLoginBinding
@@ -36,14 +37,14 @@ class LoginActivity : AppCompatActivity() {
                 binding.campoEmail.error = getString(R.string.errorEmail)
             } else {
                 binding.campoEmail.error = null
-                var intent = Intent(this,MainActivity::class.java)
+                var intent = Intent(this,MainActivityNavDrawer::class.java)
                 startActivity(intent)
             }
         }
 
         binding.txtIngreseSesion.setOnClickListener()
         {
-            var intent = Intent(this,MainActivity::class.java)
+            var intent = Intent(this,MainActivityNavDrawer::class.java)
             startActivity(intent)
         }
 

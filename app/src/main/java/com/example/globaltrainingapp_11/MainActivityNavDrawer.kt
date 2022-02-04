@@ -16,7 +16,7 @@ import com.example.globaltrainingapp_11.databinding.ActivityMainNavDrawerBinding
 class MainActivityNavDrawer : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainNavDrawerBinding
+    private lateinit var binding:  ActivityMainNavDrawerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@ class MainActivityNavDrawer : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_inicio, R.id.nav_rutinas, R.id.nav_ejercicios
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

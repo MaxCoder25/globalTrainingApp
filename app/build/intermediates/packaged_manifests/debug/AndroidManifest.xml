@@ -20,19 +20,16 @@
         android:testOnly="true"
         android:theme="@style/Theme.GlobalTrainingApp_11" >
         <activity
-            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
-            android:exported="false"
-            android:label="@string/title_activity_main_nav_drawer"
-            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" />
-        <activity
-            android:name="com.example.globaltrainingapp_11.presentacion.MainActivity"
+            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />
         <activity
             android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
-            android:exported="true" >
+            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
+            android:exported="true"
+            android:label="@string/title_activity_main_nav_drawer"
+            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

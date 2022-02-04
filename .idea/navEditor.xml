@@ -8,19 +8,19 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="nav_gallery">
+                  <entry key="nav_articulos">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="292" />
-                            <option name="y" value="12" />
+                            <option name="x" value="195" />
+                            <option name="y" value="731" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_home">
+                  <entry key="nav_asistente">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -32,13 +32,48 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_slideshow">
+                  <entry key="nav_ejercicios">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="432" />
+                            <option name="x" value="114" />
+                            <option name="y" value="373" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_inicio">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="y" value="-34" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_logros">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="200" />
+                            <option name="y" value="1102" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_rutinas">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="245" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>

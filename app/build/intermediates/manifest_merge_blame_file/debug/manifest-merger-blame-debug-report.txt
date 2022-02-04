@@ -11,11 +11,11 @@
 9-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:5:5-32:19
+11-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:5:5-30:19
 12        android:allowBackup="true"
 12-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\fb3270031bd107031c21c5dc13d9e5ef\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+13-->[androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\0a679862f6c55d82fb9a949f1fd4603f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:extractNativeLibs="false"
 16        android:icon="@mipmap/ic_launcher"
@@ -30,87 +30,81 @@
 21        android:theme="@style/Theme.GlobalTrainingApp_11" >
 21-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:11:9-58
 22        <activity
-22-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:12:9-16:77
-23            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
-23-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:13:13-50
-24            android:exported="false"
+22-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:12:9-14:39
+23            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
+23-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:13:13-55
+24            android:exported="false" />
 24-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:14:13-37
-25            android:label="@string/title_activity_main_nav_drawer"
-25-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:15:13-67
-26            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" />
-26-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:16:13-74
-27        <activity
-27-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:17:9-19:40
-28            android:name="com.example.globaltrainingapp_11.presentacion.MainActivity"
-28-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:18:13-54
-29            android:exported="false" />
-29-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:19:13-37
-30        <activity
-30-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:20:9-22:40
-31            android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
-31-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:21:13-58
-32            android:exported="false" />
-32-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:22:13-37
-33        <activity
-33-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:9-31:20
-34            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
-34-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:24:13-55
-35            android:exported="true" >
-35-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:13-36
-36            <intent-filter>
-36-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:26:13-30:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:17-69
-37-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:29:17-77
-39-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:29:27-74
-40            </intent-filter>
-41        </activity>
-42
+25        <activity
+25-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:15:9-17:40
+26            android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
+26-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:16:13-58
+27            android:exported="false" />
+27-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:17:13-37
+28        <activity
+28-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:18:9-29:20
+29            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
+29-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:20:13-50
+30            android:exported="true"
+30-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:21:13-36
+31            android:label="@string/title_activity_main_nav_drawer"
+31-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:22:13-67
+32            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
+32-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:13-74
+33            <intent-filter>
+33-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:24:13-28:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:17-69
+34-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:17-77
+36-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <uses-library
+40-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+41            android:name="androidx.window.extensions"
+41-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+42            android:required="false" />
+42-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
 43        <uses-library
-43-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\bb120d0f3cef906a8dd7f4d4a5f6d377\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-44            android:name="androidx.window.extensions"
-44-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\bb120d0f3cef906a8dd7f4d4a5f6d377\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+43-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+44            android:name="androidx.window.sidecar"
+44-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
 45            android:required="false" />
-45-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\bb120d0f3cef906a8dd7f4d4a5f6d377\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-46        <uses-library
-46-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\bb120d0f3cef906a8dd7f4d4a5f6d377\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-47            android:name="androidx.window.sidecar"
-47-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\bb120d0f3cef906a8dd7f4d4a5f6d377\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-48            android:required="false" />
-48-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\bb120d0f3cef906a8dd7f4d4a5f6d377\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-49
-50        <provider
-50-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\04f92fc990b338bd1ee9fd7164fafcfa\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-51            android:name="com.squareup.picasso.PicassoProvider"
-51-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\04f92fc990b338bd1ee9fd7164fafcfa\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-52            android:authorities="com.example.globaltrainingapp_11.com.squareup.picasso"
-52-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\04f92fc990b338bd1ee9fd7164fafcfa\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-53            android:exported="false" />
-53-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\04f92fc990b338bd1ee9fd7164fafcfa\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-54        <provider
-54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-55            android:name="androidx.startup.InitializationProvider"
-55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-56            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
-56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-57            android:exported="false" >
-57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+45-->[androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+46
+47        <provider
+47-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+48            android:name="com.squareup.picasso.PicassoProvider"
+48-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+49            android:authorities="com.example.globaltrainingapp_11.com.squareup.picasso"
+49-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+50            android:exported="false" />
+50-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+51        <provider
+51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+53            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
 58            <meta-data
-58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-59                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
 60                android:value="androidx.startup" />
-60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-61            <meta-data
-61-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\60fb03f7868607ff1baa13fa3ab998ab\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-62                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-62-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\60fb03f7868607ff1baa13fa3ab998ab\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-63                android:value="androidx.startup" />
-63-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\60fb03f7868607ff1baa13fa3ab998ab\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-64        </provider>
-65    </application>
-66
-67</manifest>
+60-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+61        </provider>
+62    </application>
+63
+64</manifest>

@@ -5,72 +5,37 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CalendarView;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.globaltrainingapp_11.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentInicioBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnAdelante;
+  public final Button botonIniEjer;
 
   @NonNull
-  public final Button btnAdelante2;
+  public final TextView textHome;
 
-  @NonNull
-  public final CalendarView calendarView;
-
-  @NonNull
-  public final FloatingActionButton floatingActionButton;
-
-  @NonNull
-  public final ImageView imageView2;
-
-  @NonNull
-  public final ImageView imageView3;
-
-  @NonNull
-  public final TextView textView;
-
-  @NonNull
-  public final TextView textView2;
-
-  @NonNull
-  public final EditText txtDesafio;
-
-  private FragmentInicioBinding(@NonNull FrameLayout rootView, @NonNull Button btnAdelante,
-      @NonNull Button btnAdelante2, @NonNull CalendarView calendarView,
-      @NonNull FloatingActionButton floatingActionButton, @NonNull ImageView imageView2,
-      @NonNull ImageView imageView3, @NonNull TextView textView, @NonNull TextView textView2,
-      @NonNull EditText txtDesafio) {
+  private FragmentInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button botonIniEjer,
+      @NonNull TextView textHome) {
     this.rootView = rootView;
-    this.btnAdelante = btnAdelante;
-    this.btnAdelante2 = btnAdelante2;
-    this.calendarView = calendarView;
-    this.floatingActionButton = floatingActionButton;
-    this.imageView2 = imageView2;
-    this.imageView3 = imageView3;
-    this.textView = textView;
-    this.textView2 = textView2;
-    this.txtDesafio = txtDesafio;
+    this.botonIniEjer = botonIniEjer;
+    this.textHome = textHome;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -95,63 +60,19 @@ public final class FragmentInicioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnAdelante;
-      Button btnAdelante = ViewBindings.findChildViewById(rootView, id);
-      if (btnAdelante == null) {
+      id = R.id.botonIniEjer;
+      Button botonIniEjer = ViewBindings.findChildViewById(rootView, id);
+      if (botonIniEjer == null) {
         break missingId;
       }
 
-      id = R.id.btnAdelante2;
-      Button btnAdelante2 = ViewBindings.findChildViewById(rootView, id);
-      if (btnAdelante2 == null) {
+      id = R.id.text_home;
+      TextView textHome = ViewBindings.findChildViewById(rootView, id);
+      if (textHome == null) {
         break missingId;
       }
 
-      id = R.id.calendarView;
-      CalendarView calendarView = ViewBindings.findChildViewById(rootView, id);
-      if (calendarView == null) {
-        break missingId;
-      }
-
-      id = R.id.floatingActionButton;
-      FloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
-      if (floatingActionButton == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView3;
-      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView3 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
-        break missingId;
-      }
-
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.txtDesafio;
-      EditText txtDesafio = ViewBindings.findChildViewById(rootView, id);
-      if (txtDesafio == null) {
-        break missingId;
-      }
-
-      return new FragmentInicioBinding((FrameLayout) rootView, btnAdelante, btnAdelante2,
-          calendarView, floatingActionButton, imageView2, imageView3, textView, textView2,
-          txtDesafio);
+      return new FragmentInicioBinding((ConstraintLayout) rootView, botonIniEjer, textHome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

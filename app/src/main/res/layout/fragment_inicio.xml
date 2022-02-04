@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentacion.InicioFragment">
+    tools:context=".ui.inicio.InicioFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <CalendarView
-            android:id="@+id/calendarView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="134dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="144dp"
-            android:text="ENTRENAMIENTO DE HOY"
-            android:textColor="#000000"
-            android:textSize="15sp"
-            android:textStyle="bold"
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/calendarView" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="144dp"
+                android:text="ENTRENAMIENTO DE HOY"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="224dp"
-            android:layout_marginTop="144dp"
-            android:text="J 27/01/2022"
-            android:textColor="#000000"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/calendarView" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="172dp"
-            android:src="@drawable/rutinaejem1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/calendarView" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="224dp"
+                android:layout_marginTop="144dp"
+                android:text="J 27/01/2022"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
-        <Button
-            android:id="@+id/btnAdelante"
-            android:layout_width="297dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="136dp"
-            android:text="ADELANTE"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="172dp"
+                android:src="@drawable/rutinaejem1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="272dp"
-            android:layout_marginTop="16dp"
-            android:clickable="true"
-            android:src="@android:drawable/ic_popup_sync"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.101"
-            app:layout_constraintStart_toStartOf="@+id/calendarView"
-            app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btnAdelante"
+                android:layout_width="297dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="136dp"
+                android:text="ADELANTE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-        <EditText
-            android:id="@+id/txtDesafio"
-            android:layout_width="291dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="60dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text="                        DESAFIO                                                           Pon a prueba tus capacidades"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btnAdelante" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="272dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_popup_sync"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="@+id/calendarView"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="310dp"
-            android:layout_height="126dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="72dp"
-            android:src="@drawable/plancha1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtDesafio" />
+            <EditText
+                android:id="@+id/txtDesafio"
+                android:layout_width="291dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="60dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="                        DESAFIO                                                           Pon a prueba tus capacidades"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnAdelante" />
 
-        <Button
-            android:id="@+id/btnAdelante2"
-            android:layout_width="287dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="136dp"
-            android:text="ACEPTO EL RETO"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="310dp"
+                android:layout_height="126dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/plancha1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtDesafio" />
+
+            <Button
+                android:id="@+id/btnAdelante2"
+                android:layout_width="287dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="136dp"
+                android:text="ACEPTO EL RETO"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
