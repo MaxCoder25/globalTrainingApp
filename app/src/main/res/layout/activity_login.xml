@@ -9,7 +9,6 @@
     android:focusableInTouchMode="false"
     tools:context=".presentacion.LoginActivity">
 
-    //saz
 
     <TextView
         android:id="@+id/txtIngreseSesion"

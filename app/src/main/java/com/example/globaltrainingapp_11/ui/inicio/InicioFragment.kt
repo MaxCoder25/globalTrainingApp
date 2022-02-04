@@ -43,7 +43,7 @@ class InicioFragment : Fragment() {
             val fragment2 = EjerciciosFragment()
             val fragmentManager: FragmentManager? = parentFragmentManager
             val fragmentTransaction = fragmentManager!!.beginTransaction()
-            fragmentTransaction.replace(R.id.nav_host_fragment_content_main_activity_nav_drawer , fragment2)
+            fragmentTransaction.replace(R.id.nav_host_fragment_content_main , fragment2)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 

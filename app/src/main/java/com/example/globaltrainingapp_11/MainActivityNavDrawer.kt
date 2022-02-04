@@ -11,17 +11,17 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.globaltrainingapp_11.databinding.ActivityMainNavDrawerBinding
+import com.example.globaltrainingapp_11.databinding.ActivityMainBinding
 
 class MainActivityNavDrawer : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding:  ActivityMainNavDrawerBinding
+    private lateinit var binding:  ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainNavDrawerBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMainActivityNavDrawer.toolbar)
@@ -33,12 +33,13 @@ class MainActivityNavDrawer : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController =
-            findNavController(R.id.nav_host_fragment_content_main_activity_nav_drawer)
+            findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_inicio, R.id.nav_rutinas, R.id.nav_ejercicios
+                //aqui puedo definir que aparezca una flecha para volver al anterior fragment principal en lugar del menu principal
+                R.id.nav_inicio, R.id.nav_rutinas, R.id.nav_ejercicios,R.id.nav_articulos,R.id.nav_asistente,R.id.nav_logros
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -47,13 +48,13 @@ class MainActivityNavDrawer : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main_activity_nav_drawer, menu)
+        menuInflater.inflate(R.menu.main, menu)
         return true
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController =
-            findNavController(R.id.nav_host_fragment_content_main_activity_nav_drawer)
+            findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

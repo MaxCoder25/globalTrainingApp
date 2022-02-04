@@ -84,27 +84,37 @@
 49-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 50            android:exported="false" />
 50-->[com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-51        <provider
-51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-52            android:name="androidx.startup.InitializationProvider"
-52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-53            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
-53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-54            android:exported="false" >
-54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-55            <meta-data
-55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-57                android:value="androidx.startup" />
-57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-58            <meta-data
-58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-60                android:value="androidx.startup" />
-60-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-61        </provider>
-62    </application>
-63
-64</manifest>
+51
+52        <service
+52-->[androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:25:9-28:40
+53            android:name="androidx.room.MultiInstanceInvalidationService"
+53-->[androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:26:13-74
+54            android:directBootAware="true"
+54-->[androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:27:13-43
+55            android:exported="false" />
+55-->[androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:28:13-37
+56
+57        <provider
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+58            android:name="androidx.startup.InitializationProvider"
+58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+59            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
+59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+60            android:exported="false" >
+60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+61            <meta-data
+61-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+62-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+63                android:value="androidx.startup" />
+63-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+64            <meta-data
+64-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+65-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+66                android:value="androidx.startup" />
+66-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+67        </provider>
+68    </application>
+69
+70</manifest>
