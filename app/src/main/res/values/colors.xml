@@ -7,10 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="rojo_Rebelde">#8D0101</color>
 
     <!-- Login -->
     <color name="LoginBackground">#FFFFFF</color>
-    <color name="LoginButton">#BD0D0F</color>
+    <color name="LoginButton">#930406</color>
     <color name="LoginText">#000000</color>
     <color name="LoginHighlight">#000000</color>
     <color name="LoginForgot">#61606e</color>

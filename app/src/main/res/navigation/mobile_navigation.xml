@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.example.globaltrainingapp_11.ui.inicio.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_rutinas"
+        android:name="com.example.globaltrainingapp_11.ui.rutinas.RutinasFragment"
+        android:label="@string/menu_rutinas"
+        tools:layout="@layout/fragment_rutinas" />
+
+    <fragment
+        android:id="@+id/nav_ejercicios"
+        android:name="com.example.globaltrainingapp_11.ui.ejercicios.EjerciciosFragment"
+        android:label="@string/menu_ejercicios"
+        tools:layout="@layout/fragment_ejercicios" />
+
+    <fragment
+        android:id="@+id/nav_articulos"
+        android:name="com.example.globaltrainingapp_11.ui.articulos.ArticulosFragment"
+        android:label="@string/menu_articulos"
+        tools:layout="@layout/fragment_articulos" />
+
+    <fragment
+        android:id="@+id/nav_asistente"
+        android:name="com.example.globaltrainingapp_11.ui.asistente.AsistenteFragment"
+        android:label="@string/menu_asistente"
+        tools:layout="@layout/fragment_asistente" />
+
+    <fragment
+        android:id="@+id/nav_logros"
+        android:name="com.example.globaltrainingapp_11.ui.logros.LogrosFragment"
+        android:label="@string/menu_logros"
+        tools:layout="@layout/fragment_logros" />
+-
+
+</navigation>
