@@ -1,16 +1,20 @@
 package com.example.globaltrainingapp_11.ui.inicio
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.databinding.FragmentInicioBinding
+import com.example.globaltrainingapp_11.presentacion.RegisterActivity
 import com.example.globaltrainingapp_11.ui.ejercicios.EjerciciosFragment
 
 class InicioFragment : Fragment() {
@@ -49,7 +53,21 @@ class InicioFragment : Fragment() {
 
            // lstFragments.add(R.id.itEjercicios)
 
+
+         /*   binding.btnAdelante2.setOnClickListener(){
+                Toast.makeText(binding.imageView2, .nombre, Toast.LENGTH_SHORT).show()
+
+            }
+*/
         }
+       /* binding.btnAdelante.setOnClickListener() {
+
+            var intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+
+        }*/
+
+
 
         return binding.root
 

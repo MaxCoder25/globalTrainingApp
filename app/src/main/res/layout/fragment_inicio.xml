@@ -45,7 +45,7 @@
                 app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/tituloEntrenam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
@@ -62,7 +62,7 @@
                 android:layout_marginTop="136dp"
                 android:text="ADELANTE"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                app:layout_constraintTop_toTopOf="@+id/tituloEntrenam" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton"

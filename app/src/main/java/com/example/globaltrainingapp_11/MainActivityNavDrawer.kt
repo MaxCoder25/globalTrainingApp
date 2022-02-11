@@ -26,10 +26,12 @@ class MainActivityNavDrawer : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMainActivityNavDrawer.toolbar)
 
-        binding.appBarMainActivityNavDrawer.fab.setOnClickListener { view ->
+      /* aqui va la logica del boton del main content main
+      binding.appBarMainActivityNavDrawer.fab.setOnClickListener { view ->
+
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
-        }
+        }*/
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController =
@@ -39,7 +41,7 @@ class MainActivityNavDrawer : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 //aqui puedo definir que aparezca una flecha para volver al anterior fragment principal en lugar del menu principal
-                R.id.nav_inicio, R.id.nav_rutinas, R.id.nav_ejercicios,R.id.nav_articulos,R.id.nav_asistente,R.id.nav_logros
+                R.id.nav_inicio, R.id.nav_Rutinas, R.id.nav_ejercicios,R.id.nav_articulos,R.id.nav_asistente,R.id.nav_logros
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

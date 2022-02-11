@@ -4,59 +4,48 @@ package com.example.globaltrainingapp_11.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.globaltrainingapp_11.R;
+import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentRutinasBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView txtFullbody;
+  public final RecyclerView RutinasRecyclerView;
 
   @NonNull
-  public final TextView txtGrupMusc;
+  public final ConstraintLayout listParentLayout;
 
   @NonNull
-  public final TextView txtKettlebell;
+  public final TabLayout tabLayout;
 
   @NonNull
-  public final EditText txtNum;
+  public final TextView txtTitulo2;
 
-  @NonNull
-  public final EditText txtNum1;
-
-  @NonNull
-  public final EditText txtNum2;
-
-  @NonNull
-  public final TextView txtTitulo1;
-
-  private FragmentRutinasBinding(@NonNull FrameLayout rootView, @NonNull TextView txtFullbody,
-      @NonNull TextView txtGrupMusc, @NonNull TextView txtKettlebell, @NonNull EditText txtNum,
-      @NonNull EditText txtNum1, @NonNull EditText txtNum2, @NonNull TextView txtTitulo1) {
+  private FragmentRutinasBinding(@NonNull ConstraintLayout rootView,
+      @NonNull RecyclerView RutinasRecyclerView, @NonNull ConstraintLayout listParentLayout,
+      @NonNull TabLayout tabLayout, @NonNull TextView txtTitulo2) {
     this.rootView = rootView;
-    this.txtFullbody = txtFullbody;
-    this.txtGrupMusc = txtGrupMusc;
-    this.txtKettlebell = txtKettlebell;
-    this.txtNum = txtNum;
-    this.txtNum1 = txtNum1;
-    this.txtNum2 = txtNum2;
-    this.txtTitulo1 = txtTitulo1;
+    this.RutinasRecyclerView = RutinasRecyclerView;
+    this.listParentLayout = listParentLayout;
+    this.tabLayout = tabLayout;
+    this.txtTitulo2 = txtTitulo2;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -81,50 +70,28 @@ public final class FragmentRutinasBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.txtFullbody;
-      TextView txtFullbody = ViewBindings.findChildViewById(rootView, id);
-      if (txtFullbody == null) {
+      id = R.id.RutinasRecyclerView;
+      RecyclerView RutinasRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (RutinasRecyclerView == null) {
         break missingId;
       }
 
-      id = R.id.txtGrupMusc;
-      TextView txtGrupMusc = ViewBindings.findChildViewById(rootView, id);
-      if (txtGrupMusc == null) {
+      ConstraintLayout listParentLayout = (ConstraintLayout) rootView;
+
+      id = R.id.tabLayout;
+      TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayout == null) {
         break missingId;
       }
 
-      id = R.id.txtKettlebell;
-      TextView txtKettlebell = ViewBindings.findChildViewById(rootView, id);
-      if (txtKettlebell == null) {
+      id = R.id.txtTitulo2;
+      TextView txtTitulo2 = ViewBindings.findChildViewById(rootView, id);
+      if (txtTitulo2 == null) {
         break missingId;
       }
 
-      id = R.id.txtNum;
-      EditText txtNum = ViewBindings.findChildViewById(rootView, id);
-      if (txtNum == null) {
-        break missingId;
-      }
-
-      id = R.id.txtNum1;
-      EditText txtNum1 = ViewBindings.findChildViewById(rootView, id);
-      if (txtNum1 == null) {
-        break missingId;
-      }
-
-      id = R.id.txtNum2;
-      EditText txtNum2 = ViewBindings.findChildViewById(rootView, id);
-      if (txtNum2 == null) {
-        break missingId;
-      }
-
-      id = R.id.txtTitulo1;
-      TextView txtTitulo1 = ViewBindings.findChildViewById(rootView, id);
-      if (txtTitulo1 == null) {
-        break missingId;
-      }
-
-      return new FragmentRutinasBinding((FrameLayout) rootView, txtFullbody, txtGrupMusc,
-          txtKettlebell, txtNum, txtNum1, txtNum2, txtTitulo1);
+      return new FragmentRutinasBinding((ConstraintLayout) rootView, RutinasRecyclerView,
+          listParentLayout, tabLayout, txtTitulo2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

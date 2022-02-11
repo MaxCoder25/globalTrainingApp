@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_inicio" />
 
     <fragment
-        android:id="@+id/nav_rutinas"
+        android:id="@+id/nav_Rutinas"
         android:name="com.example.globaltrainingapp_11.ui.rutinas.RutinasFragment"
         android:label="@string/menu_rutinas"
         tools:layout="@layout/fragment_rutinas" />

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/EntrenamientoConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentacion.EntrenamientoActivity">
+
+
+    <TextView
+        android:id="@+id/TXT_NOMBRE"
+        android:layout_width="234dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="40dp"
+
+        android:background="@android:drawable/editbox_background"
+        android:text="NOMBRE ENTRENAMIENTO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TXT_MUSCULOS"
+        android:layout_width="175dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="92dp"
+
+        android:background="@android:drawable/editbox_background"
+        android:text="BICEPS, TRICEPS, CUADRICEPS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TXT_NIVEL"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="112dp"
+
+        android:background="@android:drawable/editbox_background"
+        android:text="BASICO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEmpezarEntrenamiento"
+        android:layout_width="116dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="136dp"
+        android:text="Empezar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TXT_TIEMPO"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="128dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="DOMINADAS PRONAS"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="132dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento"
+        app:srcCompat="@drawable/domi_prona" />
+
+    <TextView
+        android:id="@+id/TXT_TIEMPO"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="30 MIN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TXT_MUSCULOS" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="112dp"
+        android:backgroundTint="#E00A0A"
+        android:clickable="true"
+        android:tint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento"
+        app:rippleColor="#F8F6F6"
+        app:srcCompat="@android:drawable/ic_popup_sync" />
+</androidx.constraintlayout.widget.ConstraintLayout>

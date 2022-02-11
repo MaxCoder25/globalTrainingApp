@@ -23,6 +23,9 @@
             android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
             android:exported="false" />
         <activity

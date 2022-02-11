@@ -4,37 +4,43 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.globaltrainingapp_11.R
+import com.example.globaltrainingapp_11.databinding.FragmentCategoriaRutinasListBinding
 import com.example.globaltrainingapp_11.entidades.CategoriaRutinasEntity
 import com.squareup.picasso.Picasso
-/*
-class ListCategoriaRutinasAdapter(val listRutinas: List<CategoriaRutinasEntity>, val onClickItemSelected: (CategoriaRutinasEntity) -> Unit) {
-    RecyclerView.Adapter<NewsViewHolder>() {
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
-            val inflater = LayoutInflater.from(parent.context)
-            return NewsViewHolder(inflater.inflate(R.layout.news_items, parent, false))
-        }
 
-        override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-            val item = listRutinas[position]
-            holder.render(item, onClickItemSelected)
-        }
+class ListCategoriaRutinasAdapter(val listCategoriaRutinas: List<CategoriaRutinasEntity>,private val onClickItemSelected: (CategoriaRutinasEntity) -> Unit) : RecyclerView.Adapter<CatRutinasViewHolder>() {
 
-        override fun getItemCount(): Int = listRutinas.size
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatRutinasViewHolder {
+        var layoutInflater = LayoutInflater.from(parent.context)
+        val view = layoutInflater.inflate(R.layout.fragment_categoria_rutinas_list , parent, false)
+        return CatRutinasViewHolder(view)
     }
 
-    class NewsViewHolder(itemNews: View) : RecyclerView.ViewHolder(itemNews) {
+    override fun onBindViewHolder(holder: CatRutinasViewHolder, position: Int) {
+        val item =  listCategoriaRutinas[position]
+        holder.render(item, onClickItemSelected)
+    }
 
-        private val binding: NewsItemsBinding = NewsItemsBinding.bind(itemNews)
+    override fun getItemCount(): Int = listCategoriaRutinas.size
+}
 
-        fun render(itemNewsEntity: CategoriaRutinasEntity, onClickItemSelected: (CategoriaRutinasEntity) -> Unit) {
-            binding.  txtTitleNews.text = itemNewsEntity.title
-            Picasso.get().load(itemNewsEntity.img).into(binding.imageView)
+class CatRutinasViewHolder(catRutinasViewHolder: View) : RecyclerView.ViewHolder(catRutinasViewHolder) {
 
-            itemView.setOnClickListener {
-                onClickItemSelected(itemNewsEntity)
-            }
+    val binding = FragmentCategoriaRutinasListBinding.bind(catRutinasViewHolder)
+
+    fun render(CategoriaRutinasEntity : CategoriaRutinasEntity, onClickItemSelected: (CategoriaRutinasEntity) -> Unit) {
+        binding.txtNombreCategoriaRutina.text = CategoriaRutinasEntity.nombre
+        binding.txtDescripcionCategoriaRutina.text = CategoriaRutinasEntity.descripcion
+        binding.txtCantidadCategoriaRutina.text = CategoriaRutinasEntity.cantidad.toString()
+
+
+        itemView.setOnClickListener {
+            onClickItemSelected(CategoriaRutinasEntity)
         }
 
     }
-}*/
+
+}

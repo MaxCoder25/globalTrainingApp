@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.globaltrainingapp_11">
+    package="com.example.globaltrainingapp_11"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="32" />
 
     <application
         android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GlobalTrainingApp_11">
+        android:testOnly="true"
+        android:theme="@style/Theme.GlobalTrainingApp_11" >
         <activity
-            android:name=".presentacion.LoginActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".presentacion.RegisterActivity"
+            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />
         <activity
-
-            android:name=".MainActivityNavDrawer"
+            android:name="com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
             android:exported="true"
             android:label="@string/title_activity_main_nav_drawer"
             android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
@@ -27,6 +39,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.globaltrainingapp_11.com.squareup.picasso"
+            android:exported="false" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

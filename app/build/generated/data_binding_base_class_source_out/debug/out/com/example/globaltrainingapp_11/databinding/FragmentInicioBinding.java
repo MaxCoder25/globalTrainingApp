@@ -37,9 +37,6 @@ public final class FragmentInicioBinding implements ViewBinding {
   public final FloatingActionButton floatingActionButton;
 
   @NonNull
-  public final ImageView imageView2;
-
-  @NonNull
   public final ImageView imageView3;
 
   @NonNull
@@ -49,22 +46,25 @@ public final class FragmentInicioBinding implements ViewBinding {
   public final TextView textView2;
 
   @NonNull
+  public final ImageView tituloEntrenam;
+
+  @NonNull
   public final EditText txtDesafio;
 
   private FragmentInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAdelante,
       @NonNull Button btnAdelante2, @NonNull CalendarView calendarView,
-      @NonNull FloatingActionButton floatingActionButton, @NonNull ImageView imageView2,
-      @NonNull ImageView imageView3, @NonNull TextView textView, @NonNull TextView textView2,
+      @NonNull FloatingActionButton floatingActionButton, @NonNull ImageView imageView3,
+      @NonNull TextView textView, @NonNull TextView textView2, @NonNull ImageView tituloEntrenam,
       @NonNull EditText txtDesafio) {
     this.rootView = rootView;
     this.btnAdelante = btnAdelante;
     this.btnAdelante2 = btnAdelante2;
     this.calendarView = calendarView;
     this.floatingActionButton = floatingActionButton;
-    this.imageView2 = imageView2;
     this.imageView3 = imageView3;
     this.textView = textView;
     this.textView2 = textView2;
+    this.tituloEntrenam = tituloEntrenam;
     this.txtDesafio = txtDesafio;
   }
 
@@ -119,12 +119,6 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
-        break missingId;
-      }
-
       id = R.id.imageView3;
       ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
       if (imageView3 == null) {
@@ -143,6 +137,12 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tituloEntrenam;
+      ImageView tituloEntrenam = ViewBindings.findChildViewById(rootView, id);
+      if (tituloEntrenam == null) {
+        break missingId;
+      }
+
       id = R.id.txtDesafio;
       EditText txtDesafio = ViewBindings.findChildViewById(rootView, id);
       if (txtDesafio == null) {
@@ -150,7 +150,7 @@ public final class FragmentInicioBinding implements ViewBinding {
       }
 
       return new FragmentInicioBinding((ConstraintLayout) rootView, btnAdelante, btnAdelante2,
-          calendarView, floatingActionButton, imageView2, imageView3, textView, textView2,
+          calendarView, floatingActionButton, imageView3, textView, textView2, tituloEntrenam,
           txtDesafio);
     }
     String missingId = rootView.getResources().getResourceName(id);
