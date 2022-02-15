@@ -7,10 +7,14 @@ import com.example.globaltrainingapp_11.entidades.RutinasEntity
 
 class RutinasBL {
 
-    fun getRutinasList(category: String, page: Int): List<RutinasEntity> {
+    suspend fun getRutinasList(category: String, page: Int): List<RutinasEntity> {
         return RutinasUseCase().getAllRutinas(category, page)
     }
 
+    /*suspend fun getFavoritesNews(): List<NewsEntity> {
+        return NewsUseCase().getFavoritesNews()
+    }
+*/
     fun getOneRutinas(): CategoriaRutinasEntity {
         val r = (0..3).random()
         return CategoriaRutinasUseCase().getAllCategoriaRutinas()[r]

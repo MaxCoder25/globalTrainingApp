@@ -5,9 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.globaltrainingapp_11.R
-import com.example.globaltrainingapp_11.databinding.FragmentRutinasBinding
 import com.example.globaltrainingapp_11.databinding.FragmentRutinasListBinding
-import com.example.globaltrainingapp_11.entidades.CategoriaRutinasEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
 
 

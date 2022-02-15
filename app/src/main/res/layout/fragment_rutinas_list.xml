@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@android:drawable/editbox_background">
+    android:layout_height="200dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewRutinas_Entrenamiento"
@@ -21,8 +20,8 @@
 
             <TextView
                 android:id="@+id/etiquetaNivel"
-                android:layout_width="188dp"
-                android:layout_height="32dp"
+                android:layout_width="159dp"
+                android:layout_height="31dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@android:drawable/editbox_background"
@@ -45,8 +44,8 @@
 
             <TextView
                 android:id="@+id/etiquetaTiempo"
-                android:layout_width="100dp"
-                android:layout_height="35dp"
+                android:layout_width="174dp"
+                android:layout_height="36dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="44dp"
                 android:background="@android:drawable/editbox_background"
@@ -57,7 +56,7 @@
 
             <TextView
                 android:id="@+id/etiquetaMusculos"
-                android:layout_width="239dp"
+                android:layout_width="374dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
