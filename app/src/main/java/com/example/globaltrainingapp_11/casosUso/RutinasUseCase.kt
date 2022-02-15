@@ -52,6 +52,15 @@ class RutinasUseCase {
             25,
             "Snatch, Thruster, Swing, Flexiones normales, Dominadas pronas, Burpees, Squat en rack, "
         ),
+        RutinasEntity(
+            6,
+            "Venganza Dr burpee",
+            "FULL_BODY",
+            "Intermedio",
+            "Biceps, Triceps, Cuadriceps, Gluteos",
+            25,
+            " Burpees"
+        ),
         )
 
 

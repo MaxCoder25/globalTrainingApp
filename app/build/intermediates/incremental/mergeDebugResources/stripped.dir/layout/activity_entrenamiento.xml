@@ -28,7 +28,7 @@
         android:layout_marginTop="92dp"
 
         android:background="@android:drawable/editbox_background"
-        android:text="BICEPS, TRICEPS, CUADRICEPS"
+        android:text="MUSCULOS SEPARADOS CON COMA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="112dp"
 
         android:background="@android:drawable/editbox_background"
-        android:text="BASICO"
+        android:text="NIVEL"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,56 +48,31 @@
         android:id="@+id/btnEmpezarEntrenamiento"
         android:layout_width="116dp"
         android:layout_height="44dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="56dp"
         android:text="Empezar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_TIEMPO"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="128dp"
-        android:background="@android:drawable/editbox_background"
-        android:text="DOMINADAS PRONAS"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="132dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento"
-        app:srcCompat="@drawable/domi_prona" />
-
-    <TextView
         android:id="@+id/TXT_TIEMPO"
-        android:layout_width="102dp"
-        android:layout_height="30dp"
+        android:layout_width="162dp"
+        android:layout_height="31dp"
         android:layout_marginStart="208dp"
         android:layout_marginTop="80dp"
         android:background="@android:drawable/editbox_background"
-        android:text="30 MIN"
+        android:text="DURACION EN MIN"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_MUSCULOS" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="112dp"
-        android:backgroundTint="#E00A0A"
-        android:clickable="true"
-        android:tint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento"
-        app:rippleColor="#F8F6F6"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicler_entrenamiento"
+        android:layout_width="403dp"
+        android:layout_height="419dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento" />
 </androidx.constraintlayout.widget.ConstraintLayout>

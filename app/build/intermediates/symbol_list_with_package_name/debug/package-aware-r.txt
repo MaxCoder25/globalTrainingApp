@@ -2701,6 +2701,7 @@ id btnAdelante2
 id btnEmpezarEntrenamiento
 id btnLogin
 id btnRegistrarse
+id btn_CambioEjercicio
 id button2
 id buttonPanel
 id cache_measures
@@ -2713,7 +2714,7 @@ id campoPassword
 id campoPassword2
 id cancel_action
 id cancel_button
-id cardViewRutinas
+id cardViewRutinas_Entrenamiento
 id carryVelocity
 id catRutinasRecyclerView
 id center
@@ -2793,9 +2794,11 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id etiquetaEjercicio
 id etiquetaMusculos
 id etiquetaNivel
 id etiquetaNombre
+id etiquetaRepeticiones
 id etiquetaTiempo
 id exitUntilCollapsed
 id expand_activities_button
@@ -2810,7 +2813,6 @@ id fixed
 id flip
 id floating
 id floatingActionButton
-id floatingActionButton2
 id forever
 id fragment_container_view_tag
 id frost
@@ -2837,11 +2839,11 @@ id ignoreRequest
 id image
 id imageView
 id imageView11
-id imageView2
 id imageView3
 id imageView4
 id imageView5
 id imageView6
+id img_Ejerc
 id immediateStop
 id included
 id info
@@ -2979,6 +2981,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recicler_entrenamiento
 id rectangles
 id reverseSawtooth
 id right
@@ -3080,7 +3083,6 @@ id textStart
 id textTop
 id textView
 id textView2
-id textView9
 id text_articulos
 id text_input_end_icon
 id text_input_error_icon
@@ -3266,6 +3268,7 @@ layout fragment_ejercicios
 layout fragment_inicio
 layout fragment_logros
 layout fragment_rutinas
+layout fragment_rutinas_entrenamiento_list
 layout fragment_rutinas_list
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

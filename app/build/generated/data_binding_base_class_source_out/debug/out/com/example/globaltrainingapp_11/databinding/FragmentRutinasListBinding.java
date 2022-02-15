@@ -21,7 +21,7 @@ public final class FragmentRutinasListBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final CardView cardViewRutinas;
+  public final CardView cardViewRutinasEntrenamiento;
 
   @NonNull
   public final TextView etiquetaMusculos;
@@ -36,11 +36,11 @@ public final class FragmentRutinasListBinding implements ViewBinding {
   public final TextView etiquetaTiempo;
 
   private FragmentRutinasListBinding(@NonNull ConstraintLayout rootView,
-      @NonNull CardView cardViewRutinas, @NonNull TextView etiquetaMusculos,
+      @NonNull CardView cardViewRutinasEntrenamiento, @NonNull TextView etiquetaMusculos,
       @NonNull TextView etiquetaNivel, @NonNull TextView etiquetaNombre,
       @NonNull TextView etiquetaTiempo) {
     this.rootView = rootView;
-    this.cardViewRutinas = cardViewRutinas;
+    this.cardViewRutinasEntrenamiento = cardViewRutinasEntrenamiento;
     this.etiquetaMusculos = etiquetaMusculos;
     this.etiquetaNivel = etiquetaNivel;
     this.etiquetaNombre = etiquetaNombre;
@@ -74,9 +74,9 @@ public final class FragmentRutinasListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cardViewRutinas;
-      CardView cardViewRutinas = ViewBindings.findChildViewById(rootView, id);
-      if (cardViewRutinas == null) {
+      id = R.id.cardViewRutinas_Entrenamiento;
+      CardView cardViewRutinasEntrenamiento = ViewBindings.findChildViewById(rootView, id);
+      if (cardViewRutinasEntrenamiento == null) {
         break missingId;
       }
 
@@ -104,8 +104,9 @@ public final class FragmentRutinasListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRutinasListBinding((ConstraintLayout) rootView, cardViewRutinas,
-          etiquetaMusculos, etiquetaNivel, etiquetaNombre, etiquetaTiempo);
+      return new FragmentRutinasListBinding((ConstraintLayout) rootView,
+          cardViewRutinasEntrenamiento, etiquetaMusculos, etiquetaNivel, etiquetaNombre,
+          etiquetaTiempo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

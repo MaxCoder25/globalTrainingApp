@@ -5,15 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.globaltrainingapp_11.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -41,19 +40,12 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
   public final Button btnEmpezarEntrenamiento;
 
   @NonNull
-  public final FloatingActionButton floatingActionButton2;
-
-  @NonNull
-  public final ImageView imageView2;
-
-  @NonNull
-  public final TextView textView9;
+  public final RecyclerView reciclerEntrenamiento;
 
   private ActivityEntrenamientoBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout EntrenamientoConstraintLayout, @NonNull TextView TXTMUSCULOS,
       @NonNull TextView TXTNIVEL, @NonNull TextView TXTNOMBRE, @NonNull TextView TXTTIEMPO,
-      @NonNull Button btnEmpezarEntrenamiento, @NonNull FloatingActionButton floatingActionButton2,
-      @NonNull ImageView imageView2, @NonNull TextView textView9) {
+      @NonNull Button btnEmpezarEntrenamiento, @NonNull RecyclerView reciclerEntrenamiento) {
     this.rootView = rootView;
     this.EntrenamientoConstraintLayout = EntrenamientoConstraintLayout;
     this.TXTMUSCULOS = TXTMUSCULOS;
@@ -61,9 +53,7 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
     this.TXTNOMBRE = TXTNOMBRE;
     this.TXTTIEMPO = TXTTIEMPO;
     this.btnEmpezarEntrenamiento = btnEmpezarEntrenamiento;
-    this.floatingActionButton2 = floatingActionButton2;
-    this.imageView2 = imageView2;
-    this.textView9 = textView9;
+    this.reciclerEntrenamiento = reciclerEntrenamiento;
   }
 
   @Override
@@ -125,27 +115,15 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.floatingActionButton2;
-      FloatingActionButton floatingActionButton2 = ViewBindings.findChildViewById(rootView, id);
-      if (floatingActionButton2 == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView9;
-      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
-      if (textView9 == null) {
+      id = R.id.recicler_entrenamiento;
+      RecyclerView reciclerEntrenamiento = ViewBindings.findChildViewById(rootView, id);
+      if (reciclerEntrenamiento == null) {
         break missingId;
       }
 
       return new ActivityEntrenamientoBinding((ConstraintLayout) rootView,
           EntrenamientoConstraintLayout, TXTMUSCULOS, TXTNIVEL, TXTNOMBRE, TXTTIEMPO,
-          btnEmpezarEntrenamiento, floatingActionButton2, imageView2, textView9);
+          btnEmpezarEntrenamiento, reciclerEntrenamiento);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
