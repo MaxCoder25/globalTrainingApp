@@ -37,21 +37,16 @@ public final class FragmentRutinasEntrenamientoListBinding implements ViewBindin
   @NonNull
   public final ImageView imgEjerc;
 
-  @NonNull
-  public final TextView txtCambioEjerc;
-
   private FragmentRutinasEntrenamientoListBinding(@NonNull ConstraintLayout rootView,
       @NonNull FloatingActionButton btnCambioEjercicio,
       @NonNull CardView cardViewRutinasEntrenamiento, @NonNull TextView etiquetaEjercicio,
-      @NonNull TextView etiquetaRepeticiones, @NonNull ImageView imgEjerc,
-      @NonNull TextView txtCambioEjerc) {
+      @NonNull TextView etiquetaRepeticiones, @NonNull ImageView imgEjerc) {
     this.rootView = rootView;
     this.btnCambioEjercicio = btnCambioEjercicio;
     this.cardViewRutinasEntrenamiento = cardViewRutinasEntrenamiento;
     this.etiquetaEjercicio = etiquetaEjercicio;
     this.etiquetaRepeticiones = etiquetaRepeticiones;
     this.imgEjerc = imgEjerc;
-    this.txtCambioEjerc = txtCambioEjerc;
   }
 
   @Override
@@ -111,15 +106,9 @@ public final class FragmentRutinasEntrenamientoListBinding implements ViewBindin
         break missingId;
       }
 
-      id = R.id.txtCambioEjerc;
-      TextView txtCambioEjerc = ViewBindings.findChildViewById(rootView, id);
-      if (txtCambioEjerc == null) {
-        break missingId;
-      }
-
       return new FragmentRutinasEntrenamientoListBinding((ConstraintLayout) rootView,
           btnCambioEjercicio, cardViewRutinasEntrenamiento, etiquetaEjercicio, etiquetaRepeticiones,
-          imgEjerc, txtCambioEjerc);
+          imgEjerc);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

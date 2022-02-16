@@ -1,0 +1,59 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1" date="1645023859182" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 16/2/2022 10:01 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/androidResources" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/layout_fragment_rutinas_list.xml.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_fragment_rutinas_list.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/layout_fragment_rutinas_list.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/globaltrainingapp_11/controladores/adapters/ListRutinasAdapter.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/globaltrainingapp_11/controladores/adapters/ListRutinasAdapter.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/ListRutinasAdapter.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_entrenamiento.xml.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_entrenamiento.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/layout_activity_entrenamiento.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/com/example/globaltrainingapp_11/controladores/adapters/ListRutinasAdapter.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/com/example/globaltrainingapp_11/controladores/adapters/ListRutinasAdapter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/ListRutinasAdapter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kapt3/stubs/debug/com/example/globaltrainingapp_11/controladores/adapters/RutinasViewHolder.kapt_metadata" />
+    <option name="AFTER_PATH" value="app/build/tmp/kapt3/stubs/debug/com/example/globaltrainingapp_11/controladores/adapters/RutinasViewHolder.kapt_metadata" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/RutinasViewHolder.kapt_metadata" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/processed_res/debug/out/resources-debug.ap_" />
+    <option name="AFTER_PATH" value="app/build/intermediates/processed_res/debug/out/resources-debug.ap_" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/resources-debug.ap_" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kapt3/stubs/debug/com/example/globaltrainingapp_11/controladores/adapters/ListRutinasAdapter.kapt_metadata" />
+    <option name="AFTER_PATH" value="app/build/tmp/kapt3/stubs/debug/com/example/globaltrainingapp_11/controladores/adapters/ListRutinasAdapter.kapt_metadata" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/ListRutinasAdapter.kapt_metadata" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/com/example/globaltrainingapp_11/controladores/adapters/RutinasViewHolder.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/com/example/globaltrainingapp_11/controladores/adapters/RutinasViewHolder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/RutinasViewHolder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/layout_fragment_rutinas.xml.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_fragment_rutinas.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/layout_fragment_rutinas.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/globaltrainingapp_11/controladores/adapters/RutinasViewHolder.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/globaltrainingapp_11/controladores/adapters/RutinasViewHolder.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_2_2022_10_01_[Default_Changelist]1/RutinasViewHolder.dex" />
+  </binary>
+</changelist>

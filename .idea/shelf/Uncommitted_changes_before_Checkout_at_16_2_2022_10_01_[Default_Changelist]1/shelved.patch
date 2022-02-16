@@ -1,0 +1,112 @@
+Index: app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_entrenamiento.xml
+===================================================================
+diff --git a/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_entrenamiento.xml b/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_entrenamiento.xml
+deleted file mode 100644
+--- a/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_entrenamiento.xml	
++++ /dev/null	
+@@ -1,78 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/EntrenamientoConstraintLayout"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".presentacion.EntrenamientoActivity">
+-
+-
+-    <TextView
+-        android:id="@+id/TXT_NOMBRE"
+-        android:layout_width="234dp"
+-        android:layout_height="40dp"
+-        android:layout_marginStart="104dp"
+-        android:layout_marginTop="40dp"
+-
+-        android:background="@android:drawable/editbox_background"
+-        android:text="NOMBRE ENTRENAMIENTO"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <TextView
+-        android:id="@+id/TXT_MUSCULOS"
+-        android:layout_width="175dp"
+-        android:layout_height="62dp"
+-        android:layout_marginStart="208dp"
+-        android:layout_marginTop="92dp"
+-
+-        android:background="@android:drawable/editbox_background"
+-        android:text="MUSCULOS SEPARADOS CON COMA"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <TextView
+-        android:id="@+id/TXT_NIVEL"
+-        android:layout_width="166dp"
+-        android:layout_height="42dp"
+-        android:layout_marginStart="28dp"
+-        android:layout_marginTop="112dp"
+-
+-        android:background="@android:drawable/editbox_background"
+-        android:text="NIVEL"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <Button
+-        android:id="@+id/btnEmpezarEntrenamiento"
+-        android:layout_width="116dp"
+-        android:layout_height="44dp"
+-        android:layout_marginStart="144dp"
+-        android:layout_marginTop="56dp"
+-        android:text="Empezar"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/TXT_TIEMPO"
+-        tools:ignore="TouchTargetSizeCheck" />
+-
+-    <TextView
+-        android:id="@+id/TXT_TIEMPO"
+-        android:layout_width="162dp"
+-        android:layout_height="31dp"
+-        android:layout_marginStart="208dp"
+-        android:layout_marginTop="80dp"
+-        android:background="@android:drawable/editbox_background"
+-        android:text="DURACION EN MIN"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/TXT_MUSCULOS" />
+-
+-    <androidx.recyclerview.widget.RecyclerView
+-        android:id="@+id/recicler_entrenamiento"
+-        android:layout_width="403dp"
+-        android:layout_height="419dp"
+-        android:layout_marginStart="1dp"
+-        android:layout_marginTop="64dp"
+-        android:layout_marginBottom="100dp"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="@+id/btnEmpezarEntrenamiento" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/build/intermediates/data_binding_layout_info_type_merge/debug/out/activity_entrenamiento-layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><Layout layout=\"activity_entrenamiento\" modulePackage=\"com.example.globaltrainingapp_11\" filePath=\"app\\src\\main\\res\\layout\\activity_entrenamiento.xml\" directory=\"layout\" isMerge=\"false\" isBindingData=\"false\" rootNodeType=\"androidx.constraintlayout.widget.ConstraintLayout\" rootNodeViewId=\"@+id/EntrenamientoConstraintLayout\"><Targets><Target id=\"@+id/EntrenamientoConstraintLayout\" tag=\"layout/activity_entrenamiento_0\" view=\"androidx.constraintlayout.widget.ConstraintLayout\"><Expressions/><location startLine=\"1\" startOffset=\"0\" endLine=\"77\" endOffset=\"51\"/></Target><Target id=\"@+id/TXT_NOMBRE\" view=\"TextView\"><Expressions/><location startLine=\"10\" startOffset=\"4\" endLine=\"20\" endOffset=\"51\"/></Target><Target id=\"@+id/TXT_MUSCULOS\" view=\"TextView\"><Expressions/><location startLine=\"22\" startOffset=\"4\" endLine=\"32\" endOffset=\"51\"/></Target><Target id=\"@+id/TXT_NIVEL\" view=\"TextView\"><Expressions/><location startLine=\"34\" startOffset=\"4\" endLine=\"44\" endOffset=\"51\"/></Target><Target id=\"@+id/btnEmpezarEntrenamiento\" view=\"Button\"><Expressions/><location startLine=\"46\" startOffset=\"4\" endLine=\"55\" endOffset=\"45\"/></Target><Target id=\"@+id/TXT_TIEMPO\" view=\"TextView\"><Expressions/><location startLine=\"57\" startOffset=\"4\" endLine=\"66\" endOffset=\"62\"/></Target><Target id=\"@+id/recicler_entrenamiento\" view=\"androidx.recyclerview.widget.RecyclerView\"><Expressions/><location startLine=\"68\" startOffset=\"4\" endLine=\"76\" endOffset=\"73\"/></Target></Targets></Layout>
+===================================================================
+diff --git a/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/activity_entrenamiento-layout.xml b/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/activity_entrenamiento-layout.xml
+--- a/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/activity_entrenamiento-layout.xml	
++++ b/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/activity_entrenamiento-layout.xml	
+@@ -1,1 +1,1 @@
+-<?xml version="1.0" encoding="utf-8" standalone="yes"?><Layout layout="activity_entrenamiento" modulePackage="com.example.globaltrainingapp_11" filePath="app\src\main\res\layout\activity_entrenamiento.xml" directory="layout" isMerge="false" isBindingData="false" rootNodeType="androidx.constraintlayout.widget.ConstraintLayout" rootNodeViewId="@+id/EntrenamientoConstraintLayout"><Targets><Target id="@+id/EntrenamientoConstraintLayout" tag="layout/activity_entrenamiento_0" view="androidx.constraintlayout.widget.ConstraintLayout"><Expressions/><location startLine="1" startOffset="0" endLine="77" endOffset="51"/></Target><Target id="@+id/TXT_NOMBRE" view="TextView"><Expressions/><location startLine="10" startOffset="4" endLine="20" endOffset="51"/></Target><Target id="@+id/TXT_MUSCULOS" view="TextView"><Expressions/><location startLine="22" startOffset="4" endLine="32" endOffset="51"/></Target><Target id="@+id/TXT_NIVEL" view="TextView"><Expressions/><location startLine="34" startOffset="4" endLine="44" endOffset="51"/></Target><Target id="@+id/btnEmpezarEntrenamiento" view="Button"><Expressions/><location startLine="46" startOffset="4" endLine="55" endOffset="45"/></Target><Target id="@+id/TXT_TIEMPO" view="TextView"><Expressions/><location startLine="57" startOffset="4" endLine="66" endOffset="62"/></Target><Target id="@+id/recicler_entrenamiento" view="androidx.recyclerview.widget.RecyclerView"><Expressions/><location startLine="68" startOffset="4" endLine="76" endOffset="73"/></Target></Targets></Layout>
+\ No newline at end of file
++<?xml version="1.0" encoding="utf-8" standalone="yes"?><Layout layout="activity_entrenamiento" modulePackage="com.example.globaltrainingapp_11" filePath="app\src\main\res\layout\activity_entrenamiento.xml" directory="layout" isMerge="false" isBindingData="false" rootNodeType="androidx.constraintlayout.widget.ConstraintLayout" rootNodeViewId="@+id/EntrenamientoConstraintLayout"><Targets><Target id="@+id/EntrenamientoConstraintLayout" tag="layout/activity_entrenamiento_0" view="androidx.constraintlayout.widget.ConstraintLayout"><Expressions/><location startLine="1" startOffset="0" endLine="78" endOffset="51"/></Target><Target id="@+id/TXT_NOMBRE" view="TextView"><Expressions/><location startLine="10" startOffset="4" endLine="20" endOffset="51"/></Target><Target id="@+id/TXT_MUSCULOS" view="TextView"><Expressions/><location startLine="22" startOffset="4" endLine="32" endOffset="51"/></Target><Target id="@+id/TXT_NIVEL" view="TextView"><Expressions/><location startLine="34" startOffset="4" endLine="44" endOffset="51"/></Target><Target id="@+id/btnEmpezarEntrenamiento" view="Button"><Expressions/><location startLine="46" startOffset="4" endLine="55" endOffset="45"/></Target><Target id="@+id/TXT_TIEMPO" view="TextView"><Expressions/><location startLine="57" startOffset="4" endLine="66" endOffset="62"/></Target><Target id="@+id/recicler_entrenamiento" view="androidx.recyclerview.widget.RecyclerView"><Expressions/><location startLine="68" startOffset="4" endLine="77" endOffset="73"/></Target></Targets></Layout>
+\ No newline at end of file
+Index: app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_rutinas_list-layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><Layout layout=\"fragment_rutinas_list\" modulePackage=\"com.example.globaltrainingapp_11\" filePath=\"app\\src\\main\\res\\layout\\fragment_rutinas_list.xml\" directory=\"layout\" isMerge=\"false\" isBindingData=\"false\" rootNodeType=\"androidx.constraintlayout.widget.ConstraintLayout\"><Targets><Target tag=\"layout/fragment_rutinas_list_0\" view=\"androidx.constraintlayout.widget.ConstraintLayout\"><Expressions/><location startLine=\"1\" startOffset=\"0\" endLine=\"73\" endOffset=\"51\"/></Target><Target id=\"@+id/cardViewRutinas_Entrenamiento\" view=\"androidx.cardview.widget.CardView\"><Expressions/><location startLine=\"8\" startOffset=\"4\" endLine=\"71\" endOffset=\"39\"/></Target><Target id=\"@+id/etiquetaNivel\" view=\"TextView\"><Expressions/><location startLine=\"21\" startOffset=\"12\" endLine=\"31\" endOffset=\"59\"/></Target><Target id=\"@+id/etiquetaNombre\" view=\"TextView\"><Expressions/><location startLine=\"33\" startOffset=\"12\" endLine=\"43\" endOffset=\"71\"/></Target><Target id=\"@+id/etiquetaTiempo\" view=\"TextView\"><Expressions/><location startLine=\"45\" startOffset=\"12\" endLine=\"55\" endOffset=\"74\"/></Target><Target id=\"@+id/etiquetaMusculos\" view=\"TextView\"><Expressions/><location startLine=\"57\" startOffset=\"12\" endLine=\"67\" endOffset=\"72\"/></Target></Targets></Layout>
+===================================================================
+diff --git a/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_rutinas_list-layout.xml b/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_rutinas_list-layout.xml
+--- a/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_rutinas_list-layout.xml	
++++ b/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_rutinas_list-layout.xml	
+@@ -1,1 +1,1 @@
+-<?xml version="1.0" encoding="utf-8" standalone="yes"?><Layout layout="fragment_rutinas_list" modulePackage="com.example.globaltrainingapp_11" filePath="app\src\main\res\layout\fragment_rutinas_list.xml" directory="layout" isMerge="false" isBindingData="false" rootNodeType="androidx.constraintlayout.widget.ConstraintLayout"><Targets><Target tag="layout/fragment_rutinas_list_0" view="androidx.constraintlayout.widget.ConstraintLayout"><Expressions/><location startLine="1" startOffset="0" endLine="73" endOffset="51"/></Target><Target id="@+id/cardViewRutinas_Entrenamiento" view="androidx.cardview.widget.CardView"><Expressions/><location startLine="8" startOffset="4" endLine="71" endOffset="39"/></Target><Target id="@+id/etiquetaNivel" view="TextView"><Expressions/><location startLine="21" startOffset="12" endLine="31" endOffset="59"/></Target><Target id="@+id/etiquetaNombre" view="TextView"><Expressions/><location startLine="33" startOffset="12" endLine="43" endOffset="71"/></Target><Target id="@+id/etiquetaTiempo" view="TextView"><Expressions/><location startLine="45" startOffset="12" endLine="55" endOffset="74"/></Target><Target id="@+id/etiquetaMusculos" view="TextView"><Expressions/><location startLine="57" startOffset="12" endLine="67" endOffset="72"/></Target></Targets></Layout>
+\ No newline at end of file
++<?xml version="1.0" encoding="utf-8" standalone="yes"?><Layout layout="fragment_rutinas_list" modulePackage="com.example.globaltrainingapp_11" filePath="app\src\main\res\layout\fragment_rutinas_list.xml" directory="layout" isMerge="false" isBindingData="false" rootNodeType="androidx.constraintlayout.widget.ConstraintLayout"><Targets><Target tag="layout/fragment_rutinas_list_0" view="androidx.constraintlayout.widget.ConstraintLayout"><Expressions/><location startLine="1" startOffset="0" endLine="72" endOffset="51"/></Target><Target id="@+id/cardViewRutinas_Entrenamiento" view="androidx.cardview.widget.CardView"><Expressions/><location startLine="7" startOffset="4" endLine="70" endOffset="39"/></Target><Target id="@+id/etiquetaNivel" view="TextView"><Expressions/><location startLine="20" startOffset="12" endLine="30" endOffset="59"/></Target><Target id="@+id/etiquetaNombre" view="TextView"><Expressions/><location startLine="32" startOffset="12" endLine="42" endOffset="71"/></Target><Target id="@+id/etiquetaTiempo" view="TextView"><Expressions/><location startLine="44" startOffset="12" endLine="54" endOffset="74"/></Target><Target id="@+id/etiquetaMusculos" view="TextView"><Expressions/><location startLine="56" startOffset="12" endLine="66" endOffset="72"/></Target></Targets></Layout>
+\ No newline at end of file
