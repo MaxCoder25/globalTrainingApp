@@ -12,7 +12,7 @@ public abstract interface RutinasDAO {
     kotlin.coroutines.Continuation<? super java.util.List<com.example.globaltrainingapp_11.entidades.RutinasEntity>> continuation);
     
     @org.jetbrains.annotations.Nullable()
-    @androidx.room.Query(value = "SELECT * FROM rutinas WHERE id_rutinas = :idNews")
+    @androidx.room.Query(value = "SELECT * FROM rutinas WHERE id = :idNews")
     public abstract java.lang.Object getRutinasById(int idNews, @org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super com.example.globaltrainingapp_11.entidades.RutinasEntity> continuation);
     
@@ -40,7 +40,7 @@ public abstract interface RutinasDAO {
     kotlin.coroutines.Continuation<? super kotlin.Unit> continuation);
     
     @org.jetbrains.annotations.Nullable()
-    @androidx.room.Query(value = "DELETE FROM rutinas WHERE id_rutinas = :idRutinas")
+    @androidx.room.Query(value = "DELETE FROM rutinas WHERE id = :idRutinas")
     public abstract java.lang.Object deleteRutinasById(int idRutinas, @org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super kotlin.Unit> continuation);
 }
