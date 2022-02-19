@@ -19,6 +19,8 @@ class EjerciciosFragment : Fragment() {
 
     private lateinit var binding: FragmentEjerciciosBinding
 
+    private var categoriaEjercicio: String = "FULL_BODY"
+    private var page: Int = 1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

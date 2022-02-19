@@ -49,7 +49,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
     this.__insertionAdapterOfEjerciciosEntity = new EntityInsertionAdapter<EjerciciosEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `ejercicios` (`id_ejercicios`,`nombreEjercicio`,`descripcion`,`categoria`,`nivel`,`tipo_movimiento`,`repeticiones`,`imagen`,`video`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `ejercicios` (`id_ejercicios`,`nombreEjercicio`,`categoria`,`repeticiones`,`tipo_movimiento`,`imagen`) VALUES (nullif(?, 0),?,?,?,?,?)";
       }
 
       @Override
@@ -60,36 +60,21 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         } else {
           stmt.bindString(2, value.getNombreEjercicio());
         }
-        if (value.getDescripcion() == null) {
+        if (value.getCategoria() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getDescripcion());
+          stmt.bindString(3, value.getCategoria());
         }
-        if (value.getCategoria() == null) {
-          stmt.bindNull(4);
-        } else {
-          stmt.bindString(4, value.getCategoria());
-        }
-        if (value.getNivel() == null) {
+        stmt.bindLong(4, value.getRepeticiones());
+        if (value.getTipo_movimiento() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getNivel());
+          stmt.bindString(5, value.getTipo_movimiento());
         }
-        if (value.getTipo_movimiento() == null) {
+        if (value.getImagen() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getTipo_movimiento());
-        }
-        stmt.bindLong(7, value.getRepeticiones());
-        if (value.getImagen() == null) {
-          stmt.bindNull(8);
-        } else {
-          stmt.bindString(8, value.getImagen());
-        }
-        if (value.getVideo() == null) {
-          stmt.bindNull(9);
-        } else {
-          stmt.bindString(9, value.getVideo());
+          stmt.bindString(6, value.getImagen());
         }
       }
     };
@@ -107,7 +92,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
     this.__updateAdapterOfEjerciciosEntity = new EntityDeletionOrUpdateAdapter<EjerciciosEntity>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR REPLACE `ejercicios` SET `id_ejercicios` = ?,`nombreEjercicio` = ?,`descripcion` = ?,`categoria` = ?,`nivel` = ?,`tipo_movimiento` = ?,`repeticiones` = ?,`imagen` = ?,`video` = ? WHERE `id_ejercicios` = ?";
+        return "UPDATE OR REPLACE `ejercicios` SET `id_ejercicios` = ?,`nombreEjercicio` = ?,`categoria` = ?,`repeticiones` = ?,`tipo_movimiento` = ?,`imagen` = ? WHERE `id_ejercicios` = ?";
       }
 
       @Override
@@ -118,38 +103,23 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         } else {
           stmt.bindString(2, value.getNombreEjercicio());
         }
-        if (value.getDescripcion() == null) {
+        if (value.getCategoria() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getDescripcion());
+          stmt.bindString(3, value.getCategoria());
         }
-        if (value.getCategoria() == null) {
-          stmt.bindNull(4);
-        } else {
-          stmt.bindString(4, value.getCategoria());
-        }
-        if (value.getNivel() == null) {
+        stmt.bindLong(4, value.getRepeticiones());
+        if (value.getTipo_movimiento() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getNivel());
+          stmt.bindString(5, value.getTipo_movimiento());
         }
-        if (value.getTipo_movimiento() == null) {
+        if (value.getImagen() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getTipo_movimiento());
+          stmt.bindString(6, value.getImagen());
         }
-        stmt.bindLong(7, value.getRepeticiones());
-        if (value.getImagen() == null) {
-          stmt.bindNull(8);
-        } else {
-          stmt.bindString(8, value.getImagen());
-        }
-        if (value.getVideo() == null) {
-          stmt.bindNull(9);
-        } else {
-          stmt.bindString(9, value.getVideo());
-        }
-        stmt.bindLong(10, value.getId_ejercicios());
+        stmt.bindLong(7, value.getId_ejercicios());
       }
     };
     this.__preparedStmtOfCleanDbEjercicios = new SharedSQLiteStatement(__db) {
@@ -275,13 +245,10 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         try {
           final int _cursorIndexOfIdEjercicios = CursorUtil.getColumnIndexOrThrow(_cursor, "id_ejercicios");
           final int _cursorIndexOfNombreEjercicio = CursorUtil.getColumnIndexOrThrow(_cursor, "nombreEjercicio");
-          final int _cursorIndexOfDescripcion = CursorUtil.getColumnIndexOrThrow(_cursor, "descripcion");
           final int _cursorIndexOfCategoria = CursorUtil.getColumnIndexOrThrow(_cursor, "categoria");
-          final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
-          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
-          final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final List<EjerciciosEntity> _result = new ArrayList<EjerciciosEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final EjerciciosEntity _item;
@@ -293,45 +260,27 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpNombreEjercicio = _cursor.getString(_cursorIndexOfNombreEjercicio);
             }
-            final String _tmpDescripcion;
-            if (_cursor.isNull(_cursorIndexOfDescripcion)) {
-              _tmpDescripcion = null;
-            } else {
-              _tmpDescripcion = _cursor.getString(_cursorIndexOfDescripcion);
-            }
             final String _tmpCategoria;
             if (_cursor.isNull(_cursorIndexOfCategoria)) {
               _tmpCategoria = null;
             } else {
               _tmpCategoria = _cursor.getString(_cursorIndexOfCategoria);
             }
-            final String _tmpNivel;
-            if (_cursor.isNull(_cursorIndexOfNivel)) {
-              _tmpNivel = null;
-            } else {
-              _tmpNivel = _cursor.getString(_cursorIndexOfNivel);
-            }
+            final int _tmpRepeticiones;
+            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpTipo_movimiento;
             if (_cursor.isNull(_cursorIndexOfTipoMovimiento)) {
               _tmpTipo_movimiento = null;
             } else {
               _tmpTipo_movimiento = _cursor.getString(_cursorIndexOfTipoMovimiento);
             }
-            final int _tmpRepeticiones;
-            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
             } else {
               _tmpImagen = _cursor.getString(_cursorIndexOfImagen);
             }
-            final String _tmpVideo;
-            if (_cursor.isNull(_cursorIndexOfVideo)) {
-              _tmpVideo = null;
-            } else {
-              _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
-            }
-            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpCategoria,_tmpRepeticiones,_tmpTipo_movimiento,_tmpImagen);
             _result.add(_item);
           }
           return _result;
@@ -358,13 +307,10 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         try {
           final int _cursorIndexOfIdEjercicios = CursorUtil.getColumnIndexOrThrow(_cursor, "id_ejercicios");
           final int _cursorIndexOfNombreEjercicio = CursorUtil.getColumnIndexOrThrow(_cursor, "nombreEjercicio");
-          final int _cursorIndexOfDescripcion = CursorUtil.getColumnIndexOrThrow(_cursor, "descripcion");
           final int _cursorIndexOfCategoria = CursorUtil.getColumnIndexOrThrow(_cursor, "categoria");
-          final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
-          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
-          final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final EjerciciosEntity _result;
           if(_cursor.moveToFirst()) {
             final int _tmpId_ejercicios;
@@ -375,45 +321,27 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpNombreEjercicio = _cursor.getString(_cursorIndexOfNombreEjercicio);
             }
-            final String _tmpDescripcion;
-            if (_cursor.isNull(_cursorIndexOfDescripcion)) {
-              _tmpDescripcion = null;
-            } else {
-              _tmpDescripcion = _cursor.getString(_cursorIndexOfDescripcion);
-            }
             final String _tmpCategoria;
             if (_cursor.isNull(_cursorIndexOfCategoria)) {
               _tmpCategoria = null;
             } else {
               _tmpCategoria = _cursor.getString(_cursorIndexOfCategoria);
             }
-            final String _tmpNivel;
-            if (_cursor.isNull(_cursorIndexOfNivel)) {
-              _tmpNivel = null;
-            } else {
-              _tmpNivel = _cursor.getString(_cursorIndexOfNivel);
-            }
+            final int _tmpRepeticiones;
+            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpTipo_movimiento;
             if (_cursor.isNull(_cursorIndexOfTipoMovimiento)) {
               _tmpTipo_movimiento = null;
             } else {
               _tmpTipo_movimiento = _cursor.getString(_cursorIndexOfTipoMovimiento);
             }
-            final int _tmpRepeticiones;
-            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
             } else {
               _tmpImagen = _cursor.getString(_cursorIndexOfImagen);
             }
-            final String _tmpVideo;
-            if (_cursor.isNull(_cursorIndexOfVideo)) {
-              _tmpVideo = null;
-            } else {
-              _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
-            }
-            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpCategoria,_tmpRepeticiones,_tmpTipo_movimiento,_tmpImagen);
           } else {
             _result = null;
           }
@@ -445,13 +373,10 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         try {
           final int _cursorIndexOfIdEjercicios = CursorUtil.getColumnIndexOrThrow(_cursor, "id_ejercicios");
           final int _cursorIndexOfNombreEjercicio = CursorUtil.getColumnIndexOrThrow(_cursor, "nombreEjercicio");
-          final int _cursorIndexOfDescripcion = CursorUtil.getColumnIndexOrThrow(_cursor, "descripcion");
           final int _cursorIndexOfCategoria = CursorUtil.getColumnIndexOrThrow(_cursor, "categoria");
-          final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
-          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
-          final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final EjerciciosEntity _result;
           if(_cursor.moveToFirst()) {
             final int _tmpId_ejercicios;
@@ -462,45 +387,27 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpNombreEjercicio = _cursor.getString(_cursorIndexOfNombreEjercicio);
             }
-            final String _tmpDescripcion;
-            if (_cursor.isNull(_cursorIndexOfDescripcion)) {
-              _tmpDescripcion = null;
-            } else {
-              _tmpDescripcion = _cursor.getString(_cursorIndexOfDescripcion);
-            }
             final String _tmpCategoria;
             if (_cursor.isNull(_cursorIndexOfCategoria)) {
               _tmpCategoria = null;
             } else {
               _tmpCategoria = _cursor.getString(_cursorIndexOfCategoria);
             }
-            final String _tmpNivel;
-            if (_cursor.isNull(_cursorIndexOfNivel)) {
-              _tmpNivel = null;
-            } else {
-              _tmpNivel = _cursor.getString(_cursorIndexOfNivel);
-            }
+            final int _tmpRepeticiones;
+            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpTipo_movimiento;
             if (_cursor.isNull(_cursorIndexOfTipoMovimiento)) {
               _tmpTipo_movimiento = null;
             } else {
               _tmpTipo_movimiento = _cursor.getString(_cursorIndexOfTipoMovimiento);
             }
-            final int _tmpRepeticiones;
-            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
             } else {
               _tmpImagen = _cursor.getString(_cursorIndexOfImagen);
             }
-            final String _tmpVideo;
-            if (_cursor.isNull(_cursorIndexOfVideo)) {
-              _tmpVideo = null;
-            } else {
-              _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
-            }
-            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpCategoria,_tmpRepeticiones,_tmpTipo_movimiento,_tmpImagen);
           } else {
             _result = null;
           }
@@ -532,13 +439,10 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         try {
           final int _cursorIndexOfIdEjercicios = CursorUtil.getColumnIndexOrThrow(_cursor, "id_ejercicios");
           final int _cursorIndexOfNombreEjercicio = CursorUtil.getColumnIndexOrThrow(_cursor, "nombreEjercicio");
-          final int _cursorIndexOfDescripcion = CursorUtil.getColumnIndexOrThrow(_cursor, "descripcion");
           final int _cursorIndexOfCategoria = CursorUtil.getColumnIndexOrThrow(_cursor, "categoria");
-          final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
-          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
-          final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final EjerciciosEntity _result;
           if(_cursor.moveToFirst()) {
             final int _tmpId_ejercicios;
@@ -549,45 +453,27 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpNombreEjercicio = _cursor.getString(_cursorIndexOfNombreEjercicio);
             }
-            final String _tmpDescripcion;
-            if (_cursor.isNull(_cursorIndexOfDescripcion)) {
-              _tmpDescripcion = null;
-            } else {
-              _tmpDescripcion = _cursor.getString(_cursorIndexOfDescripcion);
-            }
             final String _tmpCategoria;
             if (_cursor.isNull(_cursorIndexOfCategoria)) {
               _tmpCategoria = null;
             } else {
               _tmpCategoria = _cursor.getString(_cursorIndexOfCategoria);
             }
-            final String _tmpNivel;
-            if (_cursor.isNull(_cursorIndexOfNivel)) {
-              _tmpNivel = null;
-            } else {
-              _tmpNivel = _cursor.getString(_cursorIndexOfNivel);
-            }
+            final int _tmpRepeticiones;
+            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpTipo_movimiento;
             if (_cursor.isNull(_cursorIndexOfTipoMovimiento)) {
               _tmpTipo_movimiento = null;
             } else {
               _tmpTipo_movimiento = _cursor.getString(_cursorIndexOfTipoMovimiento);
             }
-            final int _tmpRepeticiones;
-            _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
             } else {
               _tmpImagen = _cursor.getString(_cursorIndexOfImagen);
             }
-            final String _tmpVideo;
-            if (_cursor.isNull(_cursorIndexOfVideo)) {
-              _tmpVideo = null;
-            } else {
-              _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
-            }
-            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpCategoria,_tmpRepeticiones,_tmpTipo_movimiento,_tmpImagen);
           } else {
             _result = null;
           }
@@ -800,7 +686,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
       return;
     }
     StringBuilder _stringBuilder = StringUtil.newStringBuilder();
-    _stringBuilder.append("SELECT `ejercicios`.`id_ejercicios` AS `id_ejercicios`,`ejercicios`.`nombreEjercicio` AS `nombreEjercicio`,`ejercicios`.`descripcion` AS `descripcion`,`ejercicios`.`categoria` AS `categoria`,`ejercicios`.`nivel` AS `nivel`,`ejercicios`.`tipo_movimiento` AS `tipo_movimiento`,`ejercicios`.`repeticiones` AS `repeticiones`,`ejercicios`.`imagen` AS `imagen`,`ejercicios`.`video` AS `video`,_junction.`id_rutinas` FROM `rutinas_ejercicios` AS _junction INNER JOIN `ejercicios` ON (_junction.`id_ejercicios` = `ejercicios`.`id_ejercicios`) WHERE _junction.`id_rutinas` IN (");
+    _stringBuilder.append("SELECT `ejercicios`.`id_ejercicios` AS `id_ejercicios`,`ejercicios`.`nombreEjercicio` AS `nombreEjercicio`,`ejercicios`.`categoria` AS `categoria`,`ejercicios`.`repeticiones` AS `repeticiones`,`ejercicios`.`tipo_movimiento` AS `tipo_movimiento`,`ejercicios`.`imagen` AS `imagen`,_junction.`id_rutinas` FROM `rutinas_ejercicios` AS _junction INNER JOIN `ejercicios` ON (_junction.`id_ejercicios` = `ejercicios`.`id_ejercicios`) WHERE _junction.`id_rutinas` IN (");
     final int _inputSize = _map.size();
     StringUtil.appendPlaceholders(_stringBuilder, _inputSize);
     _stringBuilder.append(")");
@@ -815,19 +701,16 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
     }
     final Cursor _cursor = DBUtil.query(__db, _stmt, false, null);
     try {
-      final int _itemKeyIndex = 9; // _junction.id_rutinas;
+      final int _itemKeyIndex = 6; // _junction.id_rutinas;
       if (_itemKeyIndex == -1) {
         return;
       }
       final int _cursorIndexOfIdEjercicios = 0;
       final int _cursorIndexOfNombreEjercicio = 1;
-      final int _cursorIndexOfDescripcion = 2;
-      final int _cursorIndexOfCategoria = 3;
-      final int _cursorIndexOfNivel = 4;
-      final int _cursorIndexOfTipoMovimiento = 5;
-      final int _cursorIndexOfRepeticiones = 6;
-      final int _cursorIndexOfImagen = 7;
-      final int _cursorIndexOfVideo = 8;
+      final int _cursorIndexOfCategoria = 2;
+      final int _cursorIndexOfRepeticiones = 3;
+      final int _cursorIndexOfTipoMovimiento = 4;
+      final int _cursorIndexOfImagen = 5;
       while(_cursor.moveToNext()) {
         final long _tmpKey = _cursor.getLong(_itemKeyIndex);
         ArrayList<EjerciciosEntity> _tmpRelation = _map.get(_tmpKey);
@@ -841,45 +724,27 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           } else {
             _tmpNombreEjercicio = _cursor.getString(_cursorIndexOfNombreEjercicio);
           }
-          final String _tmpDescripcion;
-          if (_cursor.isNull(_cursorIndexOfDescripcion)) {
-            _tmpDescripcion = null;
-          } else {
-            _tmpDescripcion = _cursor.getString(_cursorIndexOfDescripcion);
-          }
           final String _tmpCategoria;
           if (_cursor.isNull(_cursorIndexOfCategoria)) {
             _tmpCategoria = null;
           } else {
             _tmpCategoria = _cursor.getString(_cursorIndexOfCategoria);
           }
-          final String _tmpNivel;
-          if (_cursor.isNull(_cursorIndexOfNivel)) {
-            _tmpNivel = null;
-          } else {
-            _tmpNivel = _cursor.getString(_cursorIndexOfNivel);
-          }
+          final int _tmpRepeticiones;
+          _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
           final String _tmpTipo_movimiento;
           if (_cursor.isNull(_cursorIndexOfTipoMovimiento)) {
             _tmpTipo_movimiento = null;
           } else {
             _tmpTipo_movimiento = _cursor.getString(_cursorIndexOfTipoMovimiento);
           }
-          final int _tmpRepeticiones;
-          _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
           final String _tmpImagen;
           if (_cursor.isNull(_cursorIndexOfImagen)) {
             _tmpImagen = null;
           } else {
             _tmpImagen = _cursor.getString(_cursorIndexOfImagen);
           }
-          final String _tmpVideo;
-          if (_cursor.isNull(_cursorIndexOfVideo)) {
-            _tmpVideo = null;
-          } else {
-            _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
-          }
-          _item_1 = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+          _item_1 = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpCategoria,_tmpRepeticiones,_tmpTipo_movimiento,_tmpImagen);
           _tmpRelation.add(_item_1);
         }
       }

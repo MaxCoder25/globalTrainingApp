@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\activity_entrenamiento.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ejercicios_list.xml",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_ejercicios_list.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\activity_register.xml"
     },

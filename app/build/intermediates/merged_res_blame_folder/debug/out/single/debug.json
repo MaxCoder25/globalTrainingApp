@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_ejercicios_list.xml.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_ejercicios_list.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_rutinas_list.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_rutinas_list.xml"
     },
