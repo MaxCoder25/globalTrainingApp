@@ -1,11 +1,14 @@
 package com.example.globaltrainingapp_11.entidades
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
 import java.sql.Time
 
-
+@Entity (tableName = "ejercicios")
 @Serializable
 data class EjerciciosEntity (
-    val id: Int = 0,
+    @PrimaryKey(autoGenerate = true)
+    val id_ejercicios: Int = 0,
     val nombreEjercicio: String,
     val categoria: String,
     val repeticiones: Int,

@@ -2,10 +2,11 @@ package com.example.globaltrainingapp_11.casosUso
 
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 
 class EjerciciosUseCase {
 
-    private val ejerciciosList = listOf<EjerciciosEntity>(
+   /* private val ejerciciosList = listOf<EjerciciosEntity>(
     EjerciciosEntity(
     1,
     "Flexiones normales",
@@ -58,31 +59,43 @@ class EjerciciosUseCase {
             "flex4.jpg"
 
         ),
+        EjerciciosEntity(
+            5,
+            "ABS colgado (rodillas dobladas)",
+            "CUERPO_SUPERIOR",
+            12,
+            "ESTABILIZACION_DINAMICA",
+            "flex4.jpg"
+
+        ),
     )
 
-    //ESTABILIZACION_DINAMICA
-/*
-
-    private var rutinasFiltradas = listOf<RutinasEntity>()
-
-
-
-    /*     original
-    fun getAllRutinas(): List<RutinasEntity> {
-        return rutinasList
-    }
 */
-    fun getAllRutinas(
+
+    private var ejerciciosFiltrados = listOf<EjerciciosEntity>()
+
+
+
+
+     suspend fun getAllEjercicios(): List<EjerciciosEntity> {
+         val db = globalTrainingApp.getDatabase()
+         return db.ejerciciosDao().getAllEjercicios()
+     }
+
+
+    suspend fun getEjerciciosByCategory(
         category: String,
         page: Int,
-    ): List<RutinasEntity> {
+    ): List<EjerciciosEntity> {
 
-        //rutinasFiltradas  = rutinasList.subList(0,2)
-        rutinasFiltradas= rutinasList.filter { it.categoria == category }
+        val db = globalTrainingApp.getDatabase()
+
+        ejerciciosFiltrados= db.ejerciciosDao().getAllEjercicios().filter { it.categoria == category }
 
 
-        return rutinasFiltradas
+
+        return ejerciciosFiltrados
     }
 
-*/
+
 }

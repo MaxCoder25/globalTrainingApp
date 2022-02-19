@@ -9,7 +9,7 @@ import java.sql.Time
 @Serializable
 data class RutinasEntity (
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id_rutinas: Int = 0,
     val nombre: String,
     val categoria: String,
     val nivel: String,

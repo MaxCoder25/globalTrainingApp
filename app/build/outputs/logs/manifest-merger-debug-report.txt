@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
 MERGED from [androidx.databinding:viewbinding:7.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\188d91025299c7e0862b5850bf41bb59\transformed\jetified-viewbinding-7.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\0c6cc74cf0362a8f005ffd2aeacb2ea3\transformed\navigation-fragment-ktx-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\8cbadd42df14ac69258736dc617c7acd\transformed\navigation-fragment-2.4.0\AndroidManifest.xml:17:1-24:12
@@ -29,7 +29,7 @@ MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Usuario\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Usuario\.gradle\caches\transforms-3\d46c1861af98d570c6b5c5bc3483b758\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\95a596a8cadca047e846ba9721ec1368\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\4a23a847761d45a6d0cac3d412075634\transformed\fragment-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\72cacf48e5f038396b97d8eb788f1fab\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.core:core-ktx:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\1d94106b0d913cb69fde8725f41767a8\transformed\jetified-core-ktx-1.8.0-alpha04\AndroidManifest.xml:2:1-9:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\Usuario\.gradle\caches\transforms-3\224a37a5594b1492e934dc7d5662c247\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
@@ -50,7 +50,7 @@ MERGED from [androidx.customview:customview:1.1.0] C:\Users\Usuario\.gradle\cach
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\1fd867c806fd5899e5d3c50eeada40b7\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\526f68df7aefedb4b2af348558b44bb3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\11b912f9fb2fb366245db9d5ec115e0a\transformed\transition-1.4.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\0a679862f6c55d82fb9a949f1fd4603f\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.core:core:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\032ac56457fec59c98648eb0f55fe85a\transformed\core-1.8.0-alpha04\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\88542b646e8ae4a5c6ab0a927b14b4a1\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Usuario\.gradle\caches\transforms-3\a78216fadd5fba13aa7f69369a1faff5\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\2450d394743437e0cb5b8deda6e3ca3c\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -75,9 +75,9 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\ad7d2c64d7e0a72e024491ba50d4cdcb\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\e64fef9e2eff94f82b0cf2bb04f38caa\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\e98dacd9d17cc4f27db877ffcf1d885a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-75:12
 	package
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
@@ -92,10 +92,14 @@ INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\m
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:6:22-64
 uses-sdk
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:7:5-9:41
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:8:5-10:41
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:8:5-10:41
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:8:5-10:41
 MERGED from [androidx.databinding:viewbinding:7.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\188d91025299c7e0862b5850bf41bb59\transformed\jetified-viewbinding-7.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:viewbinding:7.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\188d91025299c7e0862b5850bf41bb59\transformed\jetified-viewbinding-7.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\0c6cc74cf0362a8f005ffd2aeacb2ea3\transformed\navigation-fragment-ktx-2.4.0\AndroidManifest.xml:20:5-22:41
@@ -146,8 +150,8 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Usuario\.gradle\cach
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\95a596a8cadca047e846ba9721ec1368\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\4a23a847761d45a6d0cac3d412075634\transformed\fragment-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\4a23a847761d45a6d0cac3d412075634\transformed\fragment-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\72cacf48e5f038396b97d8eb788f1fab\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\72cacf48e5f038396b97d8eb788f1fab\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\1d94106b0d913cb69fde8725f41767a8\transformed\jetified-core-ktx-1.8.0-alpha04\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\1d94106b0d913cb69fde8725f41767a8\transformed\jetified-core-ktx-1.8.0-alpha04\AndroidManifest.xml:5:5-7:41
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:20:5-22:41
@@ -188,8 +192,8 @@ MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Us
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\526f68df7aefedb4b2af348558b44bb3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\11b912f9fb2fb366245db9d5ec115e0a\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\11b912f9fb2fb366245db9d5ec115e0a\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\0a679862f6c55d82fb9a949f1fd4603f\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\0a679862f6c55d82fb9a949f1fd4603f\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\032ac56457fec59c98648eb0f55fe85a\transformed\core-1.8.0-alpha04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\032ac56457fec59c98648eb0f55fe85a\transformed\core-1.8.0-alpha04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\88542b646e8ae4a5c6ab0a927b14b4a1\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\88542b646e8ae4a5c6ab0a927b14b4a1\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Usuario\.gradle\caches\transforms-3\a78216fadd5fba13aa7f69369a1faff5\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -238,18 +242,18 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Usuario\.gradle\
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\e64fef9e2eff94f82b0cf2bb04f38caa\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\e98dacd9d17cc4f27db877ffcf1d885a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\e98dacd9d17cc4f27db877ffcf1d885a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:8:5-10:41
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:8:5-10:41
 	android:targetSdkVersion
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:9:9-38
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:10:9-38
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:9:9-35
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:11:5-71:19
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:12:5-73:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Usuario\.gradle\caches\transforms-3\b21dd1d969b1b90338eb5a4fcebf64d6\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
@@ -264,8 +268,8 @@ MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\t
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\0a679862f6c55d82fb9a949f1fd4603f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\0a679862f6c55d82fb9a949f1fd4603f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\032ac56457fec59c98648eb0f55fe85a\transformed\core-1.8.0-alpha04\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0-alpha04] C:\Users\Usuario\.gradle\caches\transforms-3\032ac56457fec59c98648eb0f55fe85a\transformed\core-1.8.0-alpha04\AndroidManifest.xml:24:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Usuario\.gradle\caches\transforms-3\e0d8042bc68afc3ea420b67e445882a7\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
@@ -273,99 +277,101 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Us
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\d02de822bbaefd60bda5fd4142b495dd\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\d02de822bbaefd60bda5fd4142b495dd\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:15:9-42
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:17:9-42
 	android:supportsRtl
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:19:9-41
 	android:appComponentFactory
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:13:9-77
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:15:9-77
 	android:testOnly
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:20:9-32
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:22:9-32
 	android:roundIcon
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:18:9-54
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:21:9-58
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:9-58
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:13:9-48
 activity#com.example.globaltrainingapp_11.presentacion.LoginActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:22:9-24:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:24:9-26:40
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:13-87
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:13-87
 activity#com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:9-27:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:9-29:40
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:26:13-95
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:13-95
 activity#com.example.globaltrainingapp_11.presentacion.RegisterActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:9-30:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:9-32:40
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:29:13-90
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:31:13-90
 activity#com.example.globaltrainingapp_11.MainActivityNavDrawer
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:31:9-41:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:33:9-43:20
 	android:label
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:34:13-67
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:36:13-67
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:33:13-36
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:35:13-36
 	android:theme
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:35:13-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:37:13-74
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:32:13-82
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:34:13-82
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:36:13-40:29
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:37:17-69
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:17-77
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:27-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:41:27-74
 uses-library#androidx.window.extensions
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:43:9-45:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:45:9-47:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 	android:required
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:44:13-54
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:46:13-54
 uses-library#androidx.window.sidecar
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:46:9-48:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:48:9-50:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\06db87dd6f678c2d88e7cb17471e5286\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 	android:required
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:48:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:47:13-51
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:49:13-51
 provider#com.squareup.picasso.PicassoProvider
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:9-53:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:52:9-55:40
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e65c8dd9bfb4cb84f14656e339dc0b83\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:52:13-88
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:54:13-88
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:53:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:51:13-64
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:53:13-64
 service#androidx.room.MultiInstanceInvalidationService
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:9-58:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:9-60:40
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:25:9-28:40
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\18c6314f94c71f97c6992fc8861757f9\transformed\room-runtime-2.4.1\AndroidManifest.xml:25:9-28:40
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:58:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:60:13-37
 	android:directBootAware
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:13-43
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:59:13-43
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:56:13-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:58:13-74
 provider#androidx.startup.InitializationProvider
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:60:9-70:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:62:9-72:20
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
@@ -375,24 +381,24 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Usuario\.gradle\ca
 	tools:node
 		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:30:13-31
 	android:authorities
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:62:13-84
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:64:13-84
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:63:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:13-67
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:63:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:64:13-66:52
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:66:13-68:52
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dc4e900b39a7fd162f78e4f1c5ff925b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:66:17-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:68:17-49
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:65:17-75
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:67:17-75
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:67:13-69:52
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:69:13-71:52
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\a01ba094378da2cbf578182aee9cfcb9\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:69:17-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:71:17-49
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:68:17-78
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:70:17-78

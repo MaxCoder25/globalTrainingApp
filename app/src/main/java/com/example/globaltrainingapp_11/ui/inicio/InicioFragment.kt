@@ -13,9 +13,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
+import com.example.globaltrainingapp_11.casosUso.EjerciciosUseCase
+import com.example.globaltrainingapp_11.casosUso.Rutinas_Ejercicios_UseCase
 import com.example.globaltrainingapp_11.databinding.FragmentInicioBinding
 import com.example.globaltrainingapp_11.presentacion.RegisterActivity
 import com.example.globaltrainingapp_11.ui.ejercicios.EjerciciosFragment
+
 
 class InicioFragment : Fragment() {
 
@@ -59,6 +62,12 @@ class InicioFragment : Fragment() {
 
             }
 */
+        }
+
+        binding.floatingActionButton.setOnClickListener() {
+
+
+         //   Rutinas_Ejercicios_UseCase. getRutinas_Ejercicios2()
         }
        /* binding.btnAdelante.setOnClickListener() {
 
