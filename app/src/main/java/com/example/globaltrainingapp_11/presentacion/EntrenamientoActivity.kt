@@ -2,18 +2,16 @@ package com.example.globaltrainingapp_11.presentacion
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.globaltrainingapp_11.controladores.adapters.ListRutinasAdapter
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.databinding.ActivityEntrenamientoBinding
+import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
-import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Entity
-import com.example.globaltrainingapp_11.logica.RutinasBL
+import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_CrossRef
+import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
-import com.example.globaltrainingapp_11.utils.EnumRutinas
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -39,7 +37,7 @@ class EntrenamientoActivity : AppCompatActivity() {
             if (n != null) {
                 loadRutinas(n!!)
 
-                loadRutinas_Ejercicios(n!!.id)
+                loadRutinas_Ejercicios(n!!.id_rutinas)
                // loadRutinas_Ejercicios(id_Rutina)
             }
 
@@ -82,15 +80,15 @@ private fun loadRutinas_Ejercicios(id_Rutina: Int) {
             LinearLayoutManager(binding.reciclerEntrenamiento.context)
 
         binding.reciclerEntrenamiento.adapter =
-            ListRutinas_Ejercicios_Adapter(items) { Rutinas_Ejercicios_Entity -> ItemClickOnRecycledView(Rutinas_Ejercicios_Entity) }
+            ListRutinas_Ejercicios_Adapter(items) { EjerciciosEntity -> ItemClickOnRecycledView(EjerciciosEntity) }
         //binding.reciclerEntrenamiento.adapter = ListRutinasAdapter(items) { getRutinaItem(it) }
 
 
     }
 }
 
-    fun ItemClickOnRecycledView(Rutinas_Ejercicios_Entity: Rutinas_Ejercicios_Entity) {
-        Toast.makeText(binding.reciclerEntrenamiento.context, "Cambio del ejercicio: "+ Rutinas_Ejercicios_Entity.id_ejerc.toString(), Toast.LENGTH_SHORT).show()
+    fun ItemClickOnRecycledView(EjerciciosEntity: EjerciciosEntity) {
+        Toast.makeText(binding.reciclerEntrenamiento.context, EjerciciosEntity.categoria , Toast.LENGTH_SHORT).show()
     }
 
 

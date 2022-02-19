@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.globaltrainingapp_11.R;
@@ -21,37 +21,16 @@ public final class FragmentEjerciciosBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final ImageView imageView4;
-
-  @NonNull
-  public final ImageView imageView5;
-
-  @NonNull
-  public final ImageView imageView6;
-
-  @NonNull
-  public final TextView txtAbs;
+  public final RecyclerView reciclerEjerciciosTodos;
 
   @NonNull
   public final TextView txtBiblioEjerc;
 
-  @NonNull
-  public final TextView txtDomi;
-
-  @NonNull
-  public final TextView txtFlexion;
-
-  private FragmentEjerciciosBinding(@NonNull FrameLayout rootView, @NonNull ImageView imageView4,
-      @NonNull ImageView imageView5, @NonNull ImageView imageView6, @NonNull TextView txtAbs,
-      @NonNull TextView txtBiblioEjerc, @NonNull TextView txtDomi, @NonNull TextView txtFlexion) {
+  private FragmentEjerciciosBinding(@NonNull FrameLayout rootView,
+      @NonNull RecyclerView reciclerEjerciciosTodos, @NonNull TextView txtBiblioEjerc) {
     this.rootView = rootView;
-    this.imageView4 = imageView4;
-    this.imageView5 = imageView5;
-    this.imageView6 = imageView6;
-    this.txtAbs = txtAbs;
+    this.reciclerEjerciciosTodos = reciclerEjerciciosTodos;
     this.txtBiblioEjerc = txtBiblioEjerc;
-    this.txtDomi = txtDomi;
-    this.txtFlexion = txtFlexion;
   }
 
   @Override
@@ -81,27 +60,9 @@ public final class FragmentEjerciciosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView4;
-      ImageView imageView4 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView4 == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView5;
-      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView5 == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView6;
-      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView6 == null) {
-        break missingId;
-      }
-
-      id = R.id.txtAbs;
-      TextView txtAbs = ViewBindings.findChildViewById(rootView, id);
-      if (txtAbs == null) {
+      id = R.id.reciclerEjerciciosTodos;
+      RecyclerView reciclerEjerciciosTodos = ViewBindings.findChildViewById(rootView, id);
+      if (reciclerEjerciciosTodos == null) {
         break missingId;
       }
 
@@ -111,20 +72,8 @@ public final class FragmentEjerciciosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtDomi;
-      TextView txtDomi = ViewBindings.findChildViewById(rootView, id);
-      if (txtDomi == null) {
-        break missingId;
-      }
-
-      id = R.id.txtFlexion;
-      TextView txtFlexion = ViewBindings.findChildViewById(rootView, id);
-      if (txtFlexion == null) {
-        break missingId;
-      }
-
-      return new FragmentEjerciciosBinding((FrameLayout) rootView, imageView4, imageView5,
-          imageView6, txtAbs, txtBiblioEjerc, txtDomi, txtFlexion);
+      return new FragmentEjerciciosBinding((FrameLayout) rootView, reciclerEjerciciosTodos,
+          txtBiblioEjerc);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

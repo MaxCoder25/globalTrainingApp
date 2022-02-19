@@ -5,15 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.globaltrainingapp_11.R
-import com.example.globaltrainingapp_11.databinding.FragmentRutinasBinding
 import com.example.globaltrainingapp_11.databinding.FragmentRutinasEntrenamientoListBinding
-import com.example.globaltrainingapp_11.databinding.FragmentRutinasListBinding
-import com.example.globaltrainingapp_11.entidades.CategoriaRutinasEntity
-import com.example.globaltrainingapp_11.entidades.RutinasEntity
-import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Entity
+import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
+import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_CrossRef
+import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones
+import com.squareup.picasso.Picasso
 
 
-class ListRutinas_Ejercicios_Adapter(val listRutinas_Ejercicios: List<Rutinas_Ejercicios_Entity>,private val onClickItemSelected: (Rutinas_Ejercicios_Entity) -> Unit) : RecyclerView.Adapter<Rutinas_EjerciciosViewHolder>() {
+class ListRutinas_Ejercicios_Adapter(val listRutinas_Ejercicios: List<EjerciciosEntity>, private val onClickItemSelected: (EjerciciosEntity) -> Unit) : RecyclerView.Adapter<Rutinas_EjerciciosViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Rutinas_EjerciciosViewHolder {
@@ -35,11 +34,11 @@ class Rutinas_EjerciciosViewHolder(Rutinas_EjerciciosViewHolder: View) : Recycle
     val binding = FragmentRutinasEntrenamientoListBinding.bind(Rutinas_EjerciciosViewHolder)
 //    val binding2 = FragmentRutinasBinding.bind(RutinasViewHolder)
 
-    fun render(item : Rutinas_Ejercicios_Entity , onClickItemSelected: (Rutinas_Ejercicios_Entity) -> Unit) {
+    fun render(item : EjerciciosEntity, onClickItemSelected: (EjerciciosEntity) -> Unit) {
 
-        binding.etiquetaEjercicio.text = "Ejercicio: "+item.id_ejerc.toString()
-        binding.etiquetaRepeticiones.text = "Reps: "+item.repeticiones.toString()
-        //binding.imgEjerc.añadirImagen = item.imagenjpg
+        binding.etiquetaEjercicio.text = item.nombreEjercicio
+         binding.etiquetaRepeticiones.text = "Reps: "+item.repeticiones
+        Picasso.get().load(item.imagen).into(binding.imgEjerc)
 
 
         itemView.setOnClickListener {

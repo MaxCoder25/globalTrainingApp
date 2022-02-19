@@ -44,12 +44,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__insertionAdapterOfRutinasEntity = new EntityInsertionAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `rutinas` (`id`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `rutinas` (`id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`) VALUES (nullif(?, 0),?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, RutinasEntity value) {
-        stmt.bindLong(1, value.getId());
+        stmt.bindLong(1, value.getId_rutinas());
         if (value.getNombre() == null) {
           stmt.bindNull(2);
         } else {
@@ -76,23 +76,23 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__deletionAdapterOfRutinasEntity = new EntityDeletionOrUpdateAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `rutinas` WHERE `id` = ?";
+        return "DELETE FROM `rutinas` WHERE `id_rutinas` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, RutinasEntity value) {
-        stmt.bindLong(1, value.getId());
+        stmt.bindLong(1, value.getId_rutinas());
       }
     };
     this.__updateAdapterOfRutinasEntity = new EntityDeletionOrUpdateAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR REPLACE `rutinas` SET `id` = ?,`nombre` = ?,`categoria` = ?,`nivel` = ?,`musculos` = ?,`tiempoMin` = ? WHERE `id` = ?";
+        return "UPDATE OR REPLACE `rutinas` SET `id_rutinas` = ?,`nombre` = ?,`categoria` = ?,`nivel` = ?,`musculos` = ?,`tiempoMin` = ? WHERE `id_rutinas` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, RutinasEntity value) {
-        stmt.bindLong(1, value.getId());
+        stmt.bindLong(1, value.getId_rutinas());
         if (value.getNombre() == null) {
           stmt.bindNull(2);
         } else {
@@ -114,7 +114,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           stmt.bindString(5, value.getMusculos());
         }
         stmt.bindLong(6, value.getTiempoMin());
-        stmt.bindLong(7, value.getId());
+        stmt.bindLong(7, value.getId_rutinas());
       }
     };
     this.__preparedStmtOfCleanDbRutinas = new SharedSQLiteStatement(__db) {
@@ -127,15 +127,14 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__preparedStmtOfDeleteRutinasById = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "DELETE FROM rutinas WHERE id = ?";
+        final String _query = "DELETE FROM rutinas WHERE id_rutinas = ?";
         return _query;
       }
     };
   }
 
   @Override
-  public Object insertRutinas(final RutinasEntity news,
-      final Continuation<? super Unit> continuation) {
+  public Object insertRutinas(final RutinasEntity news, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -148,12 +147,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object deleteOneRutinas(final RutinasEntity news,
-      final Continuation<? super Unit> continuation) {
+  public Object deleteOneRutinas(final RutinasEntity news, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -166,12 +164,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object updateRutinas(final RutinasEntity news,
-      final Continuation<? super Unit> continuation) {
+  public Object updateRutinas(final RutinasEntity news, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -184,11 +181,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object cleanDbRutinas(final Continuation<? super Unit> continuation) {
+  public Object cleanDbRutinas(final Continuation<? super Unit> arg0) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -203,12 +200,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __preparedStmtOfCleanDbRutinas.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg0);
   }
 
   @Override
-  public Object deleteRutinasById(final int idRutinas,
-      final Continuation<? super Unit> continuation) {
+  public Object deleteRutinasById(final int idRutinas, final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -225,11 +221,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __preparedStmtOfDeleteRutinasById.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object getAllRutinas(final Continuation<? super List<RutinasEntity>> continuation) {
+  public Object getAllRutinas(final Continuation<? super List<RutinasEntity>> arg0) {
     final String _sql = "SELECT * FROM rutinas";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -238,7 +234,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
       public List<RutinasEntity> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfIdRutinas = CursorUtil.getColumnIndexOrThrow(_cursor, "id_rutinas");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "nombre");
           final int _cursorIndexOfCategoria = CursorUtil.getColumnIndexOrThrow(_cursor, "categoria");
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
@@ -247,8 +243,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           final List<RutinasEntity> _result = new ArrayList<RutinasEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final RutinasEntity _item;
-            final int _tmpId;
-            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final int _tmpId_rutinas;
+            _tmpId_rutinas = _cursor.getInt(_cursorIndexOfIdRutinas);
             final String _tmpNombre;
             if (_cursor.isNull(_cursorIndexOfNombre)) {
               _tmpNombre = null;
@@ -275,7 +271,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _item = new RutinasEntity(_tmpId,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            _item = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
             _result.add(_item);
           }
           return _result;
@@ -284,13 +280,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg0);
   }
 
   @Override
-  public Object getRutinasById(final int idNews,
-      final Continuation<? super RutinasEntity> continuation) {
-    final String _sql = "SELECT * FROM rutinas WHERE id = ?";
+  public Object getRutinasById(final int idNews, final Continuation<? super RutinasEntity> arg1) {
+    final String _sql = "SELECT * FROM rutinas WHERE id_rutinas = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, idNews);
@@ -300,7 +295,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
       public RutinasEntity call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfIdRutinas = CursorUtil.getColumnIndexOrThrow(_cursor, "id_rutinas");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "nombre");
           final int _cursorIndexOfCategoria = CursorUtil.getColumnIndexOrThrow(_cursor, "categoria");
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
@@ -308,8 +303,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
           final RutinasEntity _result;
           if(_cursor.moveToFirst()) {
-            final int _tmpId;
-            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final int _tmpId_rutinas;
+            _tmpId_rutinas = _cursor.getInt(_cursorIndexOfIdRutinas);
             final String _tmpNombre;
             if (_cursor.isNull(_cursorIndexOfNombre)) {
               _tmpNombre = null;
@@ -336,7 +331,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _result = new RutinasEntity(_tmpId,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            _result = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
           } else {
             _result = null;
           }
@@ -346,7 +341,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   public static List<Class<?>> getRequiredConverters() {

@@ -9,7 +9,7 @@ interface RutinasDAO {
     @Query("SELECT * FROM rutinas")
     suspend fun getAllRutinas(): List<RutinasEntity>
 
-    @Query("SELECT * FROM rutinas WHERE id = :idNews")
+    @Query("SELECT * FROM rutinas WHERE id_rutinas = :idNews")
     suspend fun getRutinasById(idNews: Int): RutinasEntity
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -24,7 +24,7 @@ interface RutinasDAO {
     @Query("DELETE FROM rutinas")
     suspend fun cleanDbRutinas()
 
-    @Query("DELETE FROM rutinas WHERE id = :idRutinas")
+    @Query("DELETE FROM rutinas WHERE id_rutinas = :idRutinas")
     suspend fun deleteRutinasById(idRutinas: Int)
 
 }

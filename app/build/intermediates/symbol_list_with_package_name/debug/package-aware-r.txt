@@ -2714,6 +2714,7 @@ id campoPassword
 id campoPassword2
 id cancel_action
 id cancel_button
+id cardViewEjercicios
 id cardViewRutinas_Entrenamiento
 id carryVelocity
 id catRutinasRecyclerView
@@ -2794,12 +2795,15 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id etiquetaCategoria
 id etiquetaEjercicio
 id etiquetaMusculos
 id etiquetaNivel
 id etiquetaNombre
+id etiquetaNombre2
 id etiquetaRepeticiones
 id etiquetaTiempo
+id etiquetaTipoMov
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2839,10 +2843,8 @@ id ignoreRequest
 id image
 id imageView
 id imageView11
+id imageView2
 id imageView3
-id imageView4
-id imageView5
-id imageView6
 id img_Ejerc
 id immediateStop
 id included
@@ -2981,6 +2983,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id reciclerEjerciciosTodos
 id recicler_entrenamiento
 id rectangles
 id reverseSawtooth
@@ -3111,15 +3114,12 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id txtAbs
 id txtBiblioEjerc
 id txtCantidadCategoriaRutina
 id txtDesafio
 id txtDescripcionCategoriaRutina
-id txtDomi
 id txtEmail
 id txtEmail2
-id txtFlexion
 id txtIngreseSesion
 id txtIniSesion
 id txtNombre
@@ -3265,6 +3265,7 @@ layout fragment_asistente
 layout fragment_cat_rutinas
 layout fragment_categoria_rutinas_list
 layout fragment_ejercicios
+layout fragment_ejercicios_list
 layout fragment_inicio
 layout fragment_logros
 layout fragment_rutinas

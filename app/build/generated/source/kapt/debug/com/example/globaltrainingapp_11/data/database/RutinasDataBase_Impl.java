@@ -17,6 +17,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+import com.example.globaltrainingapp_11.data.database.dao.EjerciciosDAO;
+import com.example.globaltrainingapp_11.data.database.dao.EjerciciosDAO_Impl;
 import com.example.globaltrainingapp_11.data.database.dao.RutinasDAO;
 import com.example.globaltrainingapp_11.data.database.dao.RutinasDAO_Impl;
 import java.lang.Class;
@@ -34,19 +36,25 @@ import java.util.Set;
 public final class RutinasDataBase_Impl extends RutinasDataBase {
   private volatile RutinasDAO _rutinasDAO;
 
+  private volatile EjerciciosDAO _ejerciciosDAO;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `musculos` TEXT NOT NULL, `tiempoMin` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas` (`id_rutinas` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `musculos` TEXT NOT NULL, `tiempoMin` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ejercicios` (`id_ejercicios` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombreEjercicio` TEXT NOT NULL, `categoria` TEXT NOT NULL, `repeticiones` INTEGER NOT NULL, `tipo_movimiento` TEXT NOT NULL, `imagen` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas_ejercicios` (`id_rutinas` INTEGER NOT NULL, `id_ejercicios` INTEGER NOT NULL, PRIMARY KEY(`id_rutinas`, `id_ejercicios`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bfb493e5ca34b41294186bd0bd50b029')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'cde05bd68a078b4de80286c4a6b67af8')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `rutinas`");
+        _db.execSQL("DROP TABLE IF EXISTS `ejercicios`");
+        _db.execSQL("DROP TABLE IF EXISTS `rutinas_ejercicios`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -86,7 +94,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsRutinas = new HashMap<String, TableInfo.Column>(6);
-        _columnsRutinas.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRutinas.put("id_rutinas", new TableInfo.Column("id_rutinas", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("nombre", new TableInfo.Column("nombre", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("categoria", new TableInfo.Column("categoria", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("nivel", new TableInfo.Column("nivel", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -101,9 +109,37 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
                   + " Expected:\n" + _infoRutinas + "\n"
                   + " Found:\n" + _existingRutinas);
         }
+        final HashMap<String, TableInfo.Column> _columnsEjercicios = new HashMap<String, TableInfo.Column>(6);
+        _columnsEjercicios.put("id_ejercicios", new TableInfo.Column("id_ejercicios", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEjercicios.put("nombreEjercicio", new TableInfo.Column("nombreEjercicio", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEjercicios.put("categoria", new TableInfo.Column("categoria", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEjercicios.put("repeticiones", new TableInfo.Column("repeticiones", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEjercicios.put("tipo_movimiento", new TableInfo.Column("tipo_movimiento", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEjercicios.put("imagen", new TableInfo.Column("imagen", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysEjercicios = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesEjercicios = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoEjercicios = new TableInfo("ejercicios", _columnsEjercicios, _foreignKeysEjercicios, _indicesEjercicios);
+        final TableInfo _existingEjercicios = TableInfo.read(_db, "ejercicios");
+        if (! _infoEjercicios.equals(_existingEjercicios)) {
+          return new RoomOpenHelper.ValidationResult(false, "ejercicios(com.example.globaltrainingapp_11.entidades.EjerciciosEntity).\n"
+                  + " Expected:\n" + _infoEjercicios + "\n"
+                  + " Found:\n" + _existingEjercicios);
+        }
+        final HashMap<String, TableInfo.Column> _columnsRutinasEjercicios = new HashMap<String, TableInfo.Column>(2);
+        _columnsRutinasEjercicios.put("id_rutinas", new TableInfo.Column("id_rutinas", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRutinasEjercicios.put("id_ejercicios", new TableInfo.Column("id_ejercicios", "INTEGER", true, 2, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysRutinasEjercicios = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesRutinasEjercicios = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoRutinasEjercicios = new TableInfo("rutinas_ejercicios", _columnsRutinasEjercicios, _foreignKeysRutinasEjercicios, _indicesRutinasEjercicios);
+        final TableInfo _existingRutinasEjercicios = TableInfo.read(_db, "rutinas_ejercicios");
+        if (! _infoRutinasEjercicios.equals(_existingRutinasEjercicios)) {
+          return new RoomOpenHelper.ValidationResult(false, "rutinas_ejercicios(com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_CrossRef).\n"
+                  + " Expected:\n" + _infoRutinasEjercicios + "\n"
+                  + " Found:\n" + _existingRutinasEjercicios);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "bfb493e5ca34b41294186bd0bd50b029", "62af525f4174cda100788bae5245e534");
+    }, "cde05bd68a078b4de80286c4a6b67af8", "fa20ac2278a237a1cdfb1e12e033fd82");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -116,7 +152,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "rutinas");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "rutinas","ejercicios","rutinas_ejercicios");
   }
 
   @Override
@@ -126,6 +162,8 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `rutinas`");
+      _db.execSQL("DELETE FROM `ejercicios`");
+      _db.execSQL("DELETE FROM `rutinas_ejercicios`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -140,6 +178,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(RutinasDAO.class, RutinasDAO_Impl.getRequiredConverters());
+    _typeConvertersMap.put(EjerciciosDAO.class, EjerciciosDAO_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -165,6 +204,20 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
           _rutinasDAO = new RutinasDAO_Impl(this);
         }
         return _rutinasDAO;
+      }
+    }
+  }
+
+  @Override
+  public EjerciciosDAO ejerciciosDao() {
+    if (_ejerciciosDAO != null) {
+      return _ejerciciosDAO;
+    } else {
+      synchronized(this) {
+        if(_ejerciciosDAO == null) {
+          _ejerciciosDAO = new EjerciciosDAO_Impl(this);
+        }
+        return _ejerciciosDAO;
       }
     }
   }
