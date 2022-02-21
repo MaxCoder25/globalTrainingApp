@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnLogin.setOnClickListener()
+      /*  binding.btnLogin.setOnClickListener()
         {
             val access = UsuarioController().LoginUser(
                 binding.campoEmail.text.toString(),
@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
                 var intent = Intent(this,MainActivityNavDrawer::class.java)
                 startActivity(intent)
             }
-        }
+        }*/
 
         binding.txtIngreseSesion.setOnClickListener()
         {
