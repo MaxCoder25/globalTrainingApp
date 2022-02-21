@@ -2539,6 +2539,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_password_24
+drawable ic_splashglobaltraining
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -3242,6 +3243,7 @@ layout activity_entrenamiento
 layout activity_login
 layout activity_main
 layout activity_register
+layout activity_splash
 layout app_bar_main
 layout content_main
 layout custom_dialog

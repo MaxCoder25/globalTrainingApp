@@ -23,6 +23,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.GlobalTrainingApp_11" >
         <activity
+            android:name="com.example.globaltrainingapp_11.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />
         <activity
@@ -36,11 +45,6 @@
             android:exported="true"
             android:label="@string/title_activity_main_nav_drawer"
             android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <uses-library
