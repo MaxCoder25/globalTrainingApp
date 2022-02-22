@@ -10,10 +10,13 @@ data class EjerciciosEntity (
     @PrimaryKey(autoGenerate = true)
     val id_ejercicios: Int = 0,
     val nombreEjercicio: String,
+    val descripcion: String,
     val categoria: String,
-    val repeticiones: Int,
+    val nivel: String,
     val tipo_movimiento: String,
-    val imagen : String
+    val repeticiones: Int,
+    val imagen : String,
+    val video: String
     ){
 
 
