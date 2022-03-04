@@ -13,7 +13,6 @@ import com.example.globaltrainingapp_11.controladores.adapters.ListRutinasAdapte
 import com.example.globaltrainingapp_11.databinding.FragmentRutinasBinding
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
 import com.example.globaltrainingapp_11.logica.RutinasBL
-import com.example.globaltrainingapp_11.logica.UsuarioBL
 import com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
 import com.example.globaltrainingapp_11.utils.EnumRutinas
 import com.google.android.material.tabs.TabLayout
@@ -28,6 +27,9 @@ class RutinasFragment : Fragment() {
 
     private lateinit var binding: FragmentRutinasBinding
     private var category: String = EnumRutinas.SelectionCategoryRutinas.FULL_BODY.toString()
+
+
+
 
 
 

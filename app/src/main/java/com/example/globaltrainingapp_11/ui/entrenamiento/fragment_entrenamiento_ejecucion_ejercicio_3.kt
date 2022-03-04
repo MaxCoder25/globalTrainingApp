@@ -62,12 +62,10 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
                 val fragmentManager: FragmentManager? = parentFragmentManager
                 val fragmentTransaction = fragmentManager!!.beginTransaction()
 
-
                 fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
                 fragmentTransaction.addToBackStack(null)
-               // fragmentTransaction.commit()
-                //agregue opara que no salga error java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
-                fragmentTransaction.commitAllowingStateLoss();
+                fragmentTransaction.commit()
+
             }
         }
         timer.start()
@@ -95,8 +93,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
                     fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
                     fragmentTransaction.addToBackStack(null)
-                   // fragmentTransaction.commit()
-                    fragmentTransaction.commitAllowingStateLoss();
+                    fragmentTransaction.commit()
                 }
 
 
@@ -124,8 +121,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
             fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
             fragmentTransaction.addToBackStack(null)
-            //fragmentTransaction.commit()
-            fragmentTransaction.commitAllowingStateLoss();
+            fragmentTransaction.commit()
+
 
 
         }
