@@ -32,6 +32,9 @@
             android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.globaltrainingapp_11.presentacion.Entrenamiento_2_Activity"
+            android:exported="false" />
+        <activity
             android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
             android:exported="true"
             android:label="@string/title_activity_main_nav_drawer"

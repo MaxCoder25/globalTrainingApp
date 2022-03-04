@@ -1,7 +1,10 @@
 package com.example.globaltrainingapp_11.casosUso
 
+import android.os.Bundle
+import android.os.Parcelable
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
+import com.example.globaltrainingapp_11.ui.entrenamiento.fragment_entrenamiento_ejecucion_ejercicio
 import com.example.globaltrainingapp_11.utils.globalTrainingApp
 
 class EjerciciosUseCase {

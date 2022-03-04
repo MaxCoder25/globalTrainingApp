@@ -35,6 +35,9 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final TextInputEditText campoPassword2;
 
   @NonNull
+  public final TextInputEditText campoPassword3;
+
+  @NonNull
   public final ImageView imageView11;
 
   @NonNull
@@ -55,17 +58,22 @@ public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   public final TextView txtpassword;
 
+  @NonNull
+  public final TextView txtpassword2;
+
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnRegistrarse, @NonNull TextInputEditText campoEmail2,
       @NonNull TextInputEditText campoNombre, @NonNull TextInputEditText campoPassword2,
-      @NonNull ImageView imageView11, @NonNull ConstraintLayout loginPrincipal,
-      @NonNull TextView txtEmail2, @NonNull TextView txtIniSesion, @NonNull TextView txtNombre,
-      @NonNull TextView txtRegistrese, @NonNull TextView txtpassword) {
+      @NonNull TextInputEditText campoPassword3, @NonNull ImageView imageView11,
+      @NonNull ConstraintLayout loginPrincipal, @NonNull TextView txtEmail2,
+      @NonNull TextView txtIniSesion, @NonNull TextView txtNombre, @NonNull TextView txtRegistrese,
+      @NonNull TextView txtpassword, @NonNull TextView txtpassword2) {
     this.rootView = rootView;
     this.btnRegistrarse = btnRegistrarse;
     this.campoEmail2 = campoEmail2;
     this.campoNombre = campoNombre;
     this.campoPassword2 = campoPassword2;
+    this.campoPassword3 = campoPassword3;
     this.imageView11 = imageView11;
     this.loginPrincipal = loginPrincipal;
     this.txtEmail2 = txtEmail2;
@@ -73,6 +81,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
     this.txtNombre = txtNombre;
     this.txtRegistrese = txtRegistrese;
     this.txtpassword = txtpassword;
+    this.txtpassword2 = txtpassword2;
   }
 
   @Override
@@ -126,6 +135,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.campoPassword3;
+      TextInputEditText campoPassword3 = ViewBindings.findChildViewById(rootView, id);
+      if (campoPassword3 == null) {
+        break missingId;
+      }
+
       id = R.id.imageView11;
       ImageView imageView11 = ViewBindings.findChildViewById(rootView, id);
       if (imageView11 == null) {
@@ -164,9 +179,15 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtpassword2;
+      TextView txtpassword2 = ViewBindings.findChildViewById(rootView, id);
+      if (txtpassword2 == null) {
+        break missingId;
+      }
+
       return new ActivityRegisterBinding((ConstraintLayout) rootView, btnRegistrarse, campoEmail2,
-          campoNombre, campoPassword2, imageView11, loginPrincipal, txtEmail2, txtIniSesion,
-          txtNombre, txtRegistrese, txtpassword);
+          campoNombre, campoPassword2, campoPassword3, imageView11, loginPrincipal, txtEmail2,
+          txtIniSesion, txtNombre, txtRegistrese, txtpassword, txtpassword2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

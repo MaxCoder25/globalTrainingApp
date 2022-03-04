@@ -2584,6 +2584,7 @@ drawable notify_panel_notification_icon_bg
 drawable plancha1
 drawable rutinaejem1
 drawable side_nav_bar
+drawable spartan
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2701,7 +2702,12 @@ id btnAdelante2
 id btnEmpezarEntrenamiento
 id btnLogin
 id btnRegistrarse
+id btn_Adelante
 id btn_CambioEjercicio
+id btn_FinEjercicio
+id btn_MenuPrincipal2
+id btn_Saltar
+id btn_tecnica
 id button2
 id buttonPanel
 id cache_measures
@@ -2712,6 +2718,7 @@ id campoEmail2
 id campoNombre
 id campoPassword
 id campoPassword2
+id campoPassword3
 id cancel_action
 id cancel_button
 id cardViewEjercicios
@@ -2818,6 +2825,7 @@ id flip
 id floating
 id floatingActionButton
 id forever
+id fragmentContainerView
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2846,6 +2854,8 @@ id imageView11
 id imageView2
 id imageView3
 id img_Ejerc
+id img_Ejerc_Frag
+id img_FinEntrenamiento2
 id immediateStop
 id included
 id info
@@ -2983,6 +2993,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id reciclerEjerc_2doUso
+id reciclerEjerc_3erUso
 id reciclerEjerciciosTodos
 id recicler_entrenamiento
 id rectangles
@@ -3115,6 +3127,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id txtBiblioEjerc
+id txtCambioEjerc
 id txtCantidadCategoriaRutina
 id txtDesafio
 id txtDescripcionCategoriaRutina
@@ -3127,9 +3140,24 @@ id txtNombreCategoriaRutina
 id txtOlvidoPassword
 id txtRegistrarse
 id txtRegistrese
+id txtSiguientEjerc
+id txtSiguientEjerc2
 id txtTitulo1
 id txtTitulo2
+id txt_10Mas
+id txt_10Mas_3
+id txt_10Menos
+id txt_10Menos_3
+id txt_DESCANSO
+id txt_NombreEjerc
+id txt_Preparate
+id txt_Reps
+id txt_mensajeMotivador2
+id txt_terminaste2
+id txt_tiempoDescanso
+id txt_tiempoPreparate
 id txtpassword
+id txtpassword2
 id unchecked
 id uniform
 id unlabeled
@@ -3239,6 +3267,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_entrenamiento
+layout activity_entrenamiento_2
 layout activity_login
 layout activity_main
 layout activity_register
@@ -3266,6 +3295,10 @@ layout fragment_cat_rutinas
 layout fragment_categoria_rutinas_list
 layout fragment_ejercicios
 layout fragment_ejercicios_list
+layout fragment_entrenamiento_ejecucion_ejercicio
+layout fragment_entrenamiento_ejecucion_ejercicio_2
+layout fragment_entrenamiento_ejecucion_ejercicio_3
+layout fragment_fin_entrenamiento_2
 layout fragment_inicio
 layout fragment_logros
 layout fragment_rutinas
