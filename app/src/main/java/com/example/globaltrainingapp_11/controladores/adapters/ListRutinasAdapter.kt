@@ -29,7 +29,6 @@ class ListRutinasAdapter(val listRutinas: List<RutinasEntity>,private val onClic
 class RutinasViewHolder(RutinasViewHolder: View) : RecyclerView.ViewHolder(RutinasViewHolder) {
 
     val binding = FragmentRutinasListBinding.bind(RutinasViewHolder)
-//    val binding2 = FragmentRutinasBinding.bind(RutinasViewHolder)
 
     fun render(item : RutinasEntity , onClickItemSelected: (RutinasEntity) -> Unit) {
 
@@ -46,8 +45,4 @@ class RutinasViewHolder(RutinasViewHolder: View) : RecyclerView.ViewHolder(Rutin
 
 
     }
-   /* fun render2(item : CategoriaRutinasEntity) {
-
-        binding2.txtTitulo2.text=item.nombre
-    }*/
 }

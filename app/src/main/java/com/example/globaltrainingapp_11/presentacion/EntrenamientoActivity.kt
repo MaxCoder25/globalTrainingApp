@@ -40,20 +40,16 @@ class EntrenamientoActivity : AppCompatActivity() {
                 loadRutinas_Ejercicios(n!!.id_rutinas)
             }
 
-       //     binding.floatingActionButtonItem.setOnClickListener {
-           //     saveFavNews(n)
-          //  }
 
             binding.btnEmpezarEntrenamiento.setOnClickListener(){
                 var i = Intent(this, Entrenamiento_2_Activity::class.java)
                 val jsonString = Json.encodeToString(n)
                 i.putExtra("rutina", jsonString)
+
                 startActivity(i)
 
 
 
-             //   var intent = Intent(this, Entrenamiento_2_Activity::class.java)
-               // startActivity(intent)
 
 
             }
@@ -64,10 +60,10 @@ class EntrenamientoActivity : AppCompatActivity() {
         }
 
     private fun getRutinaItem(EjerciciosEntity: List<EjerciciosEntity>) {
-      //  var i = Intent(activity, Entrenamiento_2_Activity::class.java)
+        var i = Intent(this, Entrenamiento_2_Activity::class.java)
         val jsonString = Json.encodeToString(EjerciciosEntity)
-        //i.putExtra("rutina", jsonString)
-        //startActivity(i)
+        i.putExtra("rutina", jsonString)
+        startActivity(i)
     }
 
         private fun loadRutinas(rutinasEntity: RutinasEntity) {

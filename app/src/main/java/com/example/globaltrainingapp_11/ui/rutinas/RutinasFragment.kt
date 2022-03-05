@@ -24,14 +24,9 @@ import kotlinx.serialization.json.Json
 
 class RutinasFragment : Fragment() {
 
-    //private lateinit var rutinasViewModel: RutinasViewModel
-   // private var _binding: FragmentRutinasBinding? = null
+
     private lateinit var binding: FragmentRutinasBinding
     private var category: String = EnumRutinas.SelectionCategoryRutinas.FULL_BODY.toString()
-    private var page: Int = 1
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-  //  private val binding get() = _binding!!
 
 
 
@@ -43,7 +38,7 @@ class RutinasFragment : Fragment() {
     ): View? {
 
         binding = FragmentRutinasBinding.inflate(inflater, container, false)
-       //loadListRutinas( RutinasBL().getRutinasList())
+
 
 
 
@@ -52,8 +47,6 @@ class RutinasFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        // binding.progressBar.visibility = View.INVISIBLE
-        // loadListCatRutinas( CategoriaRutinasBL().getCategoriaRutinasList())
     }
 
 
@@ -75,42 +68,11 @@ class RutinasFragment : Fragment() {
             }
         )
 
-      /*  binding.listRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                if (!recyclerView.canScrollVertically(1)) {
-                    page += 1
-                    loadNews(category, page)
-                }
-            }
-        })
-
-        binding.swipeRefresh.setOnRefreshListener {
-            loadNews(category, page)
-            binding.swipeRefresh.isRefreshing = false
-        }*/
     }
 
-
-
-
-/*Original
-    private fun loadListRutinas(lstRutinas: List<RutinasEntity>) {
-        //Para listar las categoria de rutinas (recycler view)
-        //Ya no es necesario porque le doy como parametro esa misma lista
-        //  val lstCatRutinas = CategoriaRutinasBL().getCategoriaRutinasList()
-        binding.RutinasRecyclerView.layoutManager =
-            LinearLayoutManager(binding.RutinasRecyclerView.context)
-
-        binding.RutinasRecyclerView.adapter = ListRutinasAdapter(lstRutinas) { RutinasEntity -> ItemClickOnRecycledView(RutinasEntity) }
-        //binding.RutinasRecyclerView.adapter = ListRutinasAdapter(lstRutinas) { getRutinaItem(it) }
-
-    }
-*/
 
 
     private fun loadListRutinas(category: String, page: Int) {
-        // binding.RutinasRecyclerView.clearAnimation()
 
 
         lifecycleScope.launch(Dispatchers.Main)

@@ -100,8 +100,9 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
 
                 fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
                 fragmentTransaction.addToBackStack(null)
-                fragmentTransaction.commit()
 
+             //   fragmentTransaction.commit()
+                fragmentTransaction.commitAllowingStateLoss();
 
             }
 
@@ -148,16 +149,13 @@ private fun loadListaEjercicios(id_Rutina: Int){
 
         val fragment2 = frag_A_Enviar3
 
-
-       // Thread.sleep(5000)
-
         val fragmentManager: FragmentManager? = parentFragmentManager
         val fragmentTransaction = fragmentManager!!.beginTransaction()
 
         fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
         fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.commit()
-
+       // fragmentTransaction.commit()
+        fragmentTransaction.commitAllowingStateLoss();
     }
 }
     private fun loadRutinas_Ejercicios(id_Rutina: Int) {
