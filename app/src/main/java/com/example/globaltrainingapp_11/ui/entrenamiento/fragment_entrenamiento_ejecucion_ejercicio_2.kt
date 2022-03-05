@@ -66,7 +66,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                 fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
                 fragmentTransaction.addToBackStack(null)
-                fragmentTransaction.commit()
+                //fragmentTransaction.commit()
+                fragmentTransaction.commitAllowingStateLoss();
 
             }
 
@@ -83,7 +84,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                     fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
                     fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+                   // fragmentTransaction.commit()
+                    fragmentTransaction.commitAllowingStateLoss();
 
                 }
             }
@@ -111,7 +113,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                     fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
                     //fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+                   // fragmentTransaction.commit()
+                    fragmentTransaction.commitAllowingStateLoss();
 
                 }
 
