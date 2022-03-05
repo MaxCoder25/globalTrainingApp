@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.entrenamiento.fragment_fin_entrenamiento2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_FinEntrenamiento2"
+            android:layout_width="330dp"
+            android:layout_height="231dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="88dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_terminaste2"
+            app:srcCompat="@drawable/spartan" />
+
+        <TextView
+            android:id="@+id/txt_terminaste2"
+            android:layout_width="274dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="84dp"
+            android:gravity="center_horizontal"
+            android:text="TERMINASTE EL ENTRENAMIENTO, ¡BIEN HECHO!"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_mensajeMotivador2"
+            android:layout_width="384dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="136dp"
+            android:gravity="center_horizontal"
+            android:text="No importa lo lento que vayas mientras no te detengas    -Confucio"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_MenuPrincipal2" />
+
+        <Button
+            android:id="@+id/btn_MenuPrincipal2"
+            android:layout_width="161dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="252dp"
+            android:text="Volver al Menu Principal"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_FinEntrenamiento2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
