@@ -1,17 +1,17 @@
 package com.example.globaltrainingapp_11.casosUso
 
-import com.example.globaltrainingapp_11.entidades.Usuario
+import com.example.globaltrainingapp_11.entidades.Usuarios
 
 class UsuarioUseCase {
 
-    private val usuariosDb = listOf<Usuario>(
-        Usuario("ADMIN", "admin"),
-        Usuario("MAC", "mac123"),
+  /*  private val usuariosDb = listOf<Usuarios>(
+        Usuarios("ADMIN", "admin"),
+        Usuarios("MAC", "mac123"),
 
     )
 
-    fun getUserNameAndPass(name: String, pass: String): Usuario {
-        var us = Usuario()
+    fun getUserNameAndPass(name: String, pass: String): Usuarios {
+        var us = Usuarios()
 
         usuariosDb.forEach() {
             println(it)
@@ -21,6 +21,6 @@ class UsuarioUseCase {
         }
         return us
     }
-
+*/
 
 }
