@@ -23,7 +23,7 @@ class TecnicaYoutubeActivity : YouTubeBaseActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+       super.onCreate(savedInstanceState)
         //binding = ActivityTecnicaEjercYoutubeBinding.inflate(layoutInflater)
 
         setContentView(R.layout.activity_tecnica_ejerc_youtube)
