@@ -48,122 +48,127 @@
 29-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:22:9-32
 30        android:theme="@style/Theme.GlobalTrainingApp_11" >
 30-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:9-58
-31
-32        <!--
-33        <activity
-34            android:name="com.example.globaltrainingapp_11.SplashActivity"
-35            android:exported="true">
-36            <intent-filter>
-37                <action android:name="android.intent.action.MAIN" />
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-40            </intent-filter>
-41        </activity>
-42        -->
+31        <activity
+31-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:24:9-32:20
+32            android:name="com.example.globaltrainingapp_11.SplashActivity"
+32-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:13-75
+33            android:exported="true" >
+33-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:26:13-36
+34            <intent-filter>
+34-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:13-31:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:17-69
+35-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:17-77
+37-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity
+40-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:33:9-35:40
+41            android:name="com.example.globaltrainingapp_11.TecnicaYoutubeActivity"
+41-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:34:13-83
+42            android:exported="false" />
+42-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:35:13-37
 43        <activity
-43-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:33:9-35:40
-44            android:name="com.example.globaltrainingapp_11.TecnicaYoutubeActivity"
-44-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:34:13-83
+43-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:37:9-39:40
+44            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
+44-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:38:13-87
 45            android:exported="false" />
-45-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:35:13-37
+45-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:13-37
 46        <activity
-46-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:37:9-39:40
-47            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
-47-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:38:13-87
+46-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:40:9-42:40
+47            android:name="com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity"
+47-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:41:13-95
 48            android:exported="false" />
-48-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:13-37
+48-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:42:13-37
 49        <activity
-49-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:40:9-42:40
-50            android:name="com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity"
-50-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:41:13-95
+49-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:43:9-45:40
+50            android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
+50-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:44:13-90
 51            android:exported="false" />
-51-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:42:13-37
+51-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:45:13-37
 52        <activity
-52-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:43:9-45:40
-53            android:name="com.example.globaltrainingapp_11.presentacion.RegisterActivity"
-53-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:44:13-90
+52-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:46:9-48:40
+53            android:name="com.example.globaltrainingapp_11.presentacion.Entrenamiento_2_Activity"
+53-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:47:13-98
 54            android:exported="false" />
-54-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:45:13-37
+54-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:48:13-37
 55        <activity
-55-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:46:9-48:40
-56            android:name="com.example.globaltrainingapp_11.presentacion.Entrenamiento_2_Activity"
-56-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:47:13-98
-57            android:exported="false" />
-57-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:48:13-37
-58        <activity
-58-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:49:9-59:20
-59            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
-59-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:13-82
-60            android:exported="true"
-60-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:51:13-36
-61            android:label="@string/title_activity_main_nav_drawer"
-61-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:52:13-67
-62            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
-62-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:53:13-74
-63            <intent-filter>
-63-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:54:13-58:29
-64                <action android:name="android.intent.action.MAIN" />
-64-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:17-69
-64-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:25-66
-65
-66                <category android:name="android.intent.category.LAUNCHER" />
-66-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:17-77
-66-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:27-74
-67            </intent-filter>
-68        </activity>
-69
+55-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:49:9-59:20
+56            android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
+56-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:13-82
+57            android:exported="true"
+57-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:51:13-36
+58            android:label="@string/title_activity_main_nav_drawer"
+58-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:52:13-67
+59            android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
+59-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:53:13-74
+60            <intent-filter>
+60-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:13-31:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:17-69
+61-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:17-77
+63-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <uses-library
+67-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:9-63:40
+68            android:name="androidx.window.extensions"
+68-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:62:13-54
+69            android:required="false" />
+69-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:63:13-37
 70        <uses-library
-70-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:9-63:40
-71            android:name="androidx.window.extensions"
-71-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:62:13-54
+70-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:64:9-66:40
+71            android:name="androidx.window.sidecar"
+71-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:65:13-51
 72            android:required="false" />
-72-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:63:13-37
-73        <uses-library
-73-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:64:9-66:40
-74            android:name="androidx.window.sidecar"
-74-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:65:13-51
-75            android:required="false" />
-75-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:66:13-37
-76
-77        <provider
-77-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:68:9-71:40
-78            android:name="com.squareup.picasso.PicassoProvider"
-78-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:69:13-64
-79            android:authorities="com.example.globaltrainingapp_11.com.squareup.picasso"
-79-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:70:13-88
-80            android:exported="false" />
-80-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:71:13-37
-81
-82        <service
-82-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:73:9-76:40
-83            android:name="androidx.room.MultiInstanceInvalidationService"
-83-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:74:13-74
-84            android:directBootAware="true"
-84-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:75:13-43
-85            android:exported="false" />
-85-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:76:13-37
-86
-87        <provider
-87-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:78:9-88:20
-88            android:name="androidx.startup.InitializationProvider"
-88-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:79:13-67
-89            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
-89-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:80:14-85
-90            android:exported="false" >
-90-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:81:13-37
+72-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:66:13-37
+73
+74        <provider
+74-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:68:9-71:40
+75            android:name="com.squareup.picasso.PicassoProvider"
+75-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:69:13-64
+76            android:authorities="com.example.globaltrainingapp_11.com.squareup.picasso"
+76-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:70:13-88
+77            android:exported="false" />
+77-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:71:13-37
+78
+79        <service
+79-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:73:9-76:40
+80            android:name="androidx.room.MultiInstanceInvalidationService"
+80-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:74:13-74
+81            android:directBootAware="true"
+81-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:75:13-43
+82            android:exported="false" />
+82-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:76:13-37
+83
+84        <provider
+84-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:78:9-88:20
+85            android:name="androidx.startup.InitializationProvider"
+85-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:79:13-67
+86            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
+86-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:80:14-85
+87            android:exported="false" >
+87-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:81:13-37
+88            <meta-data
+88-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:82:13-84:52
+89                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+89-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:83:17-75
+90                android:value="androidx.startup" />
+90-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:84:17-49
 91            <meta-data
-91-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:82:13-84:52
-92                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-92-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:83:17-75
+91-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:85:13-87:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:86:17-78
 93                android:value="androidx.startup" />
-93-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:84:17-49
-94            <meta-data
-94-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:85:13-87:52
-95                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-95-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:86:17-78
-96                android:value="androidx.startup" />
-96-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:87:17-49
-97        </provider>
-98    </application>
-99
-100</manifest>
+93-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:87:17-49
+94        </provider>
+95    </application>
+96
+97</manifest>

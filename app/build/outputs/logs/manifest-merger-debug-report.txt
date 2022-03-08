@@ -296,6 +296,22 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Usuario\.gradle\ca
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:9-58
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:13:9-48
+activity#com.example.globaltrainingapp_11.SplashActivity
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:24:9-32:20
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:25:13-75
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:30:27-74
 activity#com.example.globaltrainingapp_11.TecnicaYoutubeActivity
 ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:33:9-35:40
 	android:exported
@@ -336,16 +352,6 @@ ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:53:13-74
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:13-82
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:54:13-58:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:17-69
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:17-77
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:27-74
 uses-library#androidx.window.extensions
 ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:9-63:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
