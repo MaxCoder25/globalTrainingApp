@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
+import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio3Binding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
@@ -64,12 +65,12 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
                 fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
                 fragmentTransaction.addToBackStack(null)
-                fragmentTransaction.commit()
+                fragmentTransaction.commitAllowingStateLoss()
 
             }
         }
         timer.start()
-//se añade el nuevo timer pero el anterior sigue
+     //se añade el nuevo timer pero el anterior sigue
         binding.txt10Mas3.setOnClickListener() {
          //solo se cancela el cambio ed la etiqueta tiempo del primer timer
                // timer.cancel()
@@ -93,7 +94,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
                     fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
                     fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+                    fragmentTransaction.commitAllowingStateLoss()
                 }
 
 
@@ -121,7 +122,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
             fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
             fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+            fragmentTransaction.commitAllowingStateLoss()
 
 
 
@@ -158,8 +159,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
             LinearLayoutManager(binding. reciclerEjerc3erUso.context)
 
         binding. reciclerEjerc3erUso.adapter =
-            listaEjerc?.let { ListRutinas_Ejercicios_Adapter(it) { EjerciciosEntity -> ItemClickOnRecycledView(EjerciciosEntity) } }
-
+        listaEjerc?.let { ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc(it) }
 
 
 

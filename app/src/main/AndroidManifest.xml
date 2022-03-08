@@ -22,6 +22,19 @@
         android:testOnly="true"
         android:theme="@style/Theme.GlobalTrainingApp_11" >
         <activity
+            android:name="com.example.globaltrainingapp_11.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.globaltrainingapp_11.TecnicaYoutubeActivity"
+            android:exported="false" />
+
+        <activity
             android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />
         <activity
@@ -64,7 +77,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.globaltrainingapp_11.androidx-startup"
+             android:authorities="com.example.globaltrainingapp_11.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -74,5 +87,13 @@
                 android:value="androidx.startup" />
         </provider>
     </application>
+
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
 
 </manifest>

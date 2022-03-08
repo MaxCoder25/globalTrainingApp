@@ -11,4 +11,7 @@ class EjerciciosBL {
         return EjerciciosUseCase().getAllEjercicios()
     }
 
+    suspend fun getEjerciciosByTipoMovimiento(TipoMovimiento: String): List<EjerciciosEntity> {
+        return EjerciciosUseCase().getEjerciciosByTipoMovimiento(TipoMovimiento)
+    }
 }

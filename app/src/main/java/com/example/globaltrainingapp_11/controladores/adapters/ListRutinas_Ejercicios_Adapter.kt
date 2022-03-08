@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.databinding.FragmentRutinasEntrenamientoListBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
-import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_CrossRef
-import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones
 import com.squareup.picasso.Picasso
 
 
@@ -32,23 +30,21 @@ class ListRutinas_Ejercicios_Adapter(val listRutinas_Ejercicios: List<Ejercicios
 class Rutinas_EjerciciosViewHolder(Rutinas_EjerciciosViewHolder: View) : RecyclerView.ViewHolder(Rutinas_EjerciciosViewHolder) {
 
     val binding = FragmentRutinasEntrenamientoListBinding.bind(Rutinas_EjerciciosViewHolder)
-//    val binding2 = FragmentRutinasBinding.bind(RutinasViewHolder)
 
-    fun render(item : EjerciciosEntity, onClickItemSelected: (EjerciciosEntity) -> Unit) {
+    fun render(item: EjerciciosEntity, onClickItemSelected: (EjerciciosEntity) -> Unit) {
 
         binding.etiquetaEjercicio.text = item.nombreEjercicio
-         binding.etiquetaRepeticiones.text = "Reps: "+item.repeticiones
+        binding.etiquetaRepeticiones.text = "Reps: " + item.repeticiones
         Picasso.get().load(item.imagen).into(binding.imgEjerc)
 
 
-        itemView.setOnClickListener {
+        binding.btnCambioEjercicio.setOnClickListener {
             onClickItemSelected(item)
         }
 
 
     }
-   /* fun render2(item : CategoriaRutinasEntity) {
 
-        binding2.txtTitulo2.text=item.nombre
-    }*/
+
+
 }

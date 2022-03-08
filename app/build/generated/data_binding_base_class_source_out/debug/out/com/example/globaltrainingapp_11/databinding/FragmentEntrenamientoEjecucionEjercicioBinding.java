@@ -22,34 +22,25 @@ public final class FragmentEntrenamientoEjecucionEjercicioBinding implements Vie
   private final FrameLayout rootView;
 
   @NonNull
-  public final Button btnAdelante;
+  public final Button btnEmpezar;
 
   @NonNull
   public final RecyclerView reciclerEjerc2doUso;
 
   @NonNull
-  public final TextView txt10Mas;
-
-  @NonNull
-  public final TextView txt10Menos;
+  public final TextView txtCambioEjercicio;
 
   @NonNull
   public final TextView txtPreparate;
 
-  @NonNull
-  public final TextView txtTiempoPreparate;
-
   private FragmentEntrenamientoEjecucionEjercicioBinding(@NonNull FrameLayout rootView,
-      @NonNull Button btnAdelante, @NonNull RecyclerView reciclerEjerc2doUso,
-      @NonNull TextView txt10Mas, @NonNull TextView txt10Menos, @NonNull TextView txtPreparate,
-      @NonNull TextView txtTiempoPreparate) {
+      @NonNull Button btnEmpezar, @NonNull RecyclerView reciclerEjerc2doUso,
+      @NonNull TextView txtCambioEjercicio, @NonNull TextView txtPreparate) {
     this.rootView = rootView;
-    this.btnAdelante = btnAdelante;
+    this.btnEmpezar = btnEmpezar;
     this.reciclerEjerc2doUso = reciclerEjerc2doUso;
-    this.txt10Mas = txt10Mas;
-    this.txt10Menos = txt10Menos;
+    this.txtCambioEjercicio = txtCambioEjercicio;
     this.txtPreparate = txtPreparate;
-    this.txtTiempoPreparate = txtTiempoPreparate;
   }
 
   @Override
@@ -80,9 +71,9 @@ public final class FragmentEntrenamientoEjecucionEjercicioBinding implements Vie
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_Adelante;
-      Button btnAdelante = ViewBindings.findChildViewById(rootView, id);
-      if (btnAdelante == null) {
+      id = R.id.btn_Empezar;
+      Button btnEmpezar = ViewBindings.findChildViewById(rootView, id);
+      if (btnEmpezar == null) {
         break missingId;
       }
 
@@ -92,15 +83,9 @@ public final class FragmentEntrenamientoEjecucionEjercicioBinding implements Vie
         break missingId;
       }
 
-      id = R.id.txt_10Mas;
-      TextView txt10Mas = ViewBindings.findChildViewById(rootView, id);
-      if (txt10Mas == null) {
-        break missingId;
-      }
-
-      id = R.id.txt_10Menos;
-      TextView txt10Menos = ViewBindings.findChildViewById(rootView, id);
-      if (txt10Menos == null) {
+      id = R.id.txt_cambioEjercicio;
+      TextView txtCambioEjercicio = ViewBindings.findChildViewById(rootView, id);
+      if (txtCambioEjercicio == null) {
         break missingId;
       }
 
@@ -110,14 +95,8 @@ public final class FragmentEntrenamientoEjecucionEjercicioBinding implements Vie
         break missingId;
       }
 
-      id = R.id.txt_tiempoPreparate;
-      TextView txtTiempoPreparate = ViewBindings.findChildViewById(rootView, id);
-      if (txtTiempoPreparate == null) {
-        break missingId;
-      }
-
-      return new FragmentEntrenamientoEjecucionEjercicioBinding((FrameLayout) rootView, btnAdelante,
-          reciclerEjerc2doUso, txt10Mas, txt10Menos, txtPreparate, txtTiempoPreparate);
+      return new FragmentEntrenamientoEjecucionEjercicioBinding((FrameLayout) rootView, btnEmpezar,
+          reciclerEjerc2doUso, txtCambioEjercicio, txtPreparate);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

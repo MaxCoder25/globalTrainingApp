@@ -170,7 +170,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
 
   @Override
   public Object insertEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -183,12 +183,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object deleteOneEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -201,12 +201,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object updateEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -219,11 +219,11 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object cleanDbEjercicios(final Continuation<? super Unit> arg0) {
+  public Object cleanDbEjercicios(final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -238,12 +238,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __preparedStmtOfCleanDbEjercicios.release(_stmt);
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
   public Object deleteEjerciciosById(final int idEjercicios,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -260,11 +260,11 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __preparedStmtOfDeleteEjerciciosById.release(_stmt);
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object getAllEjercicios(final Continuation<? super List<EjerciciosEntity>> arg0) {
+  public Object getAllEjercicios(final Continuation<? super List<EjerciciosEntity>> continuation) {
     final String _sql = "SELECT * FROM ejercicios";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -340,12 +340,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
   public Object getEjerciciosById(final int idEjercicio,
-      final Continuation<? super EjerciciosEntity> arg1) {
+      final Continuation<? super EjerciciosEntity> continuation) {
     final String _sql = "SELECT * FROM ejercicios WHERE id_ejercicios = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -423,12 +423,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object getEjerciciosByCategory(final String EjerciciosCategory,
-      final Continuation<? super EjerciciosEntity> arg1) {
+      final Continuation<? super List<EjerciciosEntity>> continuation) {
     final String _sql = "SELECT * FROM ejercicios WHERE categoria = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -438,9 +438,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
       _statement.bindString(_argIndex, EjerciciosCategory);
     }
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
-    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<EjerciciosEntity>() {
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<EjerciciosEntity>>() {
       @Override
-      public EjerciciosEntity call() throws Exception {
+      public List<EjerciciosEntity> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfIdEjercicios = CursorUtil.getColumnIndexOrThrow(_cursor, "id_ejercicios");
@@ -452,8 +452,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
           final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
-          final EjerciciosEntity _result;
-          if(_cursor.moveToFirst()) {
+          final List<EjerciciosEntity> _result = new ArrayList<EjerciciosEntity>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final EjerciciosEntity _item;
             final int _tmpId_ejercicios;
             _tmpId_ejercicios = _cursor.getInt(_cursorIndexOfIdEjercicios);
             final String _tmpNombreEjercicio;
@@ -500,9 +501,8 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
-            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
-          } else {
-            _result = null;
+            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _result.add(_item);
           }
           return _result;
         } finally {
@@ -510,12 +510,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object getEjerciciosByTipoMovimiento(final String EjerciciosTipoMovimiento,
-      final Continuation<? super EjerciciosEntity> arg1) {
+      final Continuation<? super List<EjerciciosEntity>> continuation) {
     final String _sql = "SELECT * FROM ejercicios WHERE tipo_movimiento = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -525,9 +525,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
       _statement.bindString(_argIndex, EjerciciosTipoMovimiento);
     }
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
-    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<EjerciciosEntity>() {
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<EjerciciosEntity>>() {
       @Override
-      public EjerciciosEntity call() throws Exception {
+      public List<EjerciciosEntity> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfIdEjercicios = CursorUtil.getColumnIndexOrThrow(_cursor, "id_ejercicios");
@@ -539,8 +539,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
           final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
-          final EjerciciosEntity _result;
-          if(_cursor.moveToFirst()) {
+          final List<EjerciciosEntity> _result = new ArrayList<EjerciciosEntity>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final EjerciciosEntity _item;
             final int _tmpId_ejercicios;
             _tmpId_ejercicios = _cursor.getInt(_cursorIndexOfIdEjercicios);
             final String _tmpNombreEjercicio;
@@ -587,9 +588,8 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
-            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
-          } else {
-            _result = null;
+            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _result.add(_item);
           }
           return _result;
         } finally {
@@ -597,7 +597,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override

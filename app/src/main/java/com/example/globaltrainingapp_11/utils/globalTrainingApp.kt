@@ -26,6 +26,8 @@ class globalTrainingApp : Application() {
         super.onCreate()
         db = Room.databaseBuilder(applicationContext, RutinasDataBase::class.java, "rutinas_DB")
             .createFromAsset("databases/rutinas.db")
+            //agregado por error de que no deja ahcer la busqueda en el main threat para pasar una lista entre activitys, pero no arreglo el problema
+            //.allowMainThreadQueries()
             .build()
 
 

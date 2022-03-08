@@ -10,6 +10,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
     <application
         android:name="com.example.globaltrainingapp_11.utils.globalTrainingApp"
         android:allowBackup="true"
@@ -22,6 +28,21 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.GlobalTrainingApp_11" >
+
+        <!--
+        <activity
+            android:name="com.example.globaltrainingapp_11.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name="com.example.globaltrainingapp_11.TecnicaYoutubeActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />

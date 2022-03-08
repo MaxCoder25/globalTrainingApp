@@ -12,16 +12,16 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reciclerEjerc_2doUso"
-            android:layout_width="406dp"
-            android:layout_height="353dp"
+            android:layout_width="408dp"
+            android:layout_height="327dp"
             android:layout_marginTop="171dp"
             android:layout_marginBottom="17dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btn_FinEjercicio"
-            app:layout_constraintVertical_bias="0.833" />
+            app:layout_constraintVertical_bias="0.989" />
 
         <ImageView
             android:id="@+id/img_Ejerc_Frag"

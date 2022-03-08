@@ -2539,6 +2539,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_password_24
+drawable ic_splashglobaltraining
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2699,11 +2700,11 @@ id bounceEnd
 id bounceStart
 id btnAdelante
 id btnAdelante2
-id btnEmpezarEntrenamiento
+id btnAdelanteActivity
 id btnLogin
 id btnRegistrarse
-id btn_Adelante
 id btn_CambioEjercicio
+id btn_Empezar
 id btn_FinEjercicio
 id btn_MenuPrincipal2
 id btn_Saltar
@@ -3144,18 +3145,17 @@ id txtSiguientEjerc
 id txtSiguientEjerc2
 id txtTitulo1
 id txtTitulo2
-id txt_10Mas
 id txt_10Mas_3
-id txt_10Menos
 id txt_10Menos_3
 id txt_DESCANSO
+id txt_EjercSimilares
 id txt_NombreEjerc
 id txt_Preparate
 id txt_Reps
+id txt_cambioEjercicio
 id txt_mensajeMotivador2
 id txt_terminaste2
 id txt_tiempoDescanso
-id txt_tiempoPreparate
 id txtpassword
 id txtpassword2
 id unchecked
@@ -3179,6 +3179,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id ytPlayer
 id zero_corner_chip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -3271,6 +3272,8 @@ layout activity_entrenamiento_2
 layout activity_login
 layout activity_main
 layout activity_register
+layout activity_splash
+layout activity_tecnica_ejerc_youtube
 layout app_bar_main
 layout content_main
 layout custom_dialog
@@ -3295,6 +3298,7 @@ layout fragment_cat_rutinas
 layout fragment_categoria_rutinas_list
 layout fragment_ejercicios
 layout fragment_ejercicios_list
+layout fragment_entrenamiento_cambio_ejercicio
 layout fragment_entrenamiento_ejecucion_ejercicio
 layout fragment_entrenamiento_ejecucion_ejercicio_2
 layout fragment_entrenamiento_ejecucion_ejercicio_3
@@ -3303,6 +3307,7 @@ layout fragment_inicio
 layout fragment_logros
 layout fragment_rutinas
 layout fragment_rutinas_entrenamiento_list
+layout fragment_rutinas_entrenamiento_list_sin_boton_cambio_ejerc
 layout fragment_rutinas_list
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

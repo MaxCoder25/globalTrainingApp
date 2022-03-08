@@ -37,7 +37,7 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
   public final TextView TXTTIEMPO;
 
   @NonNull
-  public final Button btnEmpezarEntrenamiento;
+  public final Button btnAdelanteActivity;
 
   @NonNull
   public final RecyclerView reciclerEntrenamiento;
@@ -45,14 +45,14 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
   private ActivityEntrenamientoBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout EntrenamientoConstraintLayout, @NonNull TextView TXTMUSCULOS,
       @NonNull TextView TXTNIVEL, @NonNull TextView TXTNOMBRE, @NonNull TextView TXTTIEMPO,
-      @NonNull Button btnEmpezarEntrenamiento, @NonNull RecyclerView reciclerEntrenamiento) {
+      @NonNull Button btnAdelanteActivity, @NonNull RecyclerView reciclerEntrenamiento) {
     this.rootView = rootView;
     this.EntrenamientoConstraintLayout = EntrenamientoConstraintLayout;
     this.TXTMUSCULOS = TXTMUSCULOS;
     this.TXTNIVEL = TXTNIVEL;
     this.TXTNOMBRE = TXTNOMBRE;
     this.TXTTIEMPO = TXTTIEMPO;
-    this.btnEmpezarEntrenamiento = btnEmpezarEntrenamiento;
+    this.btnAdelanteActivity = btnAdelanteActivity;
     this.reciclerEntrenamiento = reciclerEntrenamiento;
   }
 
@@ -109,9 +109,9 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnEmpezarEntrenamiento;
-      Button btnEmpezarEntrenamiento = ViewBindings.findChildViewById(rootView, id);
-      if (btnEmpezarEntrenamiento == null) {
+      id = R.id.btnAdelanteActivity;
+      Button btnAdelanteActivity = ViewBindings.findChildViewById(rootView, id);
+      if (btnAdelanteActivity == null) {
         break missingId;
       }
 
@@ -123,7 +123,7 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
 
       return new ActivityEntrenamientoBinding((ConstraintLayout) rootView,
           EntrenamientoConstraintLayout, TXTMUSCULOS, TXTNIVEL, TXTNOMBRE, TXTTIEMPO,
-          btnEmpezarEntrenamiento, reciclerEntrenamiento);
+          btnAdelanteActivity, reciclerEntrenamiento);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

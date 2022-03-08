@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
+import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.ActivityEntrenamientoBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
@@ -40,34 +41,39 @@ class EntrenamientoActivity : AppCompatActivity() {
                 loadRutinas_Ejercicios(n!!.id_rutinas)
             }
 
-       //     binding.floatingActionButtonItem.setOnClickListener {
-           //     saveFavNews(n)
-          //  }
 
-            binding.btnEmpezarEntrenamiento.setOnClickListener(){
-                var i = Intent(this, Entrenamiento_2_Activity::class.java)
-                val jsonString = Json.encodeToString(n)
-                i.putExtra("rutina", jsonString)
-                startActivity(i)
+            binding.btnAdelanteActivity.setOnClickListener() {
+
+                lifecycleScope.launch(Dispatchers.Main)
+                {
+                    val items = withContext(Dispatchers.IO) {
+                        Rutinas_Ejercicios_BL().getRutinas_EjerciciosList(n!!.id_rutinas)
+
+                    }
+
+                    val arrayListRutinaEjerc = ArrayList(items)
+
+
+                   var i = Intent(this@EntrenamientoActivity, Entrenamiento_2_Activity::class.java)
+                    val jsonString = Json.encodeToString(arrayListRutinaEjerc)
+                    i.putExtra("listaEjerc", jsonString)
+
+                    startActivity(i)
 
 
 
-             //   var intent = Intent(this, Entrenamiento_2_Activity::class.java)
-               // startActivity(intent)
+                }
+            }
 
 
             }
 
 
-
-
-        }
-
     private fun getRutinaItem(EjerciciosEntity: List<EjerciciosEntity>) {
-      //  var i = Intent(activity, Entrenamiento_2_Activity::class.java)
+        var i = Intent(this, Entrenamiento_2_Activity::class.java)
         val jsonString = Json.encodeToString(EjerciciosEntity)
-        //i.putExtra("rutina", jsonString)
-        //startActivity(i)
+        i.putExtra("rutina", jsonString)
+        startActivity(i)
     }
 
         private fun loadRutinas(rutinasEntity: RutinasEntity) {
@@ -92,8 +98,7 @@ private fun loadRutinas_Ejercicios(id_Rutina: Int) {
             LinearLayoutManager(binding.reciclerEntrenamiento.context)
 
         binding.reciclerEntrenamiento.adapter =
-            ListRutinas_Ejercicios_Adapter(items) { EjerciciosEntity -> ItemClickOnRecycledView(EjerciciosEntity) }
-        //binding.reciclerEntrenamiento.adapter = ListRutinasAdapter(items) { getRutinaItem(it) }
+            ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc(items)
 
 
     }

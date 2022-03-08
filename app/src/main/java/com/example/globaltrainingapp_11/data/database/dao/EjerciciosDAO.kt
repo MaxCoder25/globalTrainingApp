@@ -15,10 +15,10 @@ interface EjerciciosDAO {
 
 
     @Query("SELECT * FROM ejercicios WHERE categoria = :EjerciciosCategory")
-    suspend fun getEjerciciosByCategory(EjerciciosCategory: String): EjerciciosEntity
+    suspend fun getEjerciciosByCategory(EjerciciosCategory: String): List<EjerciciosEntity>
 
     @Query("SELECT * FROM ejercicios WHERE tipo_movimiento = :EjerciciosTipoMovimiento")
-    suspend fun getEjerciciosByTipoMovimiento(EjerciciosTipoMovimiento: String): EjerciciosEntity
+    suspend fun getEjerciciosByTipoMovimiento(EjerciciosTipoMovimiento: String): List<EjerciciosEntity>
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -47,10 +47,5 @@ interface EjerciciosDAO {
     @Query ("SELECT * FROM rutinas  WHERE id_rutinas=:id_rutinas")
     fun getRutinas_Ejercicios_RelacionesFiltradas(id_rutinas: Int): List <Rutinas_Ejercicios_Relaciones>
 
-/*
-    @Transaction
-    @Query ("SELECT * FROM ejercicios")
-    fun getRutinas_Ejercicios_Relaciones2(): List <Rutinas_Ejercicios_Relaciones>
-*/
 
 }

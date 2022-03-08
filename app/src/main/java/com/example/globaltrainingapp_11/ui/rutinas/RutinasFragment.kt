@@ -30,10 +30,6 @@ class RutinasFragment : Fragment() {
 
 
 
-
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -81,7 +77,7 @@ class RutinasFragment : Fragment() {
         lifecycleScope.launch(Dispatchers.Main)
         {
             val items = withContext(Dispatchers.IO) {
-                RutinasBL().getRutinasList(category, 1)
+                RutinasBL().getRutinasList(category)
 
             }
 

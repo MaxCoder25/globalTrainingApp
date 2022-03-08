@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.databinding.ActivityEntrenamiento2Binding
-import com.example.globaltrainingapp_11.entidades.RutinasEntity
+import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.ui.entrenamiento.fragment_entrenamiento_ejecucion_ejercicio
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -24,12 +24,15 @@ class Entrenamiento_2_Activity : AppCompatActivity() {
         binding = ActivityEntrenamiento2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var n: RutinasEntity? = null
+
+        var n: List<EjerciciosEntity>? = null
         intent.extras?.let {
-            n = Json.decodeFromString<RutinasEntity>(it.getString("rutina").toString())
+            n = Json.decodeFromString<List<EjerciciosEntity>>(it.getString("listaEjerc").toString())
         }
 
-        var Fragment2 = newInstance(n!!)
+
+
+        var Fragment2 = newInstance(n)
 
         changeFragment(R.id.nav_Rutinas, Fragment2)
         lstFragments.add(R.id. nav_Rutinas)
@@ -39,12 +42,11 @@ class Entrenamiento_2_Activity : AppCompatActivity() {
 
 
     companion object {
-        fun newInstance(rutinaObjeto: RutinasEntity): fragment_entrenamiento_ejecucion_ejercicio {
+        fun newInstance(ListaEjercicios: List<EjerciciosEntity>?): fragment_entrenamiento_ejecucion_ejercicio {
             val args = Bundle()
 
-            // args.putParcelableArrayList("rutinaObjeto", rutinaObjeto as ArrayList<out Parcelable>?)
+             args.putParcelableArrayList("listaEjerc", ListaEjercicios as ArrayList<out Parcelable>?)
 
-            args.putParcelable("rutinaObjeto", rutinaObjeto as Parcelable?)
 
             val fragment = fragment_entrenamiento_ejecucion_ejercicio()
             fragment.arguments = args

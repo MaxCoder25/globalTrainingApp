@@ -11,22 +11,15 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.globaltrainingapp_11.R
-import com.example.globaltrainingapp_11.casosUso.EjerciciosUseCase
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
+import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio2Binding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
-import com.example.globaltrainingapp_11.entidades.RutinasEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
-import com.example.globaltrainingapp_11.ui.articulos.ArticulosFragment
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
@@ -66,7 +59,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                 fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
                 fragmentTransaction.addToBackStack(null)
-                fragmentTransaction.commit()
+                fragmentTransaction.commitAllowingStateLoss()
 
             }
 
@@ -83,7 +76,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                     fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
                     fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+                    fragmentTransaction.commitAllowingStateLoss()
 
                 }
             }
@@ -111,7 +104,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                     fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
                     //fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+                    fragmentTransaction.commitAllowingStateLoss()
 
                 }
 
@@ -157,8 +150,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
             LinearLayoutManager(binding.reciclerEjerc2doUso.context)
 
         binding.reciclerEjerc2doUso.adapter =
-            listaEjerc?.let { ListRutinas_Ejercicios_Adapter(it) { EjerciciosEntity -> ItemClickOnRecycledView(EjerciciosEntity) } }
-
+            listaEjerc?.let { ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc(it) }
 
 
 

@@ -5,19 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
-import com.example.globaltrainingapp_11.casosUso.EjerciciosUseCase
-import com.example.globaltrainingapp_11.casosUso.Rutinas_Ejercicios_UseCase
+import com.example.globaltrainingapp_11.TecnicaYoutubeActivity
 import com.example.globaltrainingapp_11.databinding.FragmentInicioBinding
-import com.example.globaltrainingapp_11.presentacion.RegisterActivity
+import com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
 import com.example.globaltrainingapp_11.ui.ejercicios.EjerciciosFragment
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 
 class InicioFragment : Fragment() {
@@ -47,21 +44,22 @@ class InicioFragment : Fragment() {
        // return root
 
         binding.btnAdelante.setOnClickListener() {
-            val fragment2 = EjerciciosFragment()
+
+
+           /* val fragment2 = EjerciciosFragment()
             val fragmentManager: FragmentManager? = parentFragmentManager
             val fragmentTransaction = fragmentManager!!.beginTransaction()
             fragmentTransaction.replace(R.id.nav_host_fragment_content_main , fragment2)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
-           // lstFragments.add(R.id.itEjercicios)
+            */
+            var i = Intent(activity, TecnicaYoutubeActivity::class.java)
+          //  val jsonString = Json.encodeToString(RutinasEntity)
+         //   i.putExtra("rutina", jsonString)
+            startActivity(i)
 
 
-         /*   binding.btnAdelante2.setOnClickListener(){
-                Toast.makeText(binding.imageView2, .nombre, Toast.LENGTH_SHORT).show()
-
-            }
-*/
         }
 
         binding.floatingActionButton.setOnClickListener() {
@@ -69,6 +67,8 @@ class InicioFragment : Fragment() {
 
          //   Rutinas_Ejercicios_UseCase. getRutinas_Ejercicios2()
         }
+
+
        /* binding.btnAdelante.setOnClickListener() {
 
             var intent = Intent(this, RegisterActivity::class.java)

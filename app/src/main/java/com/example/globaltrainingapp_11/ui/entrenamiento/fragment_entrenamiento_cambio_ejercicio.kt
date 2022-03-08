@@ -1,7 +1,6 @@
 package com.example.globaltrainingapp_11.ui.entrenamiento
 
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Parcelable
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,8 +14,7 @@ import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoCambioEjercicioBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
-import com.example.globaltrainingapp_11.entidades.RutinasEntity
-import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
+import com.example.globaltrainingapp_11.logica.EjerciciosBL
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -38,43 +36,32 @@ class fragment_entrenamiento_cambio_ejercicio : Fragment() {
     ): View? {
         binding = FragmentEntrenamientoCambioEjercicioBinding.inflate(inflater, container, false)
 
-        val rutinaObjeto = arguments?.getParcelable<RutinasEntity>("rutinaObjeto")
-
-        rutinaObjeto?.let { loadRutinas_Ejercicios(it.id_rutinas) }
-
-
-        binding.btnEscoger.setOnClickListener() {
-
-            val rutinaObjeto = arguments?.getParcelable<RutinasEntity>("rutinaObjeto")
-
-            lifecycleScope.launch(Dispatchers.Main)
-            {
-                val items = withContext(Dispatchers.IO) {
-                    rutinaObjeto?.let { Rutinas_Ejercicios_BL().getRutinas_EjerciciosList(it.id_rutinas ) }
-
-                }
+        val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity >("listaEjerc")
+    val EjercicioSeleccionado  = arguments?.getParcelable<EjerciciosEntity >("EjercicioSeleccionado")
 
 
-                //paso lista a arraylist y llamo a funcion que pone en bundle la lista de ejercicios
-                val arrayList = ArrayList(items)
-
-
-
-                var frag_A_Enviar = newInstance(arrayList)
-
-                val fragment2 = frag_A_Enviar
-                val fragmentManager: FragmentManager? = parentFragmentManager
-                val fragmentTransaction = fragmentManager!!.beginTransaction()
-
-                fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
-                fragmentTransaction.addToBackStack(null)
-
-             //   fragmentTransaction.commit()
-                fragmentTransaction.commitAllowingStateLoss();
+        lifecycleScope.launch(Dispatchers.Main)
+        {
+            val items = withContext(Dispatchers.IO) {
+                EjerciciosBL().getEjerciciosByTipoMovimiento(EjercicioSeleccionado?.tipo_movimiento.toString())
 
             }
 
+
+            binding.reciclerEjerc2doUso.layoutManager =
+                LinearLayoutManager(binding.reciclerEjerc2doUso.context)
+
+            binding.reciclerEjerc2doUso.adapter =
+                items?.let {
+                    ListRutinas_Ejercicios_Adapter(it) { EjerciciosEntity ->
+                        ItemClickOnCambioEjercicio(EjerciciosEntity)
+                    }
+                }
+
+
         }
+
+
 
             return binding.root
 
@@ -83,80 +70,56 @@ class fragment_entrenamiento_cambio_ejercicio : Fragment() {
     }
 
     companion object {
-        fun newInstance(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_entrenamiento_ejecucion_ejercicio_2 {
+        fun newInstance(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_entrenamiento_ejecucion_ejercicio {
             val args = Bundle()
 
             args.putParcelableArrayList("listaEjerc", lstEjercEntity as ArrayList<out Parcelable>?)
 
-            val fragment = fragment_entrenamiento_ejecucion_ejercicio_2()
+            val fragment = fragment_entrenamiento_ejecucion_ejercicio()
             fragment.arguments = args
             return fragment
         }
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-       // loadRutinas_Ejercicios(1)
-
-        }
+    fun ItemClickOnCambioEjercicio(NuevoEjercicio: EjerciciosEntity) {
+       val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
+        val EjercicioSeleccionado  = arguments?.getParcelable<EjerciciosEntity >("EjercicioSeleccionado")
 
 
-private fun loadListaEjercicios(id_Rutina: Int){
-    binding
-    lifecycleScope.launch(Dispatchers.Main)
-    {
-        val items = withContext(Dispatchers.IO) {
-            Rutinas_Ejercicios_BL().getRutinas_EjerciciosList(id_Rutina)
-        }
+
+  if (listaEjerc != null) {
+
+    if (EjercicioSeleccionado != null) {
 
 
-        val arrayList = ArrayList(items)
-        var frag_A_Enviar3 = newInstance(arrayList)
-
-        val fragment2 = frag_A_Enviar3
+        listaEjerc.set (  listaEjerc.indexOf(EjercicioSeleccionado)   , NuevoEjercicio )
 
 
-       // Thread.sleep(5000)
+        val arrayList = ArrayList(listaEjerc)
 
+        var frag_A_Enviar = newInstance(arrayList)
+
+        val fragment2 = frag_A_Enviar
         val fragmentManager: FragmentManager? = parentFragmentManager
         val fragmentTransaction = fragmentManager!!.beginTransaction()
 
         fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
         fragmentTransaction.addToBackStack(null)
-       // fragmentTransaction.commit()
         fragmentTransaction.commitAllowingStateLoss();
-    }
-}
-    private fun loadRutinas_Ejercicios(id_Rutina: Int) {
-        binding.reciclerEjerc2doUso
-        lifecycleScope.launch(Dispatchers.Main)
-        {
-            val items = withContext(Dispatchers.IO) {
-                Rutinas_Ejercicios_BL().getRutinas_EjerciciosList(id_Rutina)
+
+
 
             }
 
-            //paso lista a arraylist y llamo a funcion que pone en bundle la lista de ejercicios
-           // val arrayList = ArrayList(items)
-          //  newInstance(arrayList)
-
-
-            binding.reciclerEjerc2doUso .layoutManager =
-                LinearLayoutManager(binding.reciclerEjerc2doUso.context)
-
-            binding.reciclerEjerc2doUso.adapter =
-                ListRutinas_Ejercicios_Adapter(items) { EjerciciosEntity -> ItemClickOnRecycledView(EjerciciosEntity) }
-
-         //   binding.reciclerEjerc2doUso.adapter = ListRutinasAdapter(items) { getRutinaItem(it) }
-
-
         }
-    }
 
-    fun ItemClickOnRecycledView(EjerciciosEntity: EjerciciosEntity) {
-        Toast.makeText(binding.reciclerEjerc2doUso.context, EjerciciosEntity.categoria , Toast.LENGTH_SHORT).show()
+
+
+
+
+
+
     }
 
 
