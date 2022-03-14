@@ -31,16 +31,25 @@ public final class FragmentRutinasBinding implements ViewBinding {
   public final TabLayout tabLayout;
 
   @NonNull
-  public final TextView txtTitulo2;
+  public final TextView txtDescripCategoria;
+
+  @NonNull
+  public final TextView txtNumRutinas;
+
+  @NonNull
+  public final TextView txtTotalRutinas;
 
   private FragmentRutinasBinding(@NonNull ConstraintLayout rootView,
       @NonNull RecyclerView RutinasRecyclerView, @NonNull ConstraintLayout listParentLayout,
-      @NonNull TabLayout tabLayout, @NonNull TextView txtTitulo2) {
+      @NonNull TabLayout tabLayout, @NonNull TextView txtDescripCategoria,
+      @NonNull TextView txtNumRutinas, @NonNull TextView txtTotalRutinas) {
     this.rootView = rootView;
     this.RutinasRecyclerView = RutinasRecyclerView;
     this.listParentLayout = listParentLayout;
     this.tabLayout = tabLayout;
-    this.txtTitulo2 = txtTitulo2;
+    this.txtDescripCategoria = txtDescripCategoria;
+    this.txtNumRutinas = txtNumRutinas;
+    this.txtTotalRutinas = txtTotalRutinas;
   }
 
   @Override
@@ -84,14 +93,26 @@ public final class FragmentRutinasBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtTitulo2;
-      TextView txtTitulo2 = ViewBindings.findChildViewById(rootView, id);
-      if (txtTitulo2 == null) {
+      id = R.id.txt_DescripCategoria;
+      TextView txtDescripCategoria = ViewBindings.findChildViewById(rootView, id);
+      if (txtDescripCategoria == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_numRutinas;
+      TextView txtNumRutinas = ViewBindings.findChildViewById(rootView, id);
+      if (txtNumRutinas == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_totalRutinas;
+      TextView txtTotalRutinas = ViewBindings.findChildViewById(rootView, id);
+      if (txtTotalRutinas == null) {
         break missingId;
       }
 
       return new FragmentRutinasBinding((ConstraintLayout) rootView, RutinasRecyclerView,
-          listParentLayout, tabLayout, txtTitulo2);
+          listParentLayout, tabLayout, txtDescripCategoria, txtNumRutinas, txtTotalRutinas);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

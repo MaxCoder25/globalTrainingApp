@@ -46,8 +46,10 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas` (`id_rutinas` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `musculos` TEXT NOT NULL, `tiempoMin` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `ejercicios` (`id_ejercicios` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombreEjercicio` TEXT NOT NULL, `descripcion` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `tipo_movimiento` TEXT NOT NULL, `repeticiones` INTEGER NOT NULL, `imagen` TEXT NOT NULL, `video` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas_ejercicios` (`id_rutinas` INTEGER NOT NULL, `id_ejercicios` INTEGER NOT NULL, PRIMARY KEY(`id_rutinas`, `id_ejercicios`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `semana_rutinas` (`dia` TEXT NOT NULL, `id_rutinas` INTEGER NOT NULL, PRIMARY KEY(`dia`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `categoria_rutinas` (`id_catRutina` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `descripcion` TEXT NOT NULL, `cantidad` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6c490a50176b75684059dd55e18dd6ae')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e40d6f59076cc87b8444eca42529fd31')");
       }
 
       @Override
@@ -55,6 +57,8 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
         _db.execSQL("DROP TABLE IF EXISTS `rutinas`");
         _db.execSQL("DROP TABLE IF EXISTS `ejercicios`");
         _db.execSQL("DROP TABLE IF EXISTS `rutinas_ejercicios`");
+        _db.execSQL("DROP TABLE IF EXISTS `semana_rutinas`");
+        _db.execSQL("DROP TABLE IF EXISTS `categoria_rutinas`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -140,9 +144,35 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
                   + " Expected:\n" + _infoRutinasEjercicios + "\n"
                   + " Found:\n" + _existingRutinasEjercicios);
         }
+        final HashMap<String, TableInfo.Column> _columnsSemanaRutinas = new HashMap<String, TableInfo.Column>(2);
+        _columnsSemanaRutinas.put("dia", new TableInfo.Column("dia", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSemanaRutinas.put("id_rutinas", new TableInfo.Column("id_rutinas", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysSemanaRutinas = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesSemanaRutinas = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoSemanaRutinas = new TableInfo("semana_rutinas", _columnsSemanaRutinas, _foreignKeysSemanaRutinas, _indicesSemanaRutinas);
+        final TableInfo _existingSemanaRutinas = TableInfo.read(_db, "semana_rutinas");
+        if (! _infoSemanaRutinas.equals(_existingSemanaRutinas)) {
+          return new RoomOpenHelper.ValidationResult(false, "semana_rutinas(com.example.globaltrainingapp_11.entidades.SemanaRutinasEntity).\n"
+                  + " Expected:\n" + _infoSemanaRutinas + "\n"
+                  + " Found:\n" + _existingSemanaRutinas);
+        }
+        final HashMap<String, TableInfo.Column> _columnsCategoriaRutinas = new HashMap<String, TableInfo.Column>(4);
+        _columnsCategoriaRutinas.put("id_catRutina", new TableInfo.Column("id_catRutina", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategoriaRutinas.put("nombre", new TableInfo.Column("nombre", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategoriaRutinas.put("descripcion", new TableInfo.Column("descripcion", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategoriaRutinas.put("cantidad", new TableInfo.Column("cantidad", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysCategoriaRutinas = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesCategoriaRutinas = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoCategoriaRutinas = new TableInfo("categoria_rutinas", _columnsCategoriaRutinas, _foreignKeysCategoriaRutinas, _indicesCategoriaRutinas);
+        final TableInfo _existingCategoriaRutinas = TableInfo.read(_db, "categoria_rutinas");
+        if (! _infoCategoriaRutinas.equals(_existingCategoriaRutinas)) {
+          return new RoomOpenHelper.ValidationResult(false, "categoria_rutinas(com.example.globaltrainingapp_11.entidades.CategoriaRutinasEntity).\n"
+                  + " Expected:\n" + _infoCategoriaRutinas + "\n"
+                  + " Found:\n" + _existingCategoriaRutinas);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "6c490a50176b75684059dd55e18dd6ae", "835553084b2ec02a183c66dd8b797770");
+    }, "e40d6f59076cc87b8444eca42529fd31", "ed676576fb13699bfea5b48a77607986");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -155,7 +185,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "rutinas","ejercicios","rutinas_ejercicios");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "rutinas","ejercicios","rutinas_ejercicios","semana_rutinas","categoria_rutinas");
   }
 
   @Override
@@ -167,6 +197,8 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
       _db.execSQL("DELETE FROM `rutinas`");
       _db.execSQL("DELETE FROM `ejercicios`");
       _db.execSQL("DELETE FROM `rutinas_ejercicios`");
+      _db.execSQL("DELETE FROM `semana_rutinas`");
+      _db.execSQL("DELETE FROM `categoria_rutinas`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

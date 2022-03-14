@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.inicio.RutinasSemanaFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/RoundedTabLayoutStyle"
+        android:layout_width="378dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/rojo_Rebelde">
+
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FULL BODY" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CUERPO SUPERIOR" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PIERNAS" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KETTLEBELLS" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANILLAS" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/txt_DescripCategoria"
+        android:layout_width="314dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="DESCRIPCION CATEGORIA"
+        android:textColor="@color/LoginText"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RutinasRecyclerView"
+        android:layout_width="415dp"
+        android:layout_height="541dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_DescripCategoria" />
+
+    <TextView
+        android:id="@+id/txt_totalRutinas"
+        android:layout_width="73dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="317dp"
+        android:layout_marginTop="62dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="center"
+        android:text="Total Rutinas"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_DescripCategoria"
+        app:layout_constraintTop_toTopOf="@+id/tabLayout" />
+
+    <TextView
+        android:id="@+id/txt_numRutinas"
+        android:layout_width="50dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="68dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="center"
+        android:text="3"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_DescripCategoria"
+        app:layout_constraintTop_toTopOf="@+id/txt_totalRutinas" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

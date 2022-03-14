@@ -10,7 +10,7 @@ class RutinasUseCase {
 
 
     suspend fun getAllRutinas(
-        category: String,
+        category: String
 
     ): List<RutinasEntity> {
 

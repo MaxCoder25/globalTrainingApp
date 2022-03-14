@@ -20,10 +20,3 @@ data class Rutinas_Ejercicios_Relaciones(
 
 
 )
-
-{
-
-
-
-
-}

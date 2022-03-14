@@ -1,5 +1,6 @@
 package com.example.globaltrainingapp_11.ui.entrenamiento
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.globaltrainingapp_11.R
+import com.example.globaltrainingapp_11.TecnicaYoutubeActivity
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio2Binding
@@ -20,6 +22,8 @@ import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
@@ -68,13 +72,13 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
                 if  (listaEjerc.isNotEmpty()) {
                     val arrayList = ArrayList(listaEjerc)
-                    var frag_A_Enviar2 = newInstance2(arrayList)
+                    var frag2 = newInstance2(arrayList)
 
-                    val fragment3 = frag_A_Enviar2
+                    val fragAEnviar = frag2
                     val fragmentManager: FragmentManager? = parentFragmentManager
                     val fragmentTransaction = fragmentManager!!.beginTransaction()
 
-                    fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
+                    fragmentTransaction.replace(R.id.fragmentContainerView, fragAEnviar)
                     fragmentTransaction.addToBackStack(null)
                     fragmentTransaction.commitAllowingStateLoss()
 
@@ -88,8 +92,20 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
             val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
-            var idEjercString= listaEjerc?.get(0)?.id_ejercicios
+            //var EjercParaVerTecnica = listaEjerc?.get(0)
 
+            if (listaEjerc != null) {
+               var EjercParaVerTecnica2= listaEjerc.component1()
+
+
+            var i = Intent(activity, TecnicaYoutubeActivity::class.java)
+            val jsonString = Json.encodeToString(EjercParaVerTecnica2)
+            i.putExtra("EjercParaVerTecnica", jsonString)
+            startActivity(i)
+            }
+
+
+            /*
            if (listaEjerc != null) {
 
                 if (listaEjerc.isNotEmpty()) {
@@ -112,7 +128,9 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
         }
 
 
+*/
 
+        }
 
 
         return  binding.root

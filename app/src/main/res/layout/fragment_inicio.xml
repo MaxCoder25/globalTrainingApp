@@ -12,8 +12,9 @@
 
             <CalendarView
                 android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="134dp"
+                android:layout_width="365dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,15 +66,15 @@
                 app:layout_constraintTop_toTopOf="@+id/tituloEntrenam" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:id="@+id/btn_SemanaInicioFrag"
+                android:layout_width="56dp"
+                android:layout_height="51dp"
                 android:layout_marginStart="272dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="44dp"
                 android:clickable="true"
                 android:src="@android:drawable/ic_popup_sync"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintHorizontal_bias="0.826"
                 app:layout_constraintStart_toStartOf="@+id/calendarView"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,6 +110,16 @@
                 android:text="ACEPTO EL RETO"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="336dp"
+                android:layout_marginTop="16dp"
+                android:text="Editar"
+                app:layout_constraintStart_toStartOf="@+id/calendarView"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

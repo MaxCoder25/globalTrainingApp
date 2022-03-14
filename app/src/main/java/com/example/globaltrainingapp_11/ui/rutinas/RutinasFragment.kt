@@ -13,7 +13,6 @@ import com.example.globaltrainingapp_11.controladores.adapters.ListRutinasAdapte
 import com.example.globaltrainingapp_11.databinding.FragmentRutinasBinding
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
 import com.example.globaltrainingapp_11.logica.RutinasBL
-import com.example.globaltrainingapp_11.logica.UsuarioBL
 import com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
 import com.example.globaltrainingapp_11.utils.EnumRutinas
 import com.google.android.material.tabs.TabLayout
@@ -52,7 +51,7 @@ class RutinasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadListRutinas(category, 1)
+        loadListRutinas(category)
 
         binding.tabLayout.addOnTabSelectedListener(
             object : TabLayout.OnTabSelectedListener {
@@ -60,7 +59,9 @@ class RutinasFragment : Fragment() {
                     val idCat = tab?.position!!
                     category = EnumRutinas.SelectionCategoryRutinas.fromPosition(idCat)
                     clear()
-                    loadListRutinas(category, 1)
+
+
+                    loadListRutinas(category)
                 }
 
                 override fun onTabReselected(tab: TabLayout.Tab?) {}
@@ -72,7 +73,9 @@ class RutinasFragment : Fragment() {
 
 
 
-    private fun loadListRutinas(category: String, page: Int) {
+    private fun loadListRutinas(category: String) {
+
+
 
 
         lifecycleScope.launch(Dispatchers.Main)
@@ -82,16 +85,27 @@ class RutinasFragment : Fragment() {
 
             }
 
+            val items1 = withContext(Dispatchers.IO) {
+                RutinasBL().getCategoriaRutinas(category)
+
+            }
+            binding.txtDescripCategoria.text = items1.descripcion
+            binding.txtNumRutinas.text = items1.cantidad.toString()
 
             binding.RutinasRecyclerView.layoutManager =
                 LinearLayoutManager(binding.RutinasRecyclerView.context)
 
-          //  binding.RutinasRecyclerView.adapter =
-             //   ListRutinasAdapter(items ) { RutinasEntity -> ItemClickOnRecycledView(RutinasEntity) }
+
             binding.RutinasRecyclerView.adapter = ListRutinasAdapter(items) {
                 getRutinaItem(it) }
 
         }
+
+
+
+
+
+
     }
 
 

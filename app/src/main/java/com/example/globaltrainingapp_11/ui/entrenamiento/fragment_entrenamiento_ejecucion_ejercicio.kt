@@ -71,6 +71,7 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
 
     }
 
+/* original enviar lista a fragment 2
     companion object {
         fun newInstance(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_entrenamiento_ejecucion_ejercicio_2 {
             val args = Bundle()
@@ -78,6 +79,18 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
             args.putParcelableArrayList("listaEjerc", lstEjercEntity as ArrayList<out Parcelable>?)
 
             val fragment = fragment_entrenamiento_ejecucion_ejercicio_2()
+            fragment.arguments = args
+            return fragment
+        }
+    }
+*/
+    companion object {
+        fun newInstance(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_configuraciones {
+            val args = Bundle()
+
+            args.putParcelableArrayList("listaEjerc", lstEjercEntity as ArrayList<out Parcelable>?)
+
+            val fragment = fragment_configuraciones()
             fragment.arguments = args
             return fragment
         }

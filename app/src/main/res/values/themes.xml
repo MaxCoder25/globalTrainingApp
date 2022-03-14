@@ -63,4 +63,16 @@
     <style name="Theme.GlobalTrainingApp_11.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.GlobalTrainingApp_11.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="RoundedTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="tabIndicator">@null</item>
+        <item name="android:background">@color/white</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/LoginForgot</item>
+        <item name="tabRippleColor">@null</item>
+    </style>
+
+
 </resources>

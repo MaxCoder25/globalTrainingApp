@@ -44,7 +44,7 @@ interface EjerciciosDAO {
     fun getRutinas_Ejercicios_Relaciones(): List <Rutinas_Ejercicios_Relaciones>
 
     @Transaction
-    @Query ("SELECT * FROM rutinas  WHERE id_rutinas=:id_rutinas")
+    @Query ("SELECT * FROM rutinas  WHERE id_rutinas =:id_rutinas")
     fun getRutinas_Ejercicios_RelacionesFiltradas(id_rutinas: Int): List <Rutinas_Ejercicios_Relaciones>
 
 

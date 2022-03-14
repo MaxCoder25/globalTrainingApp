@@ -7,7 +7,7 @@ interface UsuariosDAO {
 
 
     //AUN NO ESTA HECHO EL QUERY
-    @Query("INSERT * FROM ejercicios")
-    suspend fun getAllEjercicios(): List<EjerciciosEntity>
+  //  @Query("INSERT * FROM ejercicios")
+  //  suspend fun getAllEjercicios(): List<EjerciciosEntity>
 
 }

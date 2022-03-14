@@ -17,6 +17,7 @@ import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio3Binding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -42,11 +43,16 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
     ): View? {
         binding = FragmentEntrenamientoEjecucionEjercicio3Binding.inflate(inflater, container, false)
 
-        val timer = object: CountDownTimer(11000, 1000) {
+        var tiempoDescanso  = getIntSharedPreference()
+        var tiempoDescanso2 = (tiempoDescanso + 1)  * 1000
+
+        val timer = object: CountDownTimer(tiempoDescanso2.toLong(), 1000) {
 
 
             override fun onTick(millisUntilFinished: Long) {
                 binding.txtTiempoDescanso.setText((millisUntilFinished/1000).toString())
+
+                saveSharedPreference()
             }
 
             override fun onFinish() {
@@ -68,15 +74,32 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
                 fragmentTransaction.commitAllowingStateLoss()
 
             }
+
         }
+
         timer.start()
-     //se añade el nuevo timer pero el anterior sigue
+
+
+/*
         binding.txt10Mas3.setOnClickListener() {
          //solo se cancela el cambio ed la etiqueta tiempo del primer timer
-               // timer.cancel()
-            val timer2 = object : CountDownTimer(14000, 1000) {
+
+            //se añade el nuevo timer pero vale 1 vez la segunda vez el anterior timer sigue
+            timer.cancel()
+
+            //timer2.cancel()
+
+            var tiempoDescanso  = getIntSharedPreference2()
+
+            var tiempoDescanso2 = (tiempoDescanso + 10)  * 1000
+
+           // var tiempoDescanso = 14000
+
+            val timer2 = object : CountDownTimer(tiempoDescanso2.toLong(), 1000) {
+
                 override fun onTick(millisUntilFinished: Long) {
                     binding.txtTiempoDescanso.setText((millisUntilFinished/1000).toString())
+                    saveSharedPreference()
                 }
 
                 override fun onFinish() {
@@ -100,10 +123,10 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
             }
 
-
+           // timer2.cancel()
             timer2.start()
         }
-
+*/
 
         binding.btnSaltar.setOnClickListener() {
 
@@ -130,6 +153,17 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
 
         return  binding.root
+    }
+
+
+
+    fun saveSharedPreference() {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+
+        binding.txtTiempoDescanso.text.toString().toIntOrNull()
+            ?.let { editorSP.putInt("tiempoDescansoEjerc2", it) }
+
+        editorSP.commit()
     }
 
 
@@ -193,6 +227,22 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
         Toast.makeText(binding.reciclerEjerc3erUso.context, EjerciciosEntity.categoria , Toast.LENGTH_SHORT).show()
     }
 
+
+    fun getIntSharedPreference(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjerc", 1)
+
+        return tiempoDescansoEjerc
+
+    }
+
+    fun getIntSharedPreference2(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjerc2", 1)
+
+        return tiempoDescansoEjerc
+
+    }
 
 
 }

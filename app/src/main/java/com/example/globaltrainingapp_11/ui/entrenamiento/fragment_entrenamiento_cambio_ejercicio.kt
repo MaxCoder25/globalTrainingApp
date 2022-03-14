@@ -36,8 +36,8 @@ class fragment_entrenamiento_cambio_ejercicio : Fragment() {
     ): View? {
         binding = FragmentEntrenamientoCambioEjercicioBinding.inflate(inflater, container, false)
 
-        val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity >("listaEjerc")
-    val EjercicioSeleccionado  = arguments?.getParcelable<EjerciciosEntity >("EjercicioSeleccionado")
+    val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
+    val EjercicioSeleccionado  = arguments?.getParcelable<EjerciciosEntity>("EjercicioSeleccionado")
 
 
         lifecycleScope.launch(Dispatchers.Main)

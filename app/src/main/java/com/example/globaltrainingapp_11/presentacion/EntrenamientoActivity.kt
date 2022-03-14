@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.ActivityEntrenamientoBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
@@ -35,6 +34,7 @@ class EntrenamientoActivity : AppCompatActivity() {
             intent.extras?.let {
                 n = Json.decodeFromString<RutinasEntity>(it.getString("rutina").toString())
             }
+
             if (n != null) {
                 loadRutinas(n!!)
 

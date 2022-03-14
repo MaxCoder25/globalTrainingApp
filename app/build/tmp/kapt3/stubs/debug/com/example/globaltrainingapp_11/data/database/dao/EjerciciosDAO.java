@@ -62,7 +62,7 @@ public abstract interface EjerciciosDAO {
     public abstract java.util.List<com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones> getRutinas_Ejercicios_Relaciones();
     
     @org.jetbrains.annotations.NotNull()
-    @androidx.room.Query(value = "SELECT * FROM rutinas  WHERE id_rutinas=:id_rutinas")
+    @androidx.room.Query(value = "SELECT * FROM rutinas  WHERE id_rutinas =:id_rutinas")
     @androidx.room.Transaction()
     public abstract java.util.List<com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones> getRutinas_Ejercicios_RelacionesFiltradas(int id_rutinas);
 }

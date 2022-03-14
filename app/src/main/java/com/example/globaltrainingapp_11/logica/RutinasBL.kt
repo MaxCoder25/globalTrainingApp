@@ -4,6 +4,8 @@ import com.example.globaltrainingapp_11.casosUso.CategoriaRutinasUseCase
 import com.example.globaltrainingapp_11.casosUso.RutinasUseCase
 import com.example.globaltrainingapp_11.entidades.CategoriaRutinasEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
+import com.example.globaltrainingapp_11.entidades.SemanaRutinasEntity
+import com.example.globaltrainingapp_11.entidades.SemanaRutinas_Rutinas_Relaciones
 
 class RutinasBL {
 
@@ -11,9 +13,14 @@ class RutinasBL {
         return RutinasUseCase().getAllRutinas(category)
     }
 
-
-    fun getOneRutinas(): CategoriaRutinasEntity {
-        val r = (0..3).random()
-        return CategoriaRutinasUseCase().getAllCategoriaRutinas()[r]
+    suspend fun getCategoriaRutinas(category: String): CategoriaRutinasEntity {
+        return CategoriaRutinasUseCase().getCategoriaRutinas(category)
     }
+
+    suspend fun updateSemanaRutinas(id_rutinas: Int, dia: String) {
+        CategoriaRutinasUseCase().updateSemanaRutinas(id_rutinas, dia)
+    }
+
+
+
 }

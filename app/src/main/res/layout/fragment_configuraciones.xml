@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SeekBar
+        android:id="@+id/seekBar_tiempoDescansoEjerc"
+        android:layout_width="363dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:max="120"
+        android:progress="30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_descEjerc" />
+
+    <TextView
+        android:id="@+id/txt_descEjerc"
+        android:layout_width="293dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="76dp"
+        android:text="DESCANSO ENTRE EJERCICIOS"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_empezarConfigs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="296dp"
+        android:text="Empezar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBar_tiempoDescansoEjerc" />
+
+    <TextView
+        android:id="@+id/txt_tiempoDescansoConfig"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="132dp"
+        android:gravity="center"
+        android:text="30 segundos"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_descEjerc" />
+
+    <TextView
+        android:id="@+id/txt_0Segs"
+        android:layout_width="43dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="192dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_120Seg"
+        android:layout_width="55dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="208dp"
+        android:gravity="center"
+        android:text="120"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

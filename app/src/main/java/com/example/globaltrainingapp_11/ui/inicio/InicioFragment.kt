@@ -54,27 +54,25 @@ class InicioFragment : Fragment() {
             fragmentTransaction.commit()
 
             */
-            var i = Intent(activity, TecnicaYoutubeActivity::class.java)
+           // var i = Intent(activity, TecnicaYoutubeActivity::class.java)
           //  val jsonString = Json.encodeToString(RutinasEntity)
          //   i.putExtra("rutina", jsonString)
-            startActivity(i)
+          //  startActivity(i)
 
 
         }
 
-        binding.floatingActionButton.setOnClickListener() {
+        binding.btnSemanaInicioFrag.setOnClickListener() {
 
+            val fragmentSemRut = SemanaRutinasFragment()
+            val fragmentManager: FragmentManager? = parentFragmentManager
+            val fragmentTransaction = fragmentManager!!.beginTransaction()
+            fragmentTransaction.replace(R.id.nav_host_fragment_content_main , fragmentSemRut)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
 
-         //   Rutinas_Ejercicios_UseCase. getRutinas_Ejercicios2()
         }
 
-
-       /* binding.btnAdelante.setOnClickListener() {
-
-            var intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-
-        }*/
 
 
 

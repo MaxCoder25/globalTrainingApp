@@ -7,6 +7,8 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/drawable-v24/ic_splashglobaltraining.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/drawable/tab_rounded.xml" value="0.1995" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/drawable/tab_selector.xml" value="0.1995" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_entrenamiento.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_entrenamiento_2.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/activity_login.xml" value="0.2" />
@@ -29,6 +31,7 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_cat_rutinas.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_cat_rutinas_2.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_categoria_rutinas_list.xml" value="0.264" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_configuraciones.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_ejercicios.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_ejercicios_list.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_entrenamiento.xml" value="0.18704710144927536" />
@@ -40,7 +43,7 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_fin_entrenamiento_2.xml" value="0.17391304347826086" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_gallery.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_inicio.xml" value="0.2" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_inicio.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_inicio_aux.xml" value="0.13854166666666667" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_logros.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_one_categoria_rutinas.xml" value="0.72" />
@@ -51,12 +54,15 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_rutinas_entrenamiento_list_SinBotonCambioEjerc.xml" value="0.4" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_rutinas_entrenamiento_list_sin_boton_cambio_ejerc.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_rutinas_list.xml" value="0.4" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_rutinas_semana.xml" value="0.264" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_semana_list.xml" value="0.264" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_semana_rutinas.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/nav_header_main.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/layout/nav_header_main_activity_nav_drawer.xml" value="0.22326454033771106" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.536" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/bottom_bar_menu.xml" value="0.264" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main.xml" value="0.13854166666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main_activity_nav_drawer.xml" value="0.2" />
       </map>
     </option>

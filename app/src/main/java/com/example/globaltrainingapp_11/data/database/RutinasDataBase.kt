@@ -4,12 +4,10 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.example.globaltrainingapp_11.data.database.dao.EjerciciosDAO
 import com.example.globaltrainingapp_11.data.database.dao.RutinasDAO
-import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
-import com.example.globaltrainingapp_11.entidades.RutinasEntity
-import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_CrossRef
+import com.example.globaltrainingapp_11.entidades.*
 
 @Database(
-    entities = [RutinasEntity::class, EjerciciosEntity::class, Rutinas_Ejercicios_CrossRef::class],
+    entities = [RutinasEntity::class, EjerciciosEntity::class, Rutinas_Ejercicios_CrossRef::class, SemanaRutinasEntity::class, CategoriaRutinasEntity::class ],
     version = 1, exportSchema = false
 )
 abstract class RutinasDataBase : RoomDatabase() {
