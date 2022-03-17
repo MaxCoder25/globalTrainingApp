@@ -36,6 +36,7 @@ class fragment_configuraciones : Fragment() {
 
         binding = FragmentConfiguracionesBinding.inflate(inflater, container, false)
         var seekBar =binding.seekBarTiempoDescansoEjerc
+
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
             override fun onProgressChanged(p0: SeekBar?, currentValue: Int, p2: Boolean) {
@@ -48,18 +49,25 @@ class fragment_configuraciones : Fragment() {
             override fun onStopTrackingTouch(p0: SeekBar?) {}
         })
 
+        var seekBar2 = binding.seekBarTiempoDescansoSerie
 
+        seekBar2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+
+            override fun onProgressChanged(p0: SeekBar?, currentValue: Int, p2: Boolean) {
+                //  Log.i("TAG" , currentValue.toString())
+                binding.txtTiempoDescansoConfigSerie.setText(currentValue.toString() + " segundos")
+            }
+
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {}
+            override fun onStopTrackingTouch(p0: SeekBar?) {}
+        })
 
 
 
 
         binding.btnEmpezarConfigs.setOnClickListener(){
         val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
-
-        val tiempoDescansoEjerc: Int = binding.seekBarTiempoDescansoEjerc.getProgress()
-
-
-        Log.d("TAG","TiempoDescansoEjerc: " + tiempoDescansoEjerc)
 
 
             saveSharedPreference()
@@ -90,9 +98,14 @@ class fragment_configuraciones : Fragment() {
 
     fun saveSharedPreference() {
         var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("tiempoDescansoEjercOriginal", binding.seekBarTiempoDescansoEjerc.getProgress())
         editorSP.putInt("tiempoDescansoEjerc", binding.seekBarTiempoDescansoEjerc.getProgress())
+        editorSP.putInt("tiempoDescansoSerie", binding.seekBarTiempoDescansoSerie.getProgress())
         editorSP.commit()
     }
+
+
+
 
 
 

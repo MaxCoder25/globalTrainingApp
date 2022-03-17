@@ -50,7 +50,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__insertionAdapterOfRutinasEntity = new EntityInsertionAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `rutinas` (`id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `rutinas` (`id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`,`series`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override
@@ -77,6 +77,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           stmt.bindString(5, value.getMusculos());
         }
         stmt.bindLong(6, value.getTiempoMin());
+        stmt.bindLong(7, value.getSeries());
       }
     };
     this.__deletionAdapterOfRutinasEntity = new EntityDeletionOrUpdateAdapter<RutinasEntity>(__db) {
@@ -93,7 +94,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__updateAdapterOfRutinasEntity = new EntityDeletionOrUpdateAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR REPLACE `rutinas` SET `id_rutinas` = ?,`nombre` = ?,`categoria` = ?,`nivel` = ?,`musculos` = ?,`tiempoMin` = ? WHERE `id_rutinas` = ?";
+        return "UPDATE OR REPLACE `rutinas` SET `id_rutinas` = ?,`nombre` = ?,`categoria` = ?,`nivel` = ?,`musculos` = ?,`tiempoMin` = ?,`series` = ? WHERE `id_rutinas` = ?";
       }
 
       @Override
@@ -120,7 +121,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           stmt.bindString(5, value.getMusculos());
         }
         stmt.bindLong(6, value.getTiempoMin());
-        stmt.bindLong(7, value.getId_rutinas());
+        stmt.bindLong(7, value.getSeries());
+        stmt.bindLong(8, value.getId_rutinas());
       }
     };
     this.__preparedStmtOfDeleteRutinasById = new SharedSQLiteStatement(__db) {
@@ -140,7 +142,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
   }
 
   @Override
-  public Object insertRutinas(final RutinasEntity Rutina, final Continuation<? super Unit> arg1) {
+  public Object insertRutinas(final RutinasEntity Rutina,
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -153,12 +156,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object deleteOneRutinas(final RutinasEntity Rutina,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -171,11 +174,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object updateRutinas(final RutinasEntity Rutina, final Continuation<? super Unit> arg1) {
+  public Object updateRutinas(final RutinasEntity Rutina,
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -188,11 +192,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object deleteRutinasById(final int idRutinas, final Continuation<? super Unit> arg1) {
+  public Object deleteRutinasById(final int idRutinas,
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -209,12 +214,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __preparedStmtOfDeleteRutinasById.release(_stmt);
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object updateSemanaRutinas(final int id_rutinas, final String dia,
-      final Continuation<? super Unit> arg2) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -237,11 +242,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __preparedStmtOfUpdateSemanaRutinas.release(_stmt);
         }
       }
-    }, arg2);
+    }, continuation);
   }
 
   @Override
-  public Object getAllRutinas(final Continuation<? super List<RutinasEntity>> arg0) {
+  public Object getAllRutinas(final Continuation<? super List<RutinasEntity>> continuation) {
     final String _sql = "SELECT * FROM rutinas";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -256,6 +261,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
           final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
+          final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
           final List<RutinasEntity> _result = new ArrayList<RutinasEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final RutinasEntity _item;
@@ -287,7 +293,9 @@ public final class RutinasDAO_Impl implements RutinasDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _item = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            final int _tmpSeries;
+            _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+            _item = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
             _result.add(_item);
           }
           return _result;
@@ -296,11 +304,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           _statement.release();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
-  public Object getRutinasById(final int idRutina, final Continuation<? super RutinasEntity> arg1) {
+  public Object getRutinasById(final int idRutina,
+      final Continuation<? super RutinasEntity> continuation) {
     final String _sql = "SELECT * FROM rutinas WHERE id_rutinas = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -317,6 +326,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
           final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
+          final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
           final RutinasEntity _result;
           if(_cursor.moveToFirst()) {
             final int _tmpId_rutinas;
@@ -347,7 +357,9 @@ public final class RutinasDAO_Impl implements RutinasDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _result = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            final int _tmpSeries;
+            _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+            _result = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
           } else {
             _result = null;
           }
@@ -357,12 +369,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object getSemanaRutinas(
-      final Continuation<? super List<SemanaRutinas_Rutinas_Relaciones>> arg0) {
+      final Continuation<? super List<SemanaRutinas_Rutinas_Relaciones>> continuation) {
     final String _sql = "SELECT * FROM semana_rutinas";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -415,12 +427,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
   public Object getCategoriaRutinas(final String category,
-      final Continuation<? super CategoriaRutinasEntity> arg1) {
+      final Continuation<? super CategoriaRutinasEntity> continuation) {
     final String _sql = "SELECT * FROM categoria_rutinas where nombre =? ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -473,7 +485,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   public static List<Class<?>> getRequiredConverters() {
@@ -509,7 +521,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
       return;
     }
     StringBuilder _stringBuilder = StringUtil.newStringBuilder();
-    _stringBuilder.append("SELECT `id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin` FROM `rutinas` WHERE `id_rutinas` IN (");
+    _stringBuilder.append("SELECT `id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`,`series` FROM `rutinas` WHERE `id_rutinas` IN (");
     final int _inputSize = _map.size();
     StringUtil.appendPlaceholders(_stringBuilder, _inputSize);
     _stringBuilder.append(")");
@@ -534,6 +546,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
       final int _cursorIndexOfNivel = 3;
       final int _cursorIndexOfMusculos = 4;
       final int _cursorIndexOfTiempoMin = 5;
+      final int _cursorIndexOfSeries = 6;
       while(_cursor.moveToNext()) {
         final long _tmpKey = _cursor.getLong(_itemKeyIndex);
         if (_map.containsKey(_tmpKey)) {
@@ -566,7 +579,9 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           }
           final int _tmpTiempoMin;
           _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-          _item_1 = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+          final int _tmpSeries;
+          _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+          _item_1 = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
           _map.put(_tmpKey, _item_1);
         }
       }

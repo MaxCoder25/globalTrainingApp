@@ -11,6 +11,7 @@ import com.example.globaltrainingapp_11.databinding.ActivityEntrenamientoBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.entidades.RutinasEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -39,6 +40,8 @@ class EntrenamientoActivity : AppCompatActivity() {
                 loadRutinas(n!!)
 
                 loadRutinas_Ejercicios(n!!.id_rutinas)
+
+                saveSharedPreference(n!!)
             }
 
 
@@ -81,7 +84,7 @@ class EntrenamientoActivity : AppCompatActivity() {
             binding.TXTNIVEL.text = "Nivel: "+ rutinasEntity.nivel
             binding.TXTMUSCULOS.text = "Musculos: " +rutinasEntity.musculos
             binding.TXTTIEMPO.text = "Duración: "+rutinasEntity.tiempoMin.toString() + " min"
-
+            binding.TXTSERIES.text = "SERIES: " + rutinasEntity.series.toString()
         }
 
 
@@ -107,6 +110,14 @@ private fun loadRutinas_Ejercicios(id_Rutina: Int) {
     fun ItemClickOnRecycledView(EjerciciosEntity: EjerciciosEntity) {
         Toast.makeText(binding.reciclerEntrenamiento.context, EjerciciosEntity.categoria , Toast.LENGTH_SHORT).show()
     }
+
+    fun saveSharedPreference(n: RutinasEntity ) {
+
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("repsRutina", n.series)
+        editorSP.commit()
+    }
+
 
 
     }

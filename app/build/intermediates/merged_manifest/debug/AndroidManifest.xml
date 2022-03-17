@@ -30,7 +30,7 @@
         android:theme="@style/Theme.GlobalTrainingApp_11" >
 
         <!--
-        ><activity
+        <activity
             android:name="com.example.globaltrainingapp_11.SplashActivity"
             android:exported="true">
             <intent-filter>

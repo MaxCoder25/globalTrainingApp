@@ -8,7 +8,6 @@ import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
-import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.room.util.StringUtil;
@@ -36,20 +35,14 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
 
   private final EntityInsertionAdapter<EjerciciosEntity> __insertionAdapterOfEjerciciosEntity;
 
-  private final EntityDeletionOrUpdateAdapter<EjerciciosEntity> __deletionAdapterOfEjerciciosEntity;
-
   private final EntityDeletionOrUpdateAdapter<EjerciciosEntity> __updateAdapterOfEjerciciosEntity;
-
-  private final SharedSQLiteStatement __preparedStmtOfCleanDbEjercicios;
-
-  private final SharedSQLiteStatement __preparedStmtOfDeleteEjerciciosById;
 
   public EjerciciosDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfEjerciciosEntity = new EntityInsertionAdapter<EjerciciosEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `ejercicios` (`id_ejercicios`,`nombreEjercicio`,`descripcion`,`categoria`,`nivel`,`tipo_movimiento`,`repeticiones`,`imagen`,`video`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `ejercicios` (`id_ejercicios`,`nombreEjercicio`,`descripcion`,`categoria`,`nivel`,`tipo_movimiento`,`repeticiones`,`tieneTiempo`,`imagen`,`video`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -81,33 +74,27 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           stmt.bindString(6, value.getTipo_movimiento());
         }
         stmt.bindLong(7, value.getRepeticiones());
-        if (value.getImagen() == null) {
+        if (value.getTieneTiempo() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getImagen());
+          stmt.bindString(8, value.getTieneTiempo());
         }
-        if (value.getVideo() == null) {
+        if (value.getImagen() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getVideo());
+          stmt.bindString(9, value.getImagen());
         }
-      }
-    };
-    this.__deletionAdapterOfEjerciciosEntity = new EntityDeletionOrUpdateAdapter<EjerciciosEntity>(__db) {
-      @Override
-      public String createQuery() {
-        return "DELETE FROM `ejercicios` WHERE `id_ejercicios` = ?";
-      }
-
-      @Override
-      public void bind(SupportSQLiteStatement stmt, EjerciciosEntity value) {
-        stmt.bindLong(1, value.getId_ejercicios());
+        if (value.getVideo() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getVideo());
+        }
       }
     };
     this.__updateAdapterOfEjerciciosEntity = new EntityDeletionOrUpdateAdapter<EjerciciosEntity>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR REPLACE `ejercicios` SET `id_ejercicios` = ?,`nombreEjercicio` = ?,`descripcion` = ?,`categoria` = ?,`nivel` = ?,`tipo_movimiento` = ?,`repeticiones` = ?,`imagen` = ?,`video` = ? WHERE `id_ejercicios` = ?";
+        return "UPDATE OR REPLACE `ejercicios` SET `id_ejercicios` = ?,`nombreEjercicio` = ?,`descripcion` = ?,`categoria` = ?,`nivel` = ?,`tipo_movimiento` = ?,`repeticiones` = ?,`tieneTiempo` = ?,`imagen` = ?,`video` = ? WHERE `id_ejercicios` = ?";
       }
 
       @Override
@@ -139,38 +126,29 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           stmt.bindString(6, value.getTipo_movimiento());
         }
         stmt.bindLong(7, value.getRepeticiones());
-        if (value.getImagen() == null) {
+        if (value.getTieneTiempo() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getImagen());
+          stmt.bindString(8, value.getTieneTiempo());
         }
-        if (value.getVideo() == null) {
+        if (value.getImagen() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getVideo());
+          stmt.bindString(9, value.getImagen());
         }
-        stmt.bindLong(10, value.getId_ejercicios());
-      }
-    };
-    this.__preparedStmtOfCleanDbEjercicios = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "DELETE FROM ejercicios";
-        return _query;
-      }
-    };
-    this.__preparedStmtOfDeleteEjerciciosById = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "DELETE FROM ejercicios WHERE id_ejercicios = ?";
-        return _query;
+        if (value.getVideo() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getVideo());
+        }
+        stmt.bindLong(11, value.getId_ejercicios());
       }
     };
   }
 
   @Override
   public Object insertEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -183,30 +161,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
-  }
-
-  @Override
-  public Object deleteOneEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> arg1) {
-    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
-      @Override
-      public Unit call() throws Exception {
-        __db.beginTransaction();
-        try {
-          __deletionAdapterOfEjerciciosEntity.handle(ejercicio);
-          __db.setTransactionSuccessful();
-          return Unit.INSTANCE;
-        } finally {
-          __db.endTransaction();
-        }
-      }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object updateEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -219,52 +179,11 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object cleanDbEjercicios(final Continuation<? super Unit> arg0) {
-    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
-      @Override
-      public Unit call() throws Exception {
-        final SupportSQLiteStatement _stmt = __preparedStmtOfCleanDbEjercicios.acquire();
-        __db.beginTransaction();
-        try {
-          _stmt.executeUpdateDelete();
-          __db.setTransactionSuccessful();
-          return Unit.INSTANCE;
-        } finally {
-          __db.endTransaction();
-          __preparedStmtOfCleanDbEjercicios.release(_stmt);
-        }
-      }
-    }, arg0);
-  }
-
-  @Override
-  public Object deleteEjerciciosById(final int idEjercicios,
-      final Continuation<? super Unit> arg1) {
-    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
-      @Override
-      public Unit call() throws Exception {
-        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteEjerciciosById.acquire();
-        int _argIndex = 1;
-        _stmt.bindLong(_argIndex, idEjercicios);
-        __db.beginTransaction();
-        try {
-          _stmt.executeUpdateDelete();
-          __db.setTransactionSuccessful();
-          return Unit.INSTANCE;
-        } finally {
-          __db.endTransaction();
-          __preparedStmtOfDeleteEjerciciosById.release(_stmt);
-        }
-      }
-    }, arg1);
-  }
-
-  @Override
-  public Object getAllEjercicios(final Continuation<? super List<EjerciciosEntity>> arg0) {
+  public Object getAllEjercicios(final Continuation<? super List<EjerciciosEntity>> continuation) {
     final String _sql = "SELECT * FROM ejercicios";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -280,6 +199,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTieneTiempo = CursorUtil.getColumnIndexOrThrow(_cursor, "tieneTiempo");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
           final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final List<EjerciciosEntity> _result = new ArrayList<EjerciciosEntity>(_cursor.getCount());
@@ -319,6 +239,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             }
             final int _tmpRepeticiones;
             _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
+            final String _tmpTieneTiempo;
+            if (_cursor.isNull(_cursorIndexOfTieneTiempo)) {
+              _tmpTieneTiempo = null;
+            } else {
+              _tmpTieneTiempo = _cursor.getString(_cursorIndexOfTieneTiempo);
+            }
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
@@ -331,7 +257,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
-            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpTieneTiempo,_tmpImagen,_tmpVideo);
             _result.add(_item);
           }
           return _result;
@@ -340,12 +266,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
   public Object getEjerciciosById(final int idEjercicio,
-      final Continuation<? super EjerciciosEntity> arg1) {
+      final Continuation<? super EjerciciosEntity> continuation) {
     final String _sql = "SELECT * FROM ejercicios WHERE id_ejercicios = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -363,6 +289,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTieneTiempo = CursorUtil.getColumnIndexOrThrow(_cursor, "tieneTiempo");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
           final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final EjerciciosEntity _result;
@@ -401,6 +328,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             }
             final int _tmpRepeticiones;
             _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
+            final String _tmpTieneTiempo;
+            if (_cursor.isNull(_cursorIndexOfTieneTiempo)) {
+              _tmpTieneTiempo = null;
+            } else {
+              _tmpTieneTiempo = _cursor.getString(_cursorIndexOfTieneTiempo);
+            }
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
@@ -413,7 +346,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
-            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _result = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpTieneTiempo,_tmpImagen,_tmpVideo);
           } else {
             _result = null;
           }
@@ -423,12 +356,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object getEjerciciosByCategory(final String EjerciciosCategory,
-      final Continuation<? super List<EjerciciosEntity>> arg1) {
+      final Continuation<? super List<EjerciciosEntity>> continuation) {
     final String _sql = "SELECT * FROM ejercicios WHERE categoria = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -450,6 +383,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTieneTiempo = CursorUtil.getColumnIndexOrThrow(_cursor, "tieneTiempo");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
           final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final List<EjerciciosEntity> _result = new ArrayList<EjerciciosEntity>(_cursor.getCount());
@@ -489,6 +423,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             }
             final int _tmpRepeticiones;
             _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
+            final String _tmpTieneTiempo;
+            if (_cursor.isNull(_cursorIndexOfTieneTiempo)) {
+              _tmpTieneTiempo = null;
+            } else {
+              _tmpTieneTiempo = _cursor.getString(_cursorIndexOfTieneTiempo);
+            }
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
@@ -501,7 +441,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
-            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpTieneTiempo,_tmpImagen,_tmpVideo);
             _result.add(_item);
           }
           return _result;
@@ -510,12 +450,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object getEjerciciosByTipoMovimiento(final String EjerciciosTipoMovimiento,
-      final Continuation<? super List<EjerciciosEntity>> arg1) {
+      final Continuation<? super List<EjerciciosEntity>> continuation) {
     final String _sql = "SELECT * FROM ejercicios WHERE tipo_movimiento = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -537,6 +477,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo_movimiento");
           final int _cursorIndexOfRepeticiones = CursorUtil.getColumnIndexOrThrow(_cursor, "repeticiones");
+          final int _cursorIndexOfTieneTiempo = CursorUtil.getColumnIndexOrThrow(_cursor, "tieneTiempo");
           final int _cursorIndexOfImagen = CursorUtil.getColumnIndexOrThrow(_cursor, "imagen");
           final int _cursorIndexOfVideo = CursorUtil.getColumnIndexOrThrow(_cursor, "video");
           final List<EjerciciosEntity> _result = new ArrayList<EjerciciosEntity>(_cursor.getCount());
@@ -576,6 +517,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             }
             final int _tmpRepeticiones;
             _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
+            final String _tmpTieneTiempo;
+            if (_cursor.isNull(_cursorIndexOfTieneTiempo)) {
+              _tmpTieneTiempo = null;
+            } else {
+              _tmpTieneTiempo = _cursor.getString(_cursorIndexOfTieneTiempo);
+            }
             final String _tmpImagen;
             if (_cursor.isNull(_cursorIndexOfImagen)) {
               _tmpImagen = null;
@@ -588,7 +535,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             } else {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
-            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+            _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpTieneTiempo,_tmpImagen,_tmpVideo);
             _result.add(_item);
           }
           return _result;
@@ -597,7 +544,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
@@ -615,6 +562,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
         final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
         final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
+        final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
         final LongSparseArray<ArrayList<EjerciciosEntity>> _collectionEjercicios = new LongSparseArray<ArrayList<EjerciciosEntity>>();
         while (_cursor.moveToNext()) {
           final long _tmpKey = _cursor.getLong(_cursorIndexOfIdRutinas);
@@ -630,7 +578,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         while(_cursor.moveToNext()) {
           final Rutinas_Ejercicios_Relaciones _item;
           final RutinasEntity _tmpRutinas;
-          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin))) {
+          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin) && _cursor.isNull(_cursorIndexOfSeries))) {
             final int _tmpId_rutinas;
             _tmpId_rutinas = _cursor.getInt(_cursorIndexOfIdRutinas);
             final String _tmpNombre;
@@ -659,7 +607,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            final int _tmpSeries;
+            _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
           }  else  {
             _tmpRutinas = null;
           }
@@ -701,6 +651,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
         final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
         final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
+        final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
         final LongSparseArray<ArrayList<EjerciciosEntity>> _collectionEjercicios = new LongSparseArray<ArrayList<EjerciciosEntity>>();
         while (_cursor.moveToNext()) {
           final long _tmpKey = _cursor.getLong(_cursorIndexOfIdRutinas);
@@ -716,7 +667,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         while(_cursor.moveToNext()) {
           final Rutinas_Ejercicios_Relaciones _item;
           final RutinasEntity _tmpRutinas;
-          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin))) {
+          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin) && _cursor.isNull(_cursorIndexOfSeries))) {
             final int _tmpId_rutinas;
             _tmpId_rutinas = _cursor.getInt(_cursorIndexOfIdRutinas);
             final String _tmpNombre;
@@ -745,7 +696,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            final int _tmpSeries;
+            _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
           }  else  {
             _tmpRutinas = null;
           }
@@ -800,7 +753,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
       return;
     }
     StringBuilder _stringBuilder = StringUtil.newStringBuilder();
-    _stringBuilder.append("SELECT `ejercicios`.`id_ejercicios` AS `id_ejercicios`,`ejercicios`.`nombreEjercicio` AS `nombreEjercicio`,`ejercicios`.`descripcion` AS `descripcion`,`ejercicios`.`categoria` AS `categoria`,`ejercicios`.`nivel` AS `nivel`,`ejercicios`.`tipo_movimiento` AS `tipo_movimiento`,`ejercicios`.`repeticiones` AS `repeticiones`,`ejercicios`.`imagen` AS `imagen`,`ejercicios`.`video` AS `video`,_junction.`id_rutinas` FROM `rutinas_ejercicios` AS _junction INNER JOIN `ejercicios` ON (_junction.`id_ejercicios` = `ejercicios`.`id_ejercicios`) WHERE _junction.`id_rutinas` IN (");
+    _stringBuilder.append("SELECT `ejercicios`.`id_ejercicios` AS `id_ejercicios`,`ejercicios`.`nombreEjercicio` AS `nombreEjercicio`,`ejercicios`.`descripcion` AS `descripcion`,`ejercicios`.`categoria` AS `categoria`,`ejercicios`.`nivel` AS `nivel`,`ejercicios`.`tipo_movimiento` AS `tipo_movimiento`,`ejercicios`.`repeticiones` AS `repeticiones`,`ejercicios`.`tieneTiempo` AS `tieneTiempo`,`ejercicios`.`imagen` AS `imagen`,`ejercicios`.`video` AS `video`,_junction.`id_rutinas` FROM `rutinas_ejercicios` AS _junction INNER JOIN `ejercicios` ON (_junction.`id_ejercicios` = `ejercicios`.`id_ejercicios`) WHERE _junction.`id_rutinas` IN (");
     final int _inputSize = _map.size();
     StringUtil.appendPlaceholders(_stringBuilder, _inputSize);
     _stringBuilder.append(")");
@@ -815,7 +768,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
     }
     final Cursor _cursor = DBUtil.query(__db, _stmt, false, null);
     try {
-      final int _itemKeyIndex = 9; // _junction.id_rutinas;
+      final int _itemKeyIndex = 10; // _junction.id_rutinas;
       if (_itemKeyIndex == -1) {
         return;
       }
@@ -826,8 +779,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
       final int _cursorIndexOfNivel = 4;
       final int _cursorIndexOfTipoMovimiento = 5;
       final int _cursorIndexOfRepeticiones = 6;
-      final int _cursorIndexOfImagen = 7;
-      final int _cursorIndexOfVideo = 8;
+      final int _cursorIndexOfTieneTiempo = 7;
+      final int _cursorIndexOfImagen = 8;
+      final int _cursorIndexOfVideo = 9;
       while(_cursor.moveToNext()) {
         final long _tmpKey = _cursor.getLong(_itemKeyIndex);
         ArrayList<EjerciciosEntity> _tmpRelation = _map.get(_tmpKey);
@@ -867,6 +821,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           }
           final int _tmpRepeticiones;
           _tmpRepeticiones = _cursor.getInt(_cursorIndexOfRepeticiones);
+          final String _tmpTieneTiempo;
+          if (_cursor.isNull(_cursorIndexOfTieneTiempo)) {
+            _tmpTieneTiempo = null;
+          } else {
+            _tmpTieneTiempo = _cursor.getString(_cursorIndexOfTieneTiempo);
+          }
           final String _tmpImagen;
           if (_cursor.isNull(_cursorIndexOfImagen)) {
             _tmpImagen = null;
@@ -879,7 +839,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           } else {
             _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
           }
-          _item_1 = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpImagen,_tmpVideo);
+          _item_1 = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpTieneTiempo,_tmpImagen,_tmpVideo);
           _tmpRelation.add(_item_1);
         }
       }

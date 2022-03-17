@@ -4,7 +4,7 @@ package com.example.globaltrainingapp_11.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,16 +21,56 @@ public final class FragmentLogrosBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button button2;
+  public final ImageView IMGPREMIO;
 
   @NonNull
-  public final TextView textArticulos;
+  public final TextView TXTCODIGOPREMIOVARIABLE;
 
-  private FragmentLogrosBinding(@NonNull ConstraintLayout rootView, @NonNull Button button2,
-      @NonNull TextView textArticulos) {
+  @NonNull
+  public final TextView TXTNIVELLOGROS;
+
+  @NonNull
+  public final TextView TXTNIVELLOGROSVARIABLE;
+
+  @NonNull
+  public final TextView TXTOTROSPREMIOS;
+
+  @NonNull
+  public final TextView TXTPREMIOSOBTENIDOS;
+
+  @NonNull
+  public final TextView TXTPREMIOSVARIABLE;
+
+  @NonNull
+  public final TextView TXTPUNTOSVARIABLE;
+
+  @NonNull
+  public final TextView TXTRUTINAS;
+
+  @NonNull
+  public final TextView TXTRUTINASVARIABLE;
+
+  @NonNull
+  public final TextView txtPUNTOS;
+
+  private FragmentLogrosBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView IMGPREMIO,
+      @NonNull TextView TXTCODIGOPREMIOVARIABLE, @NonNull TextView TXTNIVELLOGROS,
+      @NonNull TextView TXTNIVELLOGROSVARIABLE, @NonNull TextView TXTOTROSPREMIOS,
+      @NonNull TextView TXTPREMIOSOBTENIDOS, @NonNull TextView TXTPREMIOSVARIABLE,
+      @NonNull TextView TXTPUNTOSVARIABLE, @NonNull TextView TXTRUTINAS,
+      @NonNull TextView TXTRUTINASVARIABLE, @NonNull TextView txtPUNTOS) {
     this.rootView = rootView;
-    this.button2 = button2;
-    this.textArticulos = textArticulos;
+    this.IMGPREMIO = IMGPREMIO;
+    this.TXTCODIGOPREMIOVARIABLE = TXTCODIGOPREMIOVARIABLE;
+    this.TXTNIVELLOGROS = TXTNIVELLOGROS;
+    this.TXTNIVELLOGROSVARIABLE = TXTNIVELLOGROSVARIABLE;
+    this.TXTOTROSPREMIOS = TXTOTROSPREMIOS;
+    this.TXTPREMIOSOBTENIDOS = TXTPREMIOSOBTENIDOS;
+    this.TXTPREMIOSVARIABLE = TXTPREMIOSVARIABLE;
+    this.TXTPUNTOSVARIABLE = TXTPUNTOSVARIABLE;
+    this.TXTRUTINAS = TXTRUTINAS;
+    this.TXTRUTINASVARIABLE = TXTRUTINASVARIABLE;
+    this.txtPUNTOS = txtPUNTOS;
   }
 
   @Override
@@ -60,19 +100,76 @@ public final class FragmentLogrosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-      if (button2 == null) {
+      id = R.id.IMG_PREMIO;
+      ImageView IMGPREMIO = ViewBindings.findChildViewById(rootView, id);
+      if (IMGPREMIO == null) {
         break missingId;
       }
 
-      id = R.id.text_articulos;
-      TextView textArticulos = ViewBindings.findChildViewById(rootView, id);
-      if (textArticulos == null) {
+      id = R.id.TXT_CODIGOPREMIOVARIABLE;
+      TextView TXTCODIGOPREMIOVARIABLE = ViewBindings.findChildViewById(rootView, id);
+      if (TXTCODIGOPREMIOVARIABLE == null) {
         break missingId;
       }
 
-      return new FragmentLogrosBinding((ConstraintLayout) rootView, button2, textArticulos);
+      id = R.id.TXT_NIVEL_LOGROS;
+      TextView TXTNIVELLOGROS = ViewBindings.findChildViewById(rootView, id);
+      if (TXTNIVELLOGROS == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_NIVEL_LOGROS_VARIABLE;
+      TextView TXTNIVELLOGROSVARIABLE = ViewBindings.findChildViewById(rootView, id);
+      if (TXTNIVELLOGROSVARIABLE == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_OTROSPREMIOS;
+      TextView TXTOTROSPREMIOS = ViewBindings.findChildViewById(rootView, id);
+      if (TXTOTROSPREMIOS == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_PREMIOSOBTENIDOS;
+      TextView TXTPREMIOSOBTENIDOS = ViewBindings.findChildViewById(rootView, id);
+      if (TXTPREMIOSOBTENIDOS == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_PREMIOSVARIABLE;
+      TextView TXTPREMIOSVARIABLE = ViewBindings.findChildViewById(rootView, id);
+      if (TXTPREMIOSVARIABLE == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_PUNTOS_VARIABLE;
+      TextView TXTPUNTOSVARIABLE = ViewBindings.findChildViewById(rootView, id);
+      if (TXTPUNTOSVARIABLE == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_RUTINAS;
+      TextView TXTRUTINAS = ViewBindings.findChildViewById(rootView, id);
+      if (TXTRUTINAS == null) {
+        break missingId;
+      }
+
+      id = R.id.TXT_RUTINAS_VARIABLE;
+      TextView TXTRUTINASVARIABLE = ViewBindings.findChildViewById(rootView, id);
+      if (TXTRUTINASVARIABLE == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_PUNTOS;
+      TextView txtPUNTOS = ViewBindings.findChildViewById(rootView, id);
+      if (txtPUNTOS == null) {
+        break missingId;
+      }
+
+      return new FragmentLogrosBinding((ConstraintLayout) rootView, IMGPREMIO,
+          TXTCODIGOPREMIOVARIABLE, TXTNIVELLOGROS, TXTNIVELLOGROSVARIABLE, TXTOTROSPREMIOS,
+          TXTPREMIOSOBTENIDOS, TXTPREMIOSVARIABLE, TXTPUNTOSVARIABLE, TXTRUTINAS,
+          TXTRUTINASVARIABLE, txtPUNTOS);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

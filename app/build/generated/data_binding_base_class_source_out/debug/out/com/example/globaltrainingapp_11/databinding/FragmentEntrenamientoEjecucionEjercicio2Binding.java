@@ -23,6 +23,9 @@ public final class FragmentEntrenamientoEjecucionEjercicio2Binding implements Vi
   private final FrameLayout rootView;
 
   @NonNull
+  public final Button btnCuenta;
+
+  @NonNull
   public final Button btnFinEjercicio;
 
   @NonNull
@@ -35,26 +38,32 @@ public final class FragmentEntrenamientoEjecucionEjercicio2Binding implements Vi
   public final RecyclerView reciclerEjerc2doUso;
 
   @NonNull
+  public final TextView txtCuentaEjerc;
+
+  @NonNull
   public final TextView txtNombreEjerc;
 
   @NonNull
   public final TextView txtReps;
 
   @NonNull
-  public final TextView txtSiguientEjerc;
+  public final TextView txtSegundos;
 
   private FragmentEntrenamientoEjecucionEjercicio2Binding(@NonNull FrameLayout rootView,
-      @NonNull Button btnFinEjercicio, @NonNull Button btnTecnica, @NonNull ImageView imgEjercFrag,
-      @NonNull RecyclerView reciclerEjerc2doUso, @NonNull TextView txtNombreEjerc,
-      @NonNull TextView txtReps, @NonNull TextView txtSiguientEjerc) {
+      @NonNull Button btnCuenta, @NonNull Button btnFinEjercicio, @NonNull Button btnTecnica,
+      @NonNull ImageView imgEjercFrag, @NonNull RecyclerView reciclerEjerc2doUso,
+      @NonNull TextView txtCuentaEjerc, @NonNull TextView txtNombreEjerc, @NonNull TextView txtReps,
+      @NonNull TextView txtSegundos) {
     this.rootView = rootView;
+    this.btnCuenta = btnCuenta;
     this.btnFinEjercicio = btnFinEjercicio;
     this.btnTecnica = btnTecnica;
     this.imgEjercFrag = imgEjercFrag;
     this.reciclerEjerc2doUso = reciclerEjerc2doUso;
+    this.txtCuentaEjerc = txtCuentaEjerc;
     this.txtNombreEjerc = txtNombreEjerc;
     this.txtReps = txtReps;
-    this.txtSiguientEjerc = txtSiguientEjerc;
+    this.txtSegundos = txtSegundos;
   }
 
   @Override
@@ -85,6 +94,12 @@ public final class FragmentEntrenamientoEjecucionEjercicio2Binding implements Vi
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_cuenta;
+      Button btnCuenta = ViewBindings.findChildViewById(rootView, id);
+      if (btnCuenta == null) {
+        break missingId;
+      }
+
       id = R.id.btn_FinEjercicio;
       Button btnFinEjercicio = ViewBindings.findChildViewById(rootView, id);
       if (btnFinEjercicio == null) {
@@ -109,6 +124,12 @@ public final class FragmentEntrenamientoEjecucionEjercicio2Binding implements Vi
         break missingId;
       }
 
+      id = R.id.txt_cuentaEjerc;
+      TextView txtCuentaEjerc = ViewBindings.findChildViewById(rootView, id);
+      if (txtCuentaEjerc == null) {
+        break missingId;
+      }
+
       id = R.id.txt_NombreEjerc;
       TextView txtNombreEjerc = ViewBindings.findChildViewById(rootView, id);
       if (txtNombreEjerc == null) {
@@ -121,15 +142,15 @@ public final class FragmentEntrenamientoEjecucionEjercicio2Binding implements Vi
         break missingId;
       }
 
-      id = R.id.txtSiguientEjerc;
-      TextView txtSiguientEjerc = ViewBindings.findChildViewById(rootView, id);
-      if (txtSiguientEjerc == null) {
+      id = R.id.txt_segundos;
+      TextView txtSegundos = ViewBindings.findChildViewById(rootView, id);
+      if (txtSegundos == null) {
         break missingId;
       }
 
-      return new FragmentEntrenamientoEjecucionEjercicio2Binding((FrameLayout) rootView,
-          btnFinEjercicio, btnTecnica, imgEjercFrag, reciclerEjerc2doUso, txtNombreEjerc, txtReps,
-          txtSiguientEjerc);
+      return new FragmentEntrenamientoEjecucionEjercicio2Binding((FrameLayout) rootView, btnCuenta,
+          btnFinEjercicio, btnTecnica, imgEjercFrag, reciclerEjerc2doUso, txtCuentaEjerc,
+          txtNombreEjerc, txtReps, txtSegundos);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

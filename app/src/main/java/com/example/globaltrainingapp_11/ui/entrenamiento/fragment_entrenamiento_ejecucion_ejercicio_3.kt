@@ -43,7 +43,10 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
     ): View? {
         binding = FragmentEntrenamientoEjecucionEjercicio3Binding.inflate(inflater, container, false)
 
-        var tiempoDescanso  = getIntSharedPreference()
+
+        binding.txtDESCANSO.text = getSharedPreferenceTXTDescanso()
+
+        var tiempoDescanso  = getIntSharedPreferenceDescEjer()
         var tiempoDescanso2 = (tiempoDescanso + 1)  * 1000
 
         val timer = object: CountDownTimer(tiempoDescanso2.toLong(), 1000) {
@@ -52,7 +55,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
             override fun onTick(millisUntilFinished: Long) {
                 binding.txtTiempoDescanso.setText((millisUntilFinished/1000).toString())
 
-                saveSharedPreference()
+             //   saveSharedPreference()
             }
 
             override fun onFinish() {
@@ -78,6 +81,14 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
         }
 
         timer.start()
+
+        if(getIntSharedPreferenceEjercRutina() == 0){
+//Reinicio el numero de ejercicios
+            saveSharedPreferenceEjercRutina ( getIntSharedPreferenceOriginal() )
+            saveSharedPreferenceDescansoEjerc( getIntSharedPreferenceDescEjerOriginal() )
+            saveSharedPreferenceTXTDescanso("DESCANSO EJERCICIO")
+        }
+
 
 
 /*
@@ -130,7 +141,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
         binding.btnSaltar.setOnClickListener() {
 
-
+            timer.cancel()
             val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
 
@@ -228,7 +239,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
     }
 
 
-    fun getIntSharedPreference(): Int {
+    fun getIntSharedPreferenceDescEjer(): Int {
         var editorSP = globalTrainingApp.getShareDB()
         var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjerc", 1)
 
@@ -236,12 +247,68 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
     }
 
-    fun getIntSharedPreference2(): Int {
+    fun getIntSharedPreferenceDescEjerOriginal(): Int {
         var editorSP = globalTrainingApp.getShareDB()
-        var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjerc2", 1)
+        var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjercOriginal", 1)
 
         return tiempoDescansoEjerc
 
+    }
+
+/////////////////////////////////
+
+    fun getIntSharedPreferenceOriginal(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("numeroEjercRutinaOriginal", 1)
+
+        return repsRutina
+
+    }
+
+    fun getIntSharedPreferenceEjercRutina(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("numeroEjercRutina", 1)
+
+        return repsRutina
+
+    }
+
+
+    fun getIntSharedPreferenceDescansoSerie(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoSerie = editorSP.getInt("tiempoDescansoSerie", 1)
+
+        return tiempoDescansoSerie
+
+    }
+
+
+    fun getSharedPreferenceTXTDescanso(): String? {
+
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoSerie = editorSP.getString ("ejercOSerie", "ejercOSerie")
+
+        return tiempoDescansoSerie
+
+    }
+
+    fun saveSharedPreferenceEjercRutina(size: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("numeroEjercRutina", size)
+
+        editorSP.commit()
+    }
+
+    fun saveSharedPreferenceDescansoEjerc(tiempo: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("tiempoDescansoEjerc", tiempo)
+        editorSP.commit()
+    }
+
+    fun saveSharedPreferenceTXTDescanso(ejercOSerie: String) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putString("ejercOSerie", ejercOSerie)
+        editorSP.commit()
     }
 
 

@@ -16,8 +16,8 @@ tools:context=".TecnicaYoutubeActivity">
 
     <TextView
         android:id="@+id/txt_nombreEjercTecnica"
-        android:layout_width="201dp"
-        android:layout_height="47dp"
+        android:layout_width="348dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:text="Nombre ejercicio"

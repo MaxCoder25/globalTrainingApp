@@ -16,7 +16,8 @@ data class RutinasEntity (
     val categoria: String,
     val nivel: String,
     val musculos: String,
-    val tiempoMin: Int
+    val tiempoMin: Int,
+    val series: Int
 
     ): Parcelable {
     constructor(parcel: Parcel) : this(
@@ -25,6 +26,7 @@ data class RutinasEntity (
         parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.readString().toString(),
+        parcel.readInt(),
         parcel.readInt()
     ) {
     }
@@ -36,6 +38,7 @@ data class RutinasEntity (
         parcel.writeString(nivel)
         parcel.writeString(musculos)
         parcel.writeInt(tiempoMin)
+        parcel.writeInt(series)
     }
 
     override fun describeContents(): Int {

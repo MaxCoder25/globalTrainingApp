@@ -50,7 +50,7 @@
 30-->C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:23:9-58
 31
 32        <!--
-33        ><activity
+33        <activity
 34            android:name="com.example.globaltrainingapp_11.SplashActivity"
 35            android:exported="true">
 36            <intent-filter>

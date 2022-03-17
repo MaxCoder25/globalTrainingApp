@@ -36,8 +36,8 @@
         android:id="@+id/TXT_NIVEL"
         android:layout_width="166dp"
         android:layout_height="42dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
 
         android:background="@android:drawable/editbox_background"
         android:text="NIVEL"
@@ -66,6 +66,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_MUSCULOS" />
 
+    <TextView
+        android:id="@+id/TXT_SERIES"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="172dp"
+
+        android:background="@android:drawable/editbox_background"
+        android:text="NIVEL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recicler_entrenamiento"
         android:layout_width="404dp"
@@ -76,4 +88,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnAdelanteActivity" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

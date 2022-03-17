@@ -7,27 +7,131 @@
     tools:context=".ui.logros.LogrosFragment">
 
     <TextView
-        android:id="@+id/text_articulos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/txt_PUNTOS"
+        android:layout_width="161dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="PUNTOS OBTENIDOS"
+        android:background="@android:drawable/editbox_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/TXT_PUNTOS_VARIABLE"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="242dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="999"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="@+id/txt_PUNTOS"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TXT_RUTINAS"
+        android:layout_width="219dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="TOTAL RUTINAS COMPLETADAS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_PUNTOS" />
+
+    <TextView
+        android:id="@+id/TXT_RUTINAS_VARIABLE"
+        android:layout_width="72dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="center"
+        android:text="99"
+        app:layout_constraintStart_toStartOf="@+id/TXT_RUTINAS"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_PUNTOS_VARIABLE" />
+
+    <TextView
+        android:id="@+id/TXT_NIVEL_LOGROS"
+        android:layout_width="83dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="NIVEL:"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TXT_RUTINAS" />
+
+    <TextView
+        android:id="@+id/TXT_NIVEL_LOGROS_VARIABLE"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="NIVELUSER"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="@+id/TXT_NIVEL_LOGROS"
+        app:layout_constraintTop_toTopOf="@+id/TXT_RUTINAS" />
+
+    <TextView
+        android:id="@+id/TXT_PREMIOSOBTENIDOS"
+        android:layout_width="261dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:text="PREMIOS OBTENIDOS:"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TXT_NIVEL_LOGROS_VARIABLE" />
+
+    <TextView
+        android:id="@+id/TXT_PREMIOSVARIABLE"
+        android:layout_width="197dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:text="PRODUCTO                                            UBICACION"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TXT_PREMIOSOBTENIDOS" />
+
+    <TextView
+        android:id="@+id/TXT_CODIGOPREMIOVARIABLE"
+        android:layout_width="277dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="141dp"
+        android:gravity="center"
+        android:text="CODIGO DE RETIRO: SDGSD- 13535-325"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TXT_PREMIOSVARIABLE" />
+
+    <ImageView
+        android:id="@+id/IMG_PREMIO"
+        android:layout_width="137dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/domi_prona"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="@+id/TXT_PREMIOSVARIABLE"
+        app:layout_constraintTop_toTopOf="@+id/TXT_PREMIOSOBTENIDOS" />
+
+    <TextView
+        android:id="@+id/TXT_OTROSPREMIOS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="112dp"
-        android:text="fragmentLogros"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="79dp"
+        android:text="OTROS PREMIOS DISPONIBLES"
+        android:background="@android:drawable/editbox_background"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_articulos" />
+        app:layout_constraintTop_toTopOf="@+id/TXT_CODIGOPREMIOVARIABLE" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

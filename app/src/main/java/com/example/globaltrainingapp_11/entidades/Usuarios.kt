@@ -14,7 +14,13 @@ data class Usuarios(
     val edadUsuario:Int,
     val emailUsuario:String,
     val nicknameUsuario:String,
-    val passwordUsuario:String
+    val passwordUsuario:String,
+    val rutinasCompletadas:Int,
+    val puntos:Int,
+    val nivel:Int,
+    val premios:Int
+
+
 ){
 
 }

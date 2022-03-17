@@ -2,6 +2,7 @@ package com.example.globaltrainingapp_11.ui.entrenamiento
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Parcelable
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,6 +19,7 @@ import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio2Binding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,7 +30,6 @@ import kotlinx.serialization.json.Json
 class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
     private lateinit var binding: FragmentEntrenamientoEjecucionEjercicio2Binding
-
 
 
 
@@ -43,16 +44,80 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
     ): View? {
         binding = FragmentEntrenamientoEjecucionEjercicio2Binding.inflate(inflater, container, false)
 
+        val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
+
+
+        if(listaEjerc?.get(0)?.tieneTiempo?.equals("si") == true){
+            binding.btnCuenta.setVisibility(View.VISIBLE)
+            binding.txtCuentaEjerc.setVisibility(View.VISIBLE)
+            binding.txtSegundos.setVisibility(View.VISIBLE)
+            binding.txtReps.setVisibility(View.INVISIBLE)
+
+
+
+            var tiempoEjerc  = listaEjerc[0].repeticiones
+            binding.txtCuentaEjerc.text = tiempoEjerc.toString()
+
+
+        }
+
+
+        binding.btnCuenta.setOnClickListener(){
+            var tiempoEjerc  = listaEjerc?.get(0)?.repeticiones
+            var tiempoEjerc2 = (tiempoEjerc?.times(1000))
+
+            val timer = object: CountDownTimer(tiempoEjerc2.toString().toLong(), 1000) {
+
+
+        override fun onTick(millisUntilFinished: Long) {
+            binding.txtCuentaEjerc.setText((millisUntilFinished/1000).toString())
+
+            //saveSharedPreference()
+        }
+
+        override fun onFinish() {
+
+            Toast.makeText(context,"Tiempo" , Toast.LENGTH_SHORT).show()
+            binding.txtCuentaEjerc.text = "0"
+        //binding.txtSegundos.setVisibility(View.INVISIBLE)
+        }
+
+    }
+
+    timer.start()
+
+
+
+}
 
 
         binding.btnFinEjercicio.setOnClickListener() {
 
+            binding.btnCuenta.setVisibility(View.INVISIBLE)
+            binding.txtCuentaEjerc.setVisibility(View.INVISIBLE)
+            binding.txtSegundos.setVisibility(View.INVISIBLE)
+            binding.txtReps.setVisibility(View.VISIBLE)
 
-            val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
+            saveSharedPreferenceTXTDescanso("DESCANSO EJERCICIO")
+
+            saveSharedPreference (getIntSharedPreference() - 1)
+
+            if( getIntSharedPreference() == 0){
+
+                saveSharedPreferenceDescanso( getIntSharedPreferenceDescansoSerie ()  )
+                saveSharedPreferenceTXTDescanso("DESCANSO SERIE")
+            }
+
+
+
 
             if (listaEjerc != null) {
-                listaEjerc.removeAt(0)
+
+                if (listaEjerc != null) {
+                    listaEjerc.removeAt(0)
+                }
             }
+
 
             if  (listaEjerc.isNullOrEmpty()) {
 
@@ -92,8 +157,6 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
             val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
-            //var EjercParaVerTecnica = listaEjerc?.get(0)
-
             if (listaEjerc != null) {
                var EjercParaVerTecnica2= listaEjerc.component1()
 
@@ -104,31 +167,6 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
             startActivity(i)
             }
 
-
-            /*
-           if (listaEjerc != null) {
-
-                if (listaEjerc.isNotEmpty()) {
-                    val arrayList = ArrayList(listaEjerc)
-
-
-                    var frag_A_Enviar2 = newInstance2(arrayList)
-
-                    val fragment3 = frag_A_Enviar2
-                    val fragmentManager: FragmentManager? = parentFragmentManager
-                    val fragmentTransaction = fragmentManager!!.beginTransaction()
-
-                    fragmentTransaction.replace(R.id.fragmentContainerView, fragment3)
-                    //fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commitAllowingStateLoss()
-
-                }
-
-            }
-        }
-
-
-*/
 
         }
 
@@ -141,7 +179,6 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
     companion object {
         fun newInstance2(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_entrenamiento_ejecucion_ejercicio_3 {
             val args = Bundle()
-            // args.putParcelableArrayList("listaEjerc",lstEjercEntity);
 
             args.putParcelableArrayList("listaEjerc", lstEjercEntity as ArrayList<out Parcelable>?)
 
@@ -158,6 +195,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
 
 
         val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
+
 
         if (listaEjerc != null) {
             loadEjerc(listaEjerc.component1())
@@ -218,6 +256,50 @@ class fragment_entrenamiento_ejecucion_ejercicio_2 : Fragment() {
     }
 
 
+    fun getIntSharedPreferenceOriginal(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("numeroEjercRutinaOriginal", 1)
+
+        return repsRutina
+
+    }
+
+    fun getIntSharedPreference(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("numeroEjercRutina", 1)
+
+        return repsRutina
+
+    }
+
+
+    fun getIntSharedPreferenceDescansoSerie(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoSerie = editorSP.getInt("tiempoDescansoSerie", 1)
+
+        return tiempoDescansoSerie
+
+    }
+
+
+    fun saveSharedPreference(size: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("numeroEjercRutina", size)
+
+        editorSP.commit()
+    }
+
+    fun saveSharedPreferenceDescanso(tiempo: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("tiempoDescansoEjerc", tiempo)
+        editorSP.commit()
+    }
+
+    fun saveSharedPreferenceTXTDescanso(ejercOSerie: String) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putString("ejercOSerie", ejercOSerie)
+        editorSP.commit()
+    }
 
 }
 
