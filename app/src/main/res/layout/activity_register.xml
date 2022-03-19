@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loginPrincipal"
+    android:id="@+id/RegisterPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/LoginBackground"
@@ -11,12 +11,13 @@
 
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/campoPassword3"
+        android:id="@+id/campoPassword"
         android:layout_width="251dp"
         android:layout_height="49dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
         android:hint="Ingresa un password"
+        android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtpassword2" />
 
@@ -24,21 +25,22 @@
         android:id="@+id/txtpassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
         android:text="Contraseña:"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/campoPassword2" />
+        app:layout_constraintTop_toTopOf="@+id/campoNickname" />
 
     <TextView
         android:id="@+id/txtRegistrese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="140dp"
-        android:text="Registrate"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="REGISTRATE"
         android:textColor="@color/LoginText"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -47,9 +49,9 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="136dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="136dp"
+        android:layout_width="124dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -59,15 +61,15 @@
         android:id="@+id/txtEmail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="48dp"
         android:text="Edad:"
         android:textColorHint="@color/LoginText"
         android:textStyle="bold"
         android:theme="@style/LoginInputLayout"
         app:errorEnabled="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/campoNombre"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistrese"
         app:startIconDrawable="@drawable/ic_email_24"
         app:startIconTint="#FFFFFF" />
 
@@ -75,45 +77,34 @@
         android:id="@+id/txtpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="144dp"
         android:text="Como quieres que te llamemos?"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/campoEmail2" />
+        app:layout_constraintTop_toTopOf="@+id/campoEdad" />
 
     <Button
         android:id="@+id/btnRegistrarse"
         style="@style/LoginBoton"
-        android:layout_width="228dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="223dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
         android:text="REGISTRARSE"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/campoPassword3" />
-
-    <TextView
-        android:id="@+id/txtIniSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="73dp"
-        android:text="INICIAR SESION"
-        android:textColor="@color/LoginText"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnRegistrarse" />
+        app:layout_constraintTop_toTopOf="@+id/campoPassword" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/campoEmail2"
-        android:layout_width="166dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="37dp"
-        android:hint="Digita tu edad"
+        android:id="@+id/campoEdad"
+        android:layout_width="84dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="Ejm: 25"
         android:inputType="textEmailAddress"
         app:barrierMargin="@dimen/material_emphasis_medium"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,21 +112,31 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/campoPassword2"
+        android:id="@+id/campoNickname"
         android:layout_width="251dp"
         android:layout_height="49dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
         android:hint="Ingresa un nickname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtpassword" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/campoEmail"
+        android:layout_width="266dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:hint="Ingresa un nickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_emailRegister" />
 
     <TextView
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
         android:text="Deportista:"
         android:textColor="#000000"
         android:textStyle="bold"
@@ -146,10 +147,34 @@
         android:id="@+id/campoNombre"
         android:layout_width="255dp"
         android:layout_height="43dp"
-        android:layout_marginTop="37dp"
-        android:hint="Ingresa tu nombre completo"
-        app:layout_constraintTop_toTopOf="@+id/txtNombre"
-        tools:layout_editor_absoluteX="72dp" />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:hint="Ingresa tu nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNombre" />
+
+    <Button
+        android:id="@+id/btn_iniSesionRegistrarse"
+        android:layout_width="164dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="60dp"
+        android:text="INICIAR SESION"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnRegistrarse" />
+
+    <TextView
+        android:id="@+id/txt_emailRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="Email"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/campoNombre" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

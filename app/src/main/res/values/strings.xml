@@ -2,7 +2,9 @@
     <string name="app_name">globalTrainingApp_11</string>
 
     <string name="errorEmail">Email incorrecto</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="errorPassword">Password incorrecto</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main_nav_drawer">MainActivityNavDrawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

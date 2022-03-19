@@ -13,6 +13,14 @@ class RutinasBL {
         return RutinasUseCase().getAllRutinas(category)
     }
 
+
+
+    suspend fun getRutinasById(id_rutinas: Int) {
+        RutinasUseCase().getRutinasById(id_rutinas)
+    }
+
+
+
     suspend fun getCategoriaRutinas(category: String): CategoriaRutinasEntity {
         return CategoriaRutinasUseCase().getCategoriaRutinas(category)
     }
@@ -20,7 +28,5 @@ class RutinasBL {
     suspend fun updateSemanaRutinas(id_rutinas: Int, dia: String) {
         CategoriaRutinasUseCase().updateSemanaRutinas(id_rutinas, dia)
     }
-
-
 
 }

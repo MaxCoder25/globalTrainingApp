@@ -38,9 +38,21 @@
             android:name="com.example.globaltrainingapp_11.TecnicaYoutubeActivity"
             android:exported="false" />
 
-        <activity
+       <!-- <activity
             android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
             android:exported="false" />
+        -->
+
+
+                <activity
+                    android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
+                    android:exported="false"
+                    android:label="@string/title_activity_main_nav_drawer"
+                    android:theme="@style/Theme.GlobalTrainingApp_11.NoActionBar" >
+
+                </activity>
+
+
         <activity
             android:name="com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity"
             android:exported="false" />
@@ -50,6 +62,20 @@
         <activity
             android:name="com.example.globaltrainingapp_11.presentacion.Entrenamiento_2_Activity"
             android:exported="false" />
+
+
+        <activity
+            android:name="com.example.globaltrainingapp_11.presentacion.LoginActivity"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
         <activity
             android:name="com.example.globaltrainingapp_11.MainActivityNavDrawer"
             android:exported="true"
@@ -61,6 +87,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        -->
 
         <uses-library
             android:name="androidx.window.extensions"

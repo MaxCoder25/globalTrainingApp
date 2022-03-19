@@ -1,5 +1,7 @@
 package com.example.globaltrainingapp_11.ui.entrenamiento
 
+import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Parcelable
@@ -11,12 +13,14 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio3Binding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
+import com.example.globaltrainingapp_11.ui.rutinas.RutinasFragment
 import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,6 +30,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
     private lateinit var binding: FragmentEntrenamientoEjecucionEjercicio3Binding
 
+    var mediaPlayer =  MediaPlayer()
+    var sonidoBoolean= false
 
 
 
@@ -44,6 +50,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
         binding = FragmentEntrenamientoEjecucionEjercicio3Binding.inflate(inflater, container, false)
 
 
+
+
         binding.txtDESCANSO.text = getSharedPreferenceTXTDescanso()
 
         var tiempoDescanso  = getIntSharedPreferenceDescEjer()
@@ -59,6 +67,38 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
             }
 
             override fun onFinish() {
+
+                sonidoBoolean = getSharedPreferenceSonidoBoolean() == true
+
+                if(sonidoBoolean) {
+
+                    lifecycleScope.launch(Dispatchers.Main)
+                    {
+                        withContext(Dispatchers.IO) {
+
+
+                            mediaPlayer =
+                                MediaPlayer.create(
+                                    getActivity(),
+                                    R.raw.inicio_entrenamiento_ejercicios
+                                )
+                            mediaPlayer.start()
+                            //no vale toast con corutinas
+                            // Toast.makeText(getActivity(), "Descanso terminado", Toast.LENGTH_SHORT)
+                            //     .show()
+
+
+                            Thread.sleep(2600)
+
+                            mediaPlayer.stop()
+                        }
+
+                    }
+
+                }
+
+
+
                 //hace algo al finalizar el timer
                 val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
@@ -142,6 +182,35 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
         binding.btnSaltar.setOnClickListener() {
 
             timer.cancel()
+
+            sonidoBoolean = getSharedPreferenceSonidoBoolean() == true
+
+            if(sonidoBoolean){
+
+                lifecycleScope.launch(Dispatchers.Main)
+                {
+                    withContext(Dispatchers.IO) {
+
+
+                        mediaPlayer =
+                            MediaPlayer.create(getActivity(), R.raw.inicio_entrenamiento_ejercicios)
+                        mediaPlayer.start()
+                       //no vale toast con corutinas
+                        // Toast.makeText(getActivity(), "Descanso terminado", Toast.LENGTH_SHORT)
+                       //     .show()
+
+
+                        Thread.sleep(2600)
+
+                        mediaPlayer.stop()
+                    }
+
+                }
+
+
+            }
+
+
             val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
 
@@ -157,10 +226,24 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
             fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commitAllowingStateLoss()
-
+          //  fragmentTransaction.commit()
 
 
         }
+
+        binding.btnSalirEntrenamDesc.setOnClickListener(){
+
+            timer.cancel()
+
+                var intent = Intent(context, MainActivityNavDrawer::class.java)
+
+                startActivity(intent)
+
+
+        }
+
+
+
 
 
         return  binding.root
@@ -291,6 +374,17 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
         return tiempoDescansoSerie
 
     }
+
+
+    fun getSharedPreferenceSonidoBoolean(): Boolean? {
+
+        var editorSP = globalTrainingApp.getShareDB()
+        var sonidoBoolean = editorSP.getBoolean ("sonidoBoolean", true)
+
+        return sonidoBoolean
+
+    }
+
 
     fun saveSharedPreferenceEjercRutina(size: Int) {
         var editorSP = globalTrainingApp.getShareDB().edit()

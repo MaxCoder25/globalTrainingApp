@@ -52,10 +52,6 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_asistente.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_categoria_rutinas_list.xml",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_categoria_rutinas_list.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\content_main.xml"
     },
@@ -64,12 +60,12 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_rutinas_semana.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_entrenamiento_ejecucion_ejercicio_2.xml",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_entrenamiento_ejecucion_ejercicio_2.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_semana_rutinas.xml",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_semana_rutinas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_entrenamiento_ejecucion_ejercicio_2.xml",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_entrenamiento_ejecucion_ejercicio_2.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tecnica_ejerc_youtube.xml",
@@ -118,9 +114,5 @@
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_entrenamiento_2.xml",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\activity_entrenamiento_2.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_cat_rutinas.xml",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_cat_rutinas.xml"
     }
 ]

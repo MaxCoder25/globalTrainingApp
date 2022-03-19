@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
 MERGED from [androidx.databinding:viewbinding:7.1.1] C:\Users\Usuario\.gradle\caches\transforms-3\21130ad8de5e35fc122d4b7f112542bc\transformed\jetified-viewbinding-7.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\e5198354e957cfb9c8c498648b7c7647\transformed\navigation-fragment-ktx-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\ac42409a4a6a98ba36bbf020efae1aff\transformed\navigation-fragment-2.4.0\AndroidManifest.xml:17:1-24:12
@@ -75,9 +75,9 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\7f4ee7a55447ea2453916aefd53a5ead\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\007f9a9b187370f95bba48c622b051ba\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\ae5e957dbbb19216b8857f2e2cbeb0e5\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-103:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:2:1-131:12
 	package
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
@@ -253,7 +253,7 @@ INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\m
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:12:5-93:19
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:12:5-121:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Usuario\.gradle\caches\transforms-3\b1aa95ab26f6e1763e1b9ea3e82669e5\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
@@ -302,88 +302,88 @@ ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:38:13-83
-activity#com.example.globaltrainingapp_11.presentacion.LoginActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:41:9-43:40
-	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:43:13-37
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:42:13-87
-activity#com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:44:9-46:40
-	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:46:13-37
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:45:13-95
-activity#com.example.globaltrainingapp_11.presentacion.RegisterActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:47:9-49:40
-	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:49:13-37
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:48:13-90
-activity#com.example.globaltrainingapp_11.presentacion.Entrenamiento_2_Activity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:9-52:40
-	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:52:13-37
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:51:13-98
 activity#com.example.globaltrainingapp_11.MainActivityNavDrawer
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:53:9-63:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:47:17-53:28
 	android:label
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:56:13-67
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:50:21-75
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:55:13-36
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:49:21-45
 	android:theme
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:13-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:51:21-82
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:54:13-82
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:48:21-90
+activity#com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:56:9-58:40
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:58:13-37
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:57:13-95
+activity#com.example.globaltrainingapp_11.presentacion.RegisterActivity
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:59:9-61:40
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:60:13-90
+activity#com.example.globaltrainingapp_11.presentacion.Entrenamiento_2_Activity
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:62:9-64:40
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:64:13-37
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:63:13-98
+activity#com.example.globaltrainingapp_11.presentacion.LoginActivity
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:67:9-76:20
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:69:13-36
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:68:13-87
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:58:13-62:29
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:71:13-75:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:59:17-69
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:72:17-69
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:59:25-66
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:72:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:17-77
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:74:17-77
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:61:27-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:74:27-74
 uses-library#androidx.window.extensions
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:65:9-67:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:93:9-95:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 	android:required
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:67:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:66:13-54
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:94:13-54
 uses-library#androidx.window.sidecar
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:68:9-70:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:96:9-98:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 MERGED from [androidx.window:window:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\dbd9a6d30af007a9c8bb5aee55e71841\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 	android:required
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:70:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:98:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:69:13-51
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:97:13-51
 provider#com.squareup.picasso.PicassoProvider
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:72:9-75:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:100:9-103:40
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e2acfed441a0f9b6f8971fcb86e2f906\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Usuario\.gradle\caches\transforms-3\e2acfed441a0f9b6f8971fcb86e2f906\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:74:13-88
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:102:13-88
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:75:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:103:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:73:13-64
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:101:13-64
 service#androidx.room.MultiInstanceInvalidationService
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:77:9-80:40
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:105:9-108:40
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\8e55af8098e899d7b61a20920da87e98\transformed\room-runtime-2.4.1\AndroidManifest.xml:25:9-28:40
 MERGED from [androidx.room:room-runtime:2.4.1] C:\Users\Usuario\.gradle\caches\transforms-3\8e55af8098e899d7b61a20920da87e98\transformed\room-runtime-2.4.1\AndroidManifest.xml:25:9-28:40
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:80:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:108:13-37
 	android:directBootAware
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:79:13-43
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:107:13-43
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:78:13-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:106:13-74
 provider#androidx.startup.InitializationProvider
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:82:9-92:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:110:9-120:20
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\63efaaf8629b8c56e823996ecb455ae8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\63efaaf8629b8c56e823996ecb455ae8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\f6772fa32c7b52d93e54d657da5854aa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
@@ -393,32 +393,32 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Usuario\.gradle\ca
 	tools:node
 		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\63efaaf8629b8c56e823996ecb455ae8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:30:13-31
 	android:authorities
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:84:14-85
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:112:14-85
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:85:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:113:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:83:13-67
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:111:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:86:13-88:52
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:114:13-116:52
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\63efaaf8629b8c56e823996ecb455ae8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\63efaaf8629b8c56e823996ecb455ae8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:88:17-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:116:17-49
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:87:17-75
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:115:17-75
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:89:13-91:52
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:117:13-119:52
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\f6772fa32c7b52d93e54d657da5854aa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\f6772fa32c7b52d93e54d657da5854aa\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:91:17-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:119:17-49
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:90:17-78
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:118:17-78
 queries
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:96:5-100:15
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:124:5-128:15
 intent#action:name:com.google.android.youtube.api.service.START
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:97:9-99:18
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:125:9-127:18
 action#com.google.android.youtube.api.service.START
-ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:98:13-83
+ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:126:13-83
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:98:21-80
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\globalTrainingApp\app\src\main\AndroidManifest.xml:126:21-80

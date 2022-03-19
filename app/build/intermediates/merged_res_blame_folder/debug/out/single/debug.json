@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_ejercicios_list.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_ejercicios_list.xml"
     },
@@ -20,6 +24,14 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_selector.xml.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable\\tab_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_arrow_forward_24.xml.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\ic_arrow_forward_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_entrenamiento.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\activity_entrenamiento.xml"
     },
@@ -28,20 +40,20 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\ic_password_24.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_arrow_forward_24.xml.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\ic_arrow_forward_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_tab_selector.xml.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable\\tab_selector.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_rutinas_entrenamiento_list_sin_boton_cambio_ejerc.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_rutinas_entrenamiento_list_sin_boton_cambio_ejerc.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
@@ -60,10 +72,6 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_splashglobaltraining.png.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_splashglobaltraining.png"
     },
@@ -80,12 +88,12 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_fitrevlogo.png.flat",
@@ -96,16 +104,16 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\domi_prona.jpg"
     },
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_splashglobaltraining.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_splashglobaltraining.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_rutinas_entrenamiento_list.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_rutinas_entrenamiento_list.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -120,12 +128,16 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_rutinas_semana.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_rutinas_semana.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_app_bar_main.xml.flat",
@@ -156,6 +168,10 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_configuraciones.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\raw_fin_ejercicios.wav.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\raw\\fin_ejercicios.wav"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_splashglobaltraining.png.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_splashglobaltraining.png"
     },
@@ -168,12 +184,20 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\ic_email_24.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_entrenamiento_ejecucion_ejercicio_3.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_entrenamiento_ejecucion_ejercicio_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_tecnica_ejerc_youtube.xml.flat",
@@ -200,6 +224,14 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_splashglobaltraining.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_logoapp.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\logoapp.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_list_24.xml.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\ic_list_24.xml"
     },
@@ -216,8 +248,12 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable\\tab_rounded.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_entrenamiento_ejecucion_ejercicio_2.xml.flat",
@@ -226,10 +262,6 @@
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_spartan.jpg.flat",
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable\\spartan.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_abd_colgado.jpg.flat",
@@ -260,12 +292,12 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_entrenamiento_ejecucion_ejercicio.xml.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_entrenamiento_ejecucion_ejercicio.xml"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\raw_inicio_entrenamiento_ejercicios.mp3.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\raw\\inicio_entrenamiento_ejercicios.mp3"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_entrenamiento_ejecucion_ejercicio.xml.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\layout\\fragment_entrenamiento_ejecucion_ejercicio.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_semana_list.xml.flat",
@@ -284,12 +316,8 @@
         "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\drawable-v24\\ic_btnavigation.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\AndroidStudioProjects\\globalTrainingApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_flexion_normal.jpg.flat",

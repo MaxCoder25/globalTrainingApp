@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.globaltrainingapp_11.databinding.FragmentLogrosBinding
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
 import com.example.globaltrainingapp_11.logica.UsuarioBL
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -40,7 +41,7 @@ class LogrosFragment : Fragment() {
         lifecycleScope.launch(Dispatchers.Main)
         {
             val items = withContext(Dispatchers.IO) {
-                UsuarioBL().getOneUsuario(1)
+                UsuarioBL().getOneUsuario(   getIntSharedPreference_idUsuarioLogin()   )
 
             }
 
@@ -73,6 +74,14 @@ class LogrosFragment : Fragment() {
         return root
     }
 
+
+    fun getIntSharedPreference_idUsuarioLogin(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var idUsuarioLogin = editorSP.getInt("idUsuarioLogin", 1)
+
+        return idUsuarioLogin
+
+    }
 
 
     override fun onDestroyView() {

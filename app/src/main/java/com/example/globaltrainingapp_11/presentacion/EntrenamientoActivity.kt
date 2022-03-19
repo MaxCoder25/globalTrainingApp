@@ -42,6 +42,7 @@ class EntrenamientoActivity : AppCompatActivity() {
                 loadRutinas_Ejercicios(n!!.id_rutinas)
 
                 saveSharedPreference(n!!)
+
             }
 
 
@@ -115,6 +116,7 @@ private fun loadRutinas_Ejercicios(id_Rutina: Int) {
 
         var editorSP = globalTrainingApp.getShareDB().edit()
         editorSP.putInt("repsRutina", n.series)
+        editorSP.putInt("puntosRutinaActual", n.puntos)
         editorSP.commit()
     }
 

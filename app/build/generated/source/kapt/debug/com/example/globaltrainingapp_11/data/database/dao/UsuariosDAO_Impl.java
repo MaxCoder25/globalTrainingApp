@@ -33,6 +33,12 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdatePremio_IN_UsuarioById;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateRutinasCompletadas_IN_UsuarioById;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdatePuntos_IN_UsuarioById;
+
+  private final SharedSQLiteStatement __preparedStmtOfInsertNuevoUsuario_Register;
+
   public UsuariosDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__preparedStmtOfUpdateNivel_IN_UsuarioById = new SharedSQLiteStatement(__db) {
@@ -46,6 +52,27 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
       @Override
       public String createQuery() {
         final String _query = "UPDATE usuarios SET premios=? WHERE idUsuario = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateRutinasCompletadas_IN_UsuarioById = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE usuarios SET rutinasCompletadas=? WHERE idUsuario = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdatePuntos_IN_UsuarioById = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE usuarios SET puntos=? WHERE idUsuario = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfInsertNuevoUsuario_Register = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "INSERT INTO usuarios (nombreUsuario, edadUsuario,emailUsuario, nicknameUsuario, passwordUsuario, rutinasCompletadas, puntos, nivel, premios) values (?,?,?, ?, ?, ?, ?,?,?)";
         return _query;
       }
     };
@@ -94,6 +121,110 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
         } finally {
           __db.endTransaction();
           __preparedStmtOfUpdatePremio_IN_UsuarioById.release(_stmt);
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object updateRutinasCompletadas_IN_UsuarioById(final int rutinasCompletadas,
+      final int idUsuario, final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateRutinasCompletadas_IN_UsuarioById.acquire();
+        int _argIndex = 1;
+        _stmt.bindLong(_argIndex, rutinasCompletadas);
+        _argIndex = 2;
+        _stmt.bindLong(_argIndex, idUsuario);
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfUpdateRutinasCompletadas_IN_UsuarioById.release(_stmt);
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object updatePuntos_IN_UsuarioById(final int puntos, final int idUsuario,
+      final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfUpdatePuntos_IN_UsuarioById.acquire();
+        int _argIndex = 1;
+        _stmt.bindLong(_argIndex, puntos);
+        _argIndex = 2;
+        _stmt.bindLong(_argIndex, idUsuario);
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfUpdatePuntos_IN_UsuarioById.release(_stmt);
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object insertNuevoUsuario_Register(final String nombreUsuario, final int edadUsuario,
+      final String emailUsuario, final String nicknameUsuario, final String passwordUsuario,
+      final int rutinasCompletadas, final int puntos, final int nivel, final int premios,
+      final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfInsertNuevoUsuario_Register.acquire();
+        int _argIndex = 1;
+        if (nombreUsuario == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, nombreUsuario);
+        }
+        _argIndex = 2;
+        _stmt.bindLong(_argIndex, edadUsuario);
+        _argIndex = 3;
+        if (emailUsuario == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, emailUsuario);
+        }
+        _argIndex = 4;
+        if (nicknameUsuario == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, nicknameUsuario);
+        }
+        _argIndex = 5;
+        if (passwordUsuario == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, passwordUsuario);
+        }
+        _argIndex = 6;
+        _stmt.bindLong(_argIndex, rutinasCompletadas);
+        _argIndex = 7;
+        _stmt.bindLong(_argIndex, puntos);
+        _argIndex = 8;
+        _stmt.bindLong(_argIndex, nivel);
+        _argIndex = 9;
+        _stmt.bindLong(_argIndex, premios);
+        __db.beginTransaction();
+        try {
+          _stmt.executeInsert();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfInsertNuevoUsuario_Register.release(_stmt);
         }
       }
     }, continuation);

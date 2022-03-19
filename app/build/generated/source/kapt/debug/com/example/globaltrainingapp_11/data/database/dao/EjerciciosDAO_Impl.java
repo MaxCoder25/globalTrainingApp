@@ -148,7 +148,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
 
   @Override
   public Object insertEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> continuation) {
+      final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -161,12 +161,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
   public Object updateEjercicios(final EjerciciosEntity ejercicio,
-      final Continuation<? super Unit> continuation) {
+      final Continuation<? super Unit> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -179,11 +179,11 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object getAllEjercicios(final Continuation<? super List<EjerciciosEntity>> continuation) {
+  public Object getAllEjercicios(final Continuation<? super List<EjerciciosEntity>> arg0) {
     final String _sql = "SELECT * FROM ejercicios";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -266,12 +266,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg0);
   }
 
   @Override
   public Object getEjerciciosById(final int idEjercicio,
-      final Continuation<? super EjerciciosEntity> continuation) {
+      final Continuation<? super EjerciciosEntity> arg1) {
     final String _sql = "SELECT * FROM ejercicios WHERE id_ejercicios = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -356,12 +356,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
   public Object getEjerciciosByCategory(final String EjerciciosCategory,
-      final Continuation<? super List<EjerciciosEntity>> continuation) {
+      final Continuation<? super List<EjerciciosEntity>> arg1) {
     final String _sql = "SELECT * FROM ejercicios WHERE categoria = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -450,12 +450,12 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
   public Object getEjerciciosByTipoMovimiento(final String EjerciciosTipoMovimiento,
-      final Continuation<? super List<EjerciciosEntity>> continuation) {
+      final Continuation<? super List<EjerciciosEntity>> arg1) {
     final String _sql = "SELECT * FROM ejercicios WHERE tipo_movimiento = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -544,7 +544,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
@@ -563,6 +563,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
         final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
         final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
+        final int _cursorIndexOfPuntos = CursorUtil.getColumnIndexOrThrow(_cursor, "puntos");
         final LongSparseArray<ArrayList<EjerciciosEntity>> _collectionEjercicios = new LongSparseArray<ArrayList<EjerciciosEntity>>();
         while (_cursor.moveToNext()) {
           final long _tmpKey = _cursor.getLong(_cursorIndexOfIdRutinas);
@@ -578,7 +579,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         while(_cursor.moveToNext()) {
           final Rutinas_Ejercicios_Relaciones _item;
           final RutinasEntity _tmpRutinas;
-          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin) && _cursor.isNull(_cursorIndexOfSeries))) {
+          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin) && _cursor.isNull(_cursorIndexOfSeries) && _cursor.isNull(_cursorIndexOfPuntos))) {
             final int _tmpId_rutinas;
             _tmpId_rutinas = _cursor.getInt(_cursorIndexOfIdRutinas);
             final String _tmpNombre;
@@ -609,7 +610,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
             final int _tmpSeries;
             _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
-            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
+            final int _tmpPuntos;
+            _tmpPuntos = _cursor.getInt(_cursorIndexOfPuntos);
+            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries,_tmpPuntos);
           }  else  {
             _tmpRutinas = null;
           }
@@ -652,6 +655,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
         final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
         final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
+        final int _cursorIndexOfPuntos = CursorUtil.getColumnIndexOrThrow(_cursor, "puntos");
         final LongSparseArray<ArrayList<EjerciciosEntity>> _collectionEjercicios = new LongSparseArray<ArrayList<EjerciciosEntity>>();
         while (_cursor.moveToNext()) {
           final long _tmpKey = _cursor.getLong(_cursorIndexOfIdRutinas);
@@ -667,7 +671,7 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
         while(_cursor.moveToNext()) {
           final Rutinas_Ejercicios_Relaciones _item;
           final RutinasEntity _tmpRutinas;
-          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin) && _cursor.isNull(_cursorIndexOfSeries))) {
+          if (! (_cursor.isNull(_cursorIndexOfIdRutinas) && _cursor.isNull(_cursorIndexOfNombre) && _cursor.isNull(_cursorIndexOfCategoria) && _cursor.isNull(_cursorIndexOfNivel) && _cursor.isNull(_cursorIndexOfMusculos) && _cursor.isNull(_cursorIndexOfTiempoMin) && _cursor.isNull(_cursorIndexOfSeries) && _cursor.isNull(_cursorIndexOfPuntos))) {
             final int _tmpId_rutinas;
             _tmpId_rutinas = _cursor.getInt(_cursorIndexOfIdRutinas);
             final String _tmpNombre;
@@ -698,7 +702,9 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
             final int _tmpSeries;
             _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
-            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries);
+            final int _tmpPuntos;
+            _tmpPuntos = _cursor.getInt(_cursorIndexOfPuntos);
+            _tmpRutinas = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries,_tmpPuntos);
           }  else  {
             _tmpRutinas = null;
           }

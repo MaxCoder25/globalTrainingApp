@@ -12,8 +12,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reciclerEjerc_2doUso"
-            android:layout_width="408dp"
-            android:layout_height="327dp"
+            android:layout_width="401dp"
+            android:layout_height="308dp"
             android:layout_marginTop="171dp"
             android:layout_marginBottom="17dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -25,10 +25,10 @@
 
         <ImageView
             android:id="@+id/img_Ejerc_Frag"
-            android:layout_width="278dp"
-            android:layout_height="170dp"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="256dp"
+            android:layout_height="137dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="88dp"
             android:src="@drawable/domi_prona"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
             android:layout_width="293dp"
             android:layout_height="58dp"
             android:layout_marginStart="92dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="152dp"
             android:background="@android:drawable/editbox_background"
 
             android:gravity="center"
@@ -50,8 +50,8 @@
             android:id="@+id/txt_Reps"
             android:layout_width="171dp"
             android:layout_height="31dp"
-            android:layout_marginStart="152dp"
-            android:layout_marginTop="252dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="224dp"
             android:background="@android:drawable/editbox_background"
 
             android:gravity="center"
@@ -61,8 +61,8 @@
 
         <Button
             android:id="@+id/btn_FinEjercicio"
-            android:layout_width="182dp"
-            android:layout_height="64dp"
+            android:layout_width="178dp"
+            android:layout_height="55dp"
             android:layout_marginStart="168dp"
             android:layout_marginTop="12dp"
             android:text="TOCA CUANDO TERMINES"
@@ -115,6 +115,39 @@
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/txt_Reps"
             app:layout_constraintTop_toTopOf="@+id/txt_NombreEjerc" />
+
+        <TextView
+            android:id="@+id/TXT_SERIE"
+            android:layout_width="94dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="92dp"
+            android:gravity="center"
+            android:text="SERIE: 1"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_tecnica" />
+
+        <ImageView
+            android:id="@+id/btn_salirEntrenam"
+            android:layout_width="37dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="50dp"
+            android:src="@android:drawable/presence_offline"
+            app:layout_constraintStart_toEndOf="@+id/txt_salirEntrenamiento"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_salirEntrenamiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="62dp"
+            android:text="Salir Entrenamiento"
+            app:layout_constraintStart_toEndOf="@+id/btn_tecnica"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

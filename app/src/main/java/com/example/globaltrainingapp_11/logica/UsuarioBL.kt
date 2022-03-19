@@ -10,11 +10,14 @@ import com.example.globaltrainingapp_11.utils.globalTrainingApp
 
 class UsuarioBL {
 
-   /* fun LoginUser(name: String, pass: String): Boolean {
-        var us = UsuarioUseCase().getUserNameAndPass(name, pass)
-        return (us.id == "-1L")
+    suspend fun LoginUser(nick: String, pass: String): Usuarios {
+        var idUsuario = UsuarioUseCase().getUserNameAndPass(nick, pass)
+
+        var UsuarioLogeado = UsuarioUseCase().getOneUsuario(idUsuario)
+
+        return UsuarioLogeado
     }
-*/
+
 
 
     suspend fun getAllUsuarios(): List<Usuarios> {
@@ -57,9 +60,29 @@ class UsuarioBL {
 
     }
 
+    suspend fun updateRutinasCompletadas_IN_UsuarioById(rutinasCompletadas: Int, idUsuario: Int) {
 
 
+        return UsuarioUseCase().updateRutinasCompletadas_IN_UsuarioById(rutinasCompletadas, idUsuario)
 
+    }
+
+
+    suspend fun updatePuntos_IN_UsuarioById(puntos: Int, idUsuario: Int) {
+
+
+        return UsuarioUseCase().updatePuntos_IN_UsuarioById(puntos, idUsuario)
+
+    }
+
+    suspend fun insertNuevoUsuario_Register(nombreUsuario: String ,edadUsuario: Int ,emailUsuario: String,
+                                            nicknameUsuario: String, passwordUsuario: String,
+    ) {
+
+        return UsuarioUseCase().insertNuevoUsuario_Register(nombreUsuario ,edadUsuario ,emailUsuario,
+                nicknameUsuario, passwordUsuario)
+
+    }
 
 
 

@@ -7,13 +7,13 @@ import com.example.globaltrainingapp_11.utils.globalTrainingApp
 
 class UsuarioUseCase {
 
-    suspend fun getUserNameAndPass(name: String, pass: String): Int {
+    suspend fun getUserNameAndPass(nick: String, pass: String): Int {
         var us = Usuarios
-        var id_usuarioBuscado = 1
+        var id_usuarioBuscado = 0
         val listaUsuarios = globalTrainingApp.getDatabase().usuariosDao().getAllUsuarios()
 
         listaUsuarios.forEach() {
-            if (it.nicknameUsuario== name && it.passwordUsuario == pass) {
+            if (it.nicknameUsuario== nick && it.passwordUsuario == pass) {
                 id_usuarioBuscado = it.idUsuario
             }
         }
@@ -68,7 +68,40 @@ class UsuarioUseCase {
     }
 
 
+    suspend fun updateRutinasCompletadas_IN_UsuarioById(rutinasCompletadas: Int, idUsuario: Int) {
+
+
+        return globalTrainingApp.getDatabase().usuariosDao()
+            .updateRutinasCompletadas_IN_UsuarioById(rutinasCompletadas, idUsuario)
+
+    }
+
+
+    suspend fun updatePuntos_IN_UsuarioById(puntos: Int, idUsuario: Int) {
+
+
+        return globalTrainingApp.getDatabase().usuariosDao()
+            .updatePuntos_IN_UsuarioById(puntos, idUsuario)
+
+    }
 
 
 
+
+    suspend fun insertNuevoUsuario_Register(nombreUsuario: String ,edadUsuario: Int ,emailUsuario: String,
+                                            nicknameUsuario: String, passwordUsuario: String,
+                                            ) {
+
+        var rutinasCompletadas = 0
+        var puntos = 0
+        var nivel = 1
+        var premios = 0
+
+        return globalTrainingApp.getDatabase().usuariosDao()
+            .insertNuevoUsuario_Register(nombreUsuario ,edadUsuario ,emailUsuario,
+                nicknameUsuario, passwordUsuario,
+                rutinasCompletadas, puntos, nivel,
+                premios )
+
+    }
 }

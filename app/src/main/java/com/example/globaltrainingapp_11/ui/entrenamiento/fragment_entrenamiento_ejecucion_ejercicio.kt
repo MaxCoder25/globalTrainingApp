@@ -158,6 +158,7 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
         var editorSP = globalTrainingApp.getShareDB().edit()
         editorSP.putInt("numeroEjercRutinaOriginal", size)
         editorSP.putInt("numeroEjercRutina", size)
+        editorSP.putInt("cuentaNumRutina", 1 )
 
         editorSP.commit()
     }

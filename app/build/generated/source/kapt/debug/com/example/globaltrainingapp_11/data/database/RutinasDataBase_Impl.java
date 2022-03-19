@@ -47,7 +47,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas` (`id_rutinas` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `musculos` TEXT NOT NULL, `tiempoMin` INTEGER NOT NULL, `series` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas` (`id_rutinas` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `musculos` TEXT NOT NULL, `tiempoMin` INTEGER NOT NULL, `series` INTEGER NOT NULL, `puntos` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `ejercicios` (`id_ejercicios` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombreEjercicio` TEXT NOT NULL, `descripcion` TEXT NOT NULL, `categoria` TEXT NOT NULL, `nivel` TEXT NOT NULL, `tipo_movimiento` TEXT NOT NULL, `repeticiones` INTEGER NOT NULL, `tieneTiempo` TEXT NOT NULL, `imagen` TEXT NOT NULL, `video` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `rutinas_ejercicios` (`id_rutinas` INTEGER NOT NULL, `id_ejercicios` INTEGER NOT NULL, PRIMARY KEY(`id_rutinas`, `id_ejercicios`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `semana_rutinas` (`dia` TEXT NOT NULL, `id_rutinas` INTEGER NOT NULL, PRIMARY KEY(`dia`))");
@@ -56,7 +56,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `premios` (`id_premio` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `premio` TEXT NOT NULL, `ubicacion` TEXT NOT NULL, `codigoRetiro` TEXT NOT NULL, `img_premio` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `niveles` (`id_nivel` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nivel` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6c6f52d4e880300304b8887695d7c705')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4e2d6d127cb866c7f87ba741b3285a87')");
       }
 
       @Override
@@ -107,7 +107,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsRutinas = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsRutinas = new HashMap<String, TableInfo.Column>(8);
         _columnsRutinas.put("id_rutinas", new TableInfo.Column("id_rutinas", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("nombre", new TableInfo.Column("nombre", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("categoria", new TableInfo.Column("categoria", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -115,6 +115,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
         _columnsRutinas.put("musculos", new TableInfo.Column("musculos", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("tiempoMin", new TableInfo.Column("tiempoMin", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRutinas.put("series", new TableInfo.Column("series", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRutinas.put("puntos", new TableInfo.Column("puntos", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysRutinas = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesRutinas = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoRutinas = new TableInfo("rutinas", _columnsRutinas, _foreignKeysRutinas, _indicesRutinas);
@@ -231,7 +232,7 @@ public final class RutinasDataBase_Impl extends RutinasDataBase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "6c6f52d4e880300304b8887695d7c705", "b83f946c1975044bfd3c853eefa6a9d2");
+    }, "4e2d6d127cb866c7f87ba741b3285a87", "3347b42f104ce75e0272cad9c70293ae");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

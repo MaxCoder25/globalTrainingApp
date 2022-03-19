@@ -11,49 +11,47 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/txt_salirEntrenamientoDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="40dp"
+            android:text="Salir Entrenamiento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_salirEntrenam_Desc"
+            android:layout_width="37dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:src="@android:drawable/presence_offline"
+            app:layout_constraintStart_toEndOf="@+id/txt_salirEntrenamientoDesc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/txtSiguientEjerc2"
             android:layout_width="161dp"
             android:layout_height="32dp"
-            android:layout_marginTop="32dp"
-            android:gravity="center"
+            android:layout_marginTop="144dp"
             android:background="@android:drawable/editbox_background"
+            android:gravity="center"
             android:text="Siguientes Ejercicios"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_10Menos_3" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_DESCANSO" />
 
         <TextView
             android:id="@+id/txt_DESCANSO"
             android:layout_width="316dp"
             android:layout_height="117dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="76dp"
             android:gravity="center"
             android:text="DESCANSO EJERCICIO"
             android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txt_10Menos_3"
-            android:layout_width="89dp"
-            android:layout_height="21dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="239dp"
-            android:text="- 10  seg"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txt_DESCANSO" />
-
-        <TextView
-            android:id="@+id/txt_10Mas_3"
-            android:layout_width="79dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="156dp"
-            android:layout_marginTop="239dp"
-            android:text="+ 10 seg"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/btn_Saltar"
-            app:layout_constraintTop_toTopOf="@+id/txt_DESCANSO" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reciclerEjerc_3erUso"
@@ -84,10 +82,10 @@
             android:id="@+id/btn_Saltar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="47dp"
+            android:layout_marginStart="165dp"
             android:layout_marginTop="236dp"
             android:text="SALTAR"
-            app:layout_constraintStart_toEndOf="@+id/txt_10Menos_3"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/txt_DESCANSO" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
