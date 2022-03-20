@@ -108,10 +108,10 @@ class TecnicaYoutubeActivity : YouTubeBaseActivity() {
 
 
     private fun cargarDatosEjerc( EjercParaVerTecnica: EjerciciosEntity) {
-        binding.txtNombreEjercTecnica.text = "Nombre: "+ EjercParaVerTecnica.nombreEjercicio
-        binding.txtTipMovTecnica .text = "Tipo de movimiento: "+ EjercParaVerTecnica.tipo_movimiento
-        binding.txtNivelEjercTecnica .text = "Nivel: " + EjercParaVerTecnica.nivel
-        binding.txtDescripcionEjercTecnica.text = "Duración: "+ EjercParaVerTecnica.descripcion
+        binding.txtNombreEjercTecnica.text = "Nombre ejercicio:   "+ EjercParaVerTecnica.nombreEjercicio
+        binding.txtTipMovTecnica .text = "Tipo de movimiento:   "+ EjercParaVerTecnica.tipo_movimiento
+        binding.txtNivelEjercTecnica .text = "Nivel:   " + EjercParaVerTecnica.nivel
+        binding.txtDescripcionEjercTecnica.text = "Técnica:  "+ EjercParaVerTecnica.descripcion
     }
 
 

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,19 +23,19 @@ public final class FragmentEntrenamientoEjecucionEjercicio3Binding implements Vi
   private final FrameLayout rootView;
 
   @NonNull
+  public final ImageView btnSalirEntrenamDesc;
+
+  @NonNull
   public final Button btnSaltar;
 
   @NonNull
   public final RecyclerView reciclerEjerc3erUso;
 
   @NonNull
-  public final TextView txt10Mas3;
-
-  @NonNull
-  public final TextView txt10Menos3;
-
-  @NonNull
   public final TextView txtDESCANSO;
+
+  @NonNull
+  public final TextView txtSalirEntrenamientoDesc;
 
   @NonNull
   public final TextView txtSiguientEjerc2;
@@ -43,15 +44,16 @@ public final class FragmentEntrenamientoEjecucionEjercicio3Binding implements Vi
   public final TextView txtTiempoDescanso;
 
   private FragmentEntrenamientoEjecucionEjercicio3Binding(@NonNull FrameLayout rootView,
-      @NonNull Button btnSaltar, @NonNull RecyclerView reciclerEjerc3erUso,
-      @NonNull TextView txt10Mas3, @NonNull TextView txt10Menos3, @NonNull TextView txtDESCANSO,
-      @NonNull TextView txtSiguientEjerc2, @NonNull TextView txtTiempoDescanso) {
+      @NonNull ImageView btnSalirEntrenamDesc, @NonNull Button btnSaltar,
+      @NonNull RecyclerView reciclerEjerc3erUso, @NonNull TextView txtDESCANSO,
+      @NonNull TextView txtSalirEntrenamientoDesc, @NonNull TextView txtSiguientEjerc2,
+      @NonNull TextView txtTiempoDescanso) {
     this.rootView = rootView;
+    this.btnSalirEntrenamDesc = btnSalirEntrenamDesc;
     this.btnSaltar = btnSaltar;
     this.reciclerEjerc3erUso = reciclerEjerc3erUso;
-    this.txt10Mas3 = txt10Mas3;
-    this.txt10Menos3 = txt10Menos3;
     this.txtDESCANSO = txtDESCANSO;
+    this.txtSalirEntrenamientoDesc = txtSalirEntrenamientoDesc;
     this.txtSiguientEjerc2 = txtSiguientEjerc2;
     this.txtTiempoDescanso = txtTiempoDescanso;
   }
@@ -84,6 +86,12 @@ public final class FragmentEntrenamientoEjecucionEjercicio3Binding implements Vi
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_salirEntrenam_Desc;
+      ImageView btnSalirEntrenamDesc = ViewBindings.findChildViewById(rootView, id);
+      if (btnSalirEntrenamDesc == null) {
+        break missingId;
+      }
+
       id = R.id.btn_Saltar;
       Button btnSaltar = ViewBindings.findChildViewById(rootView, id);
       if (btnSaltar == null) {
@@ -96,21 +104,15 @@ public final class FragmentEntrenamientoEjecucionEjercicio3Binding implements Vi
         break missingId;
       }
 
-      id = R.id.txt_10Mas_3;
-      TextView txt10Mas3 = ViewBindings.findChildViewById(rootView, id);
-      if (txt10Mas3 == null) {
-        break missingId;
-      }
-
-      id = R.id.txt_10Menos_3;
-      TextView txt10Menos3 = ViewBindings.findChildViewById(rootView, id);
-      if (txt10Menos3 == null) {
-        break missingId;
-      }
-
       id = R.id.txt_DESCANSO;
       TextView txtDESCANSO = ViewBindings.findChildViewById(rootView, id);
       if (txtDESCANSO == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_salirEntrenamientoDesc;
+      TextView txtSalirEntrenamientoDesc = ViewBindings.findChildViewById(rootView, id);
+      if (txtSalirEntrenamientoDesc == null) {
         break missingId;
       }
 
@@ -126,9 +128,9 @@ public final class FragmentEntrenamientoEjecucionEjercicio3Binding implements Vi
         break missingId;
       }
 
-      return new FragmentEntrenamientoEjecucionEjercicio3Binding((FrameLayout) rootView, btnSaltar,
-          reciclerEjerc3erUso, txt10Mas3, txt10Menos3, txtDESCANSO, txtSiguientEjerc2,
-          txtTiempoDescanso);
+      return new FragmentEntrenamientoEjecucionEjercicio3Binding((FrameLayout) rootView,
+          btnSalirEntrenamDesc, btnSaltar, reciclerEjerc3erUso, txtDESCANSO,
+          txtSalirEntrenamientoDesc, txtSiguientEjerc2, txtTiempoDescanso);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

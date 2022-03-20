@@ -12,6 +12,7 @@ import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicioBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 
 
 class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
@@ -32,6 +33,10 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
 
         val ListaEjercicios = arguments?.getParcelableArrayList<EjerciciosEntity >("listaEjerc")
 
+        if (ListaEjercicios != null) {
+            saveSharedPreference(ListaEjercicios.size)
+        }
+
         binding.reciclerEjerc2doUso .layoutManager =
             LinearLayoutManager(binding.reciclerEjerc2doUso.context)
 
@@ -45,8 +50,31 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
             val ListaEjercicios = arguments?.getParcelableArrayList<EjerciciosEntity >("listaEjerc")
 
 
+
+
+            val listaEjerc2: MutableList<EjerciciosEntity> = ArrayList()
+
+            if (ListaEjercicios != null) {
+                listaEjerc2.addAll(ListaEjercicios)
+            }
+
+
+
+// se hacen 3 veces toca (series - 1)
+            var rep = getIntSharedPreference() -  1
+
+            while (rep > 0){
+
+                if (ListaEjercicios != null) {
+                    listaEjerc2.addAll(ListaEjercicios)
+                }
+
+                rep--
+            }
+
+
             //paso lista a arraylist y llamo a funcion que pone en bundle la lista de ejercicios
-             val arrayList = ArrayList(ListaEjercicios)
+             val arrayList = ArrayList(listaEjerc2)
 
 
 
@@ -71,19 +99,6 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
 
     }
 
-/* original enviar lista a fragment 2
-    companion object {
-        fun newInstance(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_entrenamiento_ejecucion_ejercicio_2 {
-            val args = Bundle()
-
-            args.putParcelableArrayList("listaEjerc", lstEjercEntity as ArrayList<out Parcelable>?)
-
-            val fragment = fragment_entrenamiento_ejecucion_ejercicio_2()
-            fragment.arguments = args
-            return fragment
-        }
-    }
-*/
     companion object {
         fun newInstance(lstEjercEntity : ArrayList<EjerciciosEntity>): fragment_configuraciones {
             val args = Bundle()
@@ -130,6 +145,23 @@ class fragment_entrenamiento_ejecucion_ejercicio : Fragment() {
     }
 
 
+    fun getIntSharedPreference(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("repsRutina", 1)
+
+        return repsRutina
+
+    }
+
+
+    fun saveSharedPreference(size: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("numeroEjercRutinaOriginal", size)
+        editorSP.putInt("numeroEjercRutina", size)
+        editorSP.putInt("cuentaNumRutina", 1 )
+
+        editorSP.commit()
+    }
 
 }
 

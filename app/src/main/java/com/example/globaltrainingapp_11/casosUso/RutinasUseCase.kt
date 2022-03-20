@@ -8,6 +8,14 @@ class RutinasUseCase {
 
     private var rutinasFiltradas = listOf<RutinasEntity>()
 
+    suspend fun  getRutinasById (
+        id_rutinas: Int
+    ):
+            RutinasEntity  {
+
+        return globalTrainingApp.getDatabase().rutinasDao().getRutinasById(id_rutinas)
+    }
+
 
     suspend fun getAllRutinas(
         category: String
@@ -21,5 +29,7 @@ class RutinasUseCase {
 
         return rutinasFiltradas
     }
+
+
 
 }

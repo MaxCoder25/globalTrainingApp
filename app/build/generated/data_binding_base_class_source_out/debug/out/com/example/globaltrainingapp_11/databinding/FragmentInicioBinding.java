@@ -25,6 +25,9 @@ public final class FragmentInicioBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btbSalirSesion;
+
+  @NonNull
   public final Button btnAdelante;
 
   @NonNull
@@ -40,9 +43,6 @@ public final class FragmentInicioBinding implements ViewBinding {
   public final ImageView imageView3;
 
   @NonNull
-  public final TextView textView;
-
-  @NonNull
   public final TextView textView2;
 
   @NonNull
@@ -52,23 +52,28 @@ public final class FragmentInicioBinding implements ViewBinding {
   public final ImageView tituloEntrenam;
 
   @NonNull
+  public final TextView txtCorreoUsuarioNAVHEADER;
+
+  @NonNull
   public final EditText txtDesafio;
 
-  private FragmentInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAdelante,
-      @NonNull Button btnAdelante2, @NonNull FloatingActionButton btnSemanaInicioFrag,
-      @NonNull CalendarView calendarView, @NonNull ImageView imageView3, @NonNull TextView textView,
-      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull ImageView tituloEntrenam,
+  private FragmentInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button btbSalirSesion,
+      @NonNull Button btnAdelante, @NonNull Button btnAdelante2,
+      @NonNull FloatingActionButton btnSemanaInicioFrag, @NonNull CalendarView calendarView,
+      @NonNull ImageView imageView3, @NonNull TextView textView2, @NonNull TextView textView3,
+      @NonNull ImageView tituloEntrenam, @NonNull TextView txtCorreoUsuarioNAVHEADER,
       @NonNull EditText txtDesafio) {
     this.rootView = rootView;
+    this.btbSalirSesion = btbSalirSesion;
     this.btnAdelante = btnAdelante;
     this.btnAdelante2 = btnAdelante2;
     this.btnSemanaInicioFrag = btnSemanaInicioFrag;
     this.calendarView = calendarView;
     this.imageView3 = imageView3;
-    this.textView = textView;
     this.textView2 = textView2;
     this.textView3 = textView3;
     this.tituloEntrenam = tituloEntrenam;
+    this.txtCorreoUsuarioNAVHEADER = txtCorreoUsuarioNAVHEADER;
     this.txtDesafio = txtDesafio;
   }
 
@@ -99,6 +104,12 @@ public final class FragmentInicioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btb_salirSesion;
+      Button btbSalirSesion = ViewBindings.findChildViewById(rootView, id);
+      if (btbSalirSesion == null) {
+        break missingId;
+      }
+
       id = R.id.btnAdelante;
       Button btnAdelante = ViewBindings.findChildViewById(rootView, id);
       if (btnAdelante == null) {
@@ -129,12 +140,6 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
-        break missingId;
-      }
-
       id = R.id.textView2;
       TextView textView2 = ViewBindings.findChildViewById(rootView, id);
       if (textView2 == null) {
@@ -153,15 +158,21 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_correoUsuarioNAVHEADER;
+      TextView txtCorreoUsuarioNAVHEADER = ViewBindings.findChildViewById(rootView, id);
+      if (txtCorreoUsuarioNAVHEADER == null) {
+        break missingId;
+      }
+
       id = R.id.txtDesafio;
       EditText txtDesafio = ViewBindings.findChildViewById(rootView, id);
       if (txtDesafio == null) {
         break missingId;
       }
 
-      return new FragmentInicioBinding((ConstraintLayout) rootView, btnAdelante, btnAdelante2,
-          btnSemanaInicioFrag, calendarView, imageView3, textView, textView2, textView3,
-          tituloEntrenam, txtDesafio);
+      return new FragmentInicioBinding((ConstraintLayout) rootView, btbSalirSesion, btnAdelante,
+          btnAdelante2, btnSemanaInicioFrag, calendarView, imageView3, textView2, textView3,
+          tituloEntrenam, txtCorreoUsuarioNAVHEADER, txtDesafio);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

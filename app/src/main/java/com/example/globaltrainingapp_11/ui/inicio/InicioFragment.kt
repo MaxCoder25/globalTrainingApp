@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
+import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.TecnicaYoutubeActivity
 import com.example.globaltrainingapp_11.databinding.FragmentInicioBinding
 import com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
+import com.example.globaltrainingapp_11.presentacion.LoginActivity
 import com.example.globaltrainingapp_11.ui.ejercicios.EjerciciosFragment
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -42,6 +44,14 @@ class InicioFragment : Fragment() {
             textView.text = it
         })*/
        // return root
+
+        binding.btbSalirSesion.setOnClickListener() {
+
+            var intent = Intent(context, LoginActivity::class.java)
+
+            startActivity(intent)
+
+        }
 
         binding.btnAdelante.setOnClickListener() {
 

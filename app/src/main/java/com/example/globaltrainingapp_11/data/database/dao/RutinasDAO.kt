@@ -43,8 +43,10 @@ interface RutinasDAO {
     @Query("SELECT * FROM categoria_rutinas where nombre =:category ")
     suspend fun getCategoriaRutinas(category: String): CategoriaRutinasEntity
 
-    @Query("UPDATE semana_rutinas SET id_rutinas=:id_rutinas WHERE dia = :dia")
 
+
+
+    @Query("UPDATE semana_rutinas SET id_rutinas=:id_rutinas WHERE dia = :dia")
    // @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateSemanaRutinas(id_rutinas: Int, dia: String)
 

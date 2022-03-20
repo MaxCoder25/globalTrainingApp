@@ -14,16 +14,16 @@
                 android:id="@+id/calendarView"
                 android:layout_width="365dp"
                 android:layout_height="130dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="36dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txt_correoUsuarioNAVHEADER"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="144dp"
+                android:layout_marginTop="156dp"
                 android:text="ENTRENAMIENTO DE HOY"
                 android:textColor="#000000"
                 android:textSize="15sp"
@@ -36,21 +36,21 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="224dp"
-                android:layout_marginTop="144dp"
-                android:text="J 27/01/2022"
+                android:layout_marginStart="216dp"
+                android:layout_marginTop="156dp"
+                android:text="L 28/03/2022"
                 android:textColor="#000000"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="@+id/txt_correoUsuarioNAVHEADER"
                 app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
             <ImageView
                 android:id="@+id/tituloEntrenam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="298dp"
+                android:layout_height="119dp"
                 android:layout_marginStart="44dp"
-                android:layout_marginTop="172dp"
+                android:layout_marginTop="180dp"
                 android:src="@drawable/rutinaejem1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/calendarView" />
@@ -70,11 +70,11 @@
                 android:layout_width="56dp"
                 android:layout_height="51dp"
                 android:layout_marginStart="272dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="36dp"
                 android:clickable="true"
                 android:src="@android:drawable/ic_popup_sync"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.826"
+                app:layout_constraintHorizontal_bias="0.818"
                 app:layout_constraintStart_toStartOf="@+id/calendarView"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,8 +93,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="310dp"
-                android:layout_height="126dp"
+                android:layout_width="306dp"
+                android:layout_height="118dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="72dp"
                 android:src="@drawable/plancha1"
@@ -105,8 +105,8 @@
                 android:id="@+id/btnAdelante2"
                 android:layout_width="287dp"
                 android:layout_height="52dp"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="136dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="128dp"
                 android:text="ACEPTO EL RETO"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView3" />
@@ -116,10 +116,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="336dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="4dp"
                 android:text="Editar"
                 app:layout_constraintStart_toStartOf="@+id/calendarView"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btb_salirSesion"
+                android:layout_width="113dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:text="CERRAR SESION"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="4dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

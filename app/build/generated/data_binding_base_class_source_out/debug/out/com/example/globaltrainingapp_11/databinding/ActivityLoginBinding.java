@@ -26,6 +26,9 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final Button btnLogin;
 
   @NonNull
+  public final Button btnRegistrarse;
+
+  @NonNull
   public final TextInputEditText campoEmail;
 
   @NonNull
@@ -44,30 +47,22 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final TextView txtIngreseSesion;
 
   @NonNull
-  public final TextView txtOlvidoPassword;
-
-  @NonNull
-  public final TextView txtRegistrarse;
-
-  @NonNull
   public final TextView txtpassword;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnLogin,
-      @NonNull TextInputEditText campoEmail, @NonNull TextInputEditText campoPassword,
-      @NonNull ImageView imageView, @NonNull ConstraintLayout loginPrincipal,
-      @NonNull TextView txtEmail, @NonNull TextView txtIngreseSesion,
-      @NonNull TextView txtOlvidoPassword, @NonNull TextView txtRegistrarse,
-      @NonNull TextView txtpassword) {
+      @NonNull Button btnRegistrarse, @NonNull TextInputEditText campoEmail,
+      @NonNull TextInputEditText campoPassword, @NonNull ImageView imageView,
+      @NonNull ConstraintLayout loginPrincipal, @NonNull TextView txtEmail,
+      @NonNull TextView txtIngreseSesion, @NonNull TextView txtpassword) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
+    this.btnRegistrarse = btnRegistrarse;
     this.campoEmail = campoEmail;
     this.campoPassword = campoPassword;
     this.imageView = imageView;
     this.loginPrincipal = loginPrincipal;
     this.txtEmail = txtEmail;
     this.txtIngreseSesion = txtIngreseSesion;
-    this.txtOlvidoPassword = txtOlvidoPassword;
-    this.txtRegistrarse = txtRegistrarse;
     this.txtpassword = txtpassword;
   }
 
@@ -104,6 +99,12 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_Registrarse;
+      Button btnRegistrarse = ViewBindings.findChildViewById(rootView, id);
+      if (btnRegistrarse == null) {
+        break missingId;
+      }
+
       id = R.id.campoEmail;
       TextInputEditText campoEmail = ViewBindings.findChildViewById(rootView, id);
       if (campoEmail == null) {
@@ -136,27 +137,15 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtOlvidoPassword;
-      TextView txtOlvidoPassword = ViewBindings.findChildViewById(rootView, id);
-      if (txtOlvidoPassword == null) {
-        break missingId;
-      }
-
-      id = R.id.txtRegistrarse;
-      TextView txtRegistrarse = ViewBindings.findChildViewById(rootView, id);
-      if (txtRegistrarse == null) {
-        break missingId;
-      }
-
       id = R.id.txtpassword;
       TextView txtpassword = ViewBindings.findChildViewById(rootView, id);
       if (txtpassword == null) {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, campoEmail,
-          campoPassword, imageView, loginPrincipal, txtEmail, txtIngreseSesion, txtOlvidoPassword,
-          txtRegistrarse, txtpassword);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, btnRegistrarse,
+          campoEmail, campoPassword, imageView, loginPrincipal, txtEmail, txtIngreseSesion,
+          txtpassword);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

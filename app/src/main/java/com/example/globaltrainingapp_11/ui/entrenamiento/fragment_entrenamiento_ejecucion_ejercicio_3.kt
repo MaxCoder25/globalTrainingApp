@@ -1,5 +1,7 @@
 package com.example.globaltrainingapp_11.ui.entrenamiento
 
+import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Parcelable
@@ -11,12 +13,14 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.globaltrainingapp_11.MainActivityNavDrawer
 import com.example.globaltrainingapp_11.R
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter
 import com.example.globaltrainingapp_11.controladores.adapters.ListRutinas_Ejercicios_Adapter_Sin_Boton_Cambio_Ejerc
 import com.example.globaltrainingapp_11.databinding.FragmentEntrenamientoEjecucionEjercicio3Binding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.logica.Rutinas_Ejercicios_BL
+import com.example.globaltrainingapp_11.ui.rutinas.RutinasFragment
 import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,6 +30,8 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
     private lateinit var binding: FragmentEntrenamientoEjecucionEjercicio3Binding
 
+    var mediaPlayer =  MediaPlayer()
+    var sonidoBoolean= false
 
 
 
@@ -43,7 +49,12 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
     ): View? {
         binding = FragmentEntrenamientoEjecucionEjercicio3Binding.inflate(inflater, container, false)
 
-        var tiempoDescanso  = getIntSharedPreference()
+
+
+
+        binding.txtDESCANSO.text = getSharedPreferenceTXTDescanso()
+
+        var tiempoDescanso  = getIntSharedPreferenceDescEjer()
         var tiempoDescanso2 = (tiempoDescanso + 1)  * 1000
 
         val timer = object: CountDownTimer(tiempoDescanso2.toLong(), 1000) {
@@ -52,10 +63,42 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
             override fun onTick(millisUntilFinished: Long) {
                 binding.txtTiempoDescanso.setText((millisUntilFinished/1000).toString())
 
-                saveSharedPreference()
+             //   saveSharedPreference()
             }
 
             override fun onFinish() {
+
+                sonidoBoolean = getSharedPreferenceSonidoBoolean() == true
+
+                if(sonidoBoolean) {
+
+                    lifecycleScope.launch(Dispatchers.Main)
+                    {
+                        withContext(Dispatchers.IO) {
+
+
+                            mediaPlayer =
+                                MediaPlayer.create(
+                                    getActivity(),
+                                    R.raw.inicio_entrenamiento_ejercicios
+                                )
+                            mediaPlayer.start()
+                            //no vale toast con corutinas
+                            // Toast.makeText(getActivity(), "Descanso terminado", Toast.LENGTH_SHORT)
+                            //     .show()
+
+
+                            Thread.sleep(2600)
+
+                            mediaPlayer.stop()
+                        }
+
+                    }
+
+                }
+
+
+
                 //hace algo al finalizar el timer
                 val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
@@ -78,6 +121,14 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
         }
 
         timer.start()
+
+        if(getIntSharedPreferenceEjercRutina() == 0){
+//Reinicio el numero de ejercicios
+            saveSharedPreferenceEjercRutina ( getIntSharedPreferenceOriginal() )
+            saveSharedPreferenceDescansoEjerc( getIntSharedPreferenceDescEjerOriginal() )
+            saveSharedPreferenceTXTDescanso("DESCANSO EJERCICIO")
+        }
+
 
 
 /*
@@ -130,6 +181,35 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
         binding.btnSaltar.setOnClickListener() {
 
+            timer.cancel()
+
+            sonidoBoolean = getSharedPreferenceSonidoBoolean() == true
+
+            if(sonidoBoolean){
+
+                lifecycleScope.launch(Dispatchers.Main)
+                {
+                    withContext(Dispatchers.IO) {
+
+
+                        mediaPlayer =
+                            MediaPlayer.create(getActivity(), R.raw.inicio_entrenamiento_ejercicios)
+                        mediaPlayer.start()
+                       //no vale toast con corutinas
+                        // Toast.makeText(getActivity(), "Descanso terminado", Toast.LENGTH_SHORT)
+                       //     .show()
+
+
+                        Thread.sleep(2600)
+
+                        mediaPlayer.stop()
+                    }
+
+                }
+
+
+            }
+
 
             val listaEjerc = arguments?.getParcelableArrayList<EjerciciosEntity>("listaEjerc")
 
@@ -146,10 +226,24 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
             fragmentTransaction.replace(R.id.fragmentContainerView, fragment2)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commitAllowingStateLoss()
-
+          //  fragmentTransaction.commit()
 
 
         }
+
+        binding.btnSalirEntrenamDesc.setOnClickListener(){
+
+            timer.cancel()
+
+                var intent = Intent(context, MainActivityNavDrawer::class.java)
+
+                startActivity(intent)
+
+
+        }
+
+
+
 
 
         return  binding.root
@@ -228,7 +322,7 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
     }
 
 
-    fun getIntSharedPreference(): Int {
+    fun getIntSharedPreferenceDescEjer(): Int {
         var editorSP = globalTrainingApp.getShareDB()
         var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjerc", 1)
 
@@ -236,12 +330,79 @@ class fragment_entrenamiento_ejecucion_ejercicio_3 : Fragment() {
 
     }
 
-    fun getIntSharedPreference2(): Int {
+    fun getIntSharedPreferenceDescEjerOriginal(): Int {
         var editorSP = globalTrainingApp.getShareDB()
-        var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjerc2", 1)
+        var tiempoDescansoEjerc = editorSP.getInt("tiempoDescansoEjercOriginal", 1)
 
         return tiempoDescansoEjerc
 
+    }
+
+/////////////////////////////////
+
+    fun getIntSharedPreferenceOriginal(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("numeroEjercRutinaOriginal", 1)
+
+        return repsRutina
+
+    }
+
+    fun getIntSharedPreferenceEjercRutina(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var repsRutina = editorSP.getInt("numeroEjercRutina", 1)
+
+        return repsRutina
+
+    }
+
+
+    fun getIntSharedPreferenceDescansoSerie(): Int {
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoSerie = editorSP.getInt("tiempoDescansoSerie", 1)
+
+        return tiempoDescansoSerie
+
+    }
+
+
+    fun getSharedPreferenceTXTDescanso(): String? {
+
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoDescansoSerie = editorSP.getString ("ejercOSerie", "ejercOSerie")
+
+        return tiempoDescansoSerie
+
+    }
+
+
+    fun getSharedPreferenceSonidoBoolean(): Boolean? {
+
+        var editorSP = globalTrainingApp.getShareDB()
+        var sonidoBoolean = editorSP.getBoolean ("sonidoBoolean", true)
+
+        return sonidoBoolean
+
+    }
+
+
+    fun saveSharedPreferenceEjercRutina(size: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("numeroEjercRutina", size)
+
+        editorSP.commit()
+    }
+
+    fun saveSharedPreferenceDescansoEjerc(tiempo: Int) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putInt("tiempoDescansoEjerc", tiempo)
+        editorSP.commit()
+    }
+
+    fun saveSharedPreferenceTXTDescanso(ejercOSerie: String) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putString("ejercOSerie", ejercOSerie)
+        editorSP.commit()
     }
 
 

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,28 +29,54 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
   public final SeekBar seekBarTiempoDescansoEjerc;
 
   @NonNull
+  public final SeekBar seekBarTiempoDescansoSerie;
+
+  @NonNull
+  public final Switch switchSonido;
+
+  @NonNull
   public final TextView txt0Segs;
+
+  @NonNull
+  public final TextView txt0Segs2;
 
   @NonNull
   public final TextView txt120Seg;
 
   @NonNull
+  public final TextView txt120Seg2;
+
+  @NonNull
   public final TextView txtDescEjerc;
+
+  @NonNull
+  public final TextView txtDescEjerc2;
 
   @NonNull
   public final TextView txtTiempoDescansoConfig;
 
+  @NonNull
+  public final TextView txtTiempoDescansoConfigSerie;
+
   private FragmentConfiguracionesBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnEmpezarConfigs, @NonNull SeekBar seekBarTiempoDescansoEjerc,
-      @NonNull TextView txt0Segs, @NonNull TextView txt120Seg, @NonNull TextView txtDescEjerc,
-      @NonNull TextView txtTiempoDescansoConfig) {
+      @NonNull SeekBar seekBarTiempoDescansoSerie, @NonNull Switch switchSonido,
+      @NonNull TextView txt0Segs, @NonNull TextView txt0Segs2, @NonNull TextView txt120Seg,
+      @NonNull TextView txt120Seg2, @NonNull TextView txtDescEjerc, @NonNull TextView txtDescEjerc2,
+      @NonNull TextView txtTiempoDescansoConfig, @NonNull TextView txtTiempoDescansoConfigSerie) {
     this.rootView = rootView;
     this.btnEmpezarConfigs = btnEmpezarConfigs;
     this.seekBarTiempoDescansoEjerc = seekBarTiempoDescansoEjerc;
+    this.seekBarTiempoDescansoSerie = seekBarTiempoDescansoSerie;
+    this.switchSonido = switchSonido;
     this.txt0Segs = txt0Segs;
+    this.txt0Segs2 = txt0Segs2;
     this.txt120Seg = txt120Seg;
+    this.txt120Seg2 = txt120Seg2;
     this.txtDescEjerc = txtDescEjerc;
+    this.txtDescEjerc2 = txtDescEjerc2;
     this.txtTiempoDescansoConfig = txtTiempoDescansoConfig;
+    this.txtTiempoDescansoConfigSerie = txtTiempoDescansoConfigSerie;
   }
 
   @Override
@@ -91,9 +118,27 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.seekBar_tiempoDescansoSerie;
+      SeekBar seekBarTiempoDescansoSerie = ViewBindings.findChildViewById(rootView, id);
+      if (seekBarTiempoDescansoSerie == null) {
+        break missingId;
+      }
+
+      id = R.id.switchSonido;
+      Switch switchSonido = ViewBindings.findChildViewById(rootView, id);
+      if (switchSonido == null) {
+        break missingId;
+      }
+
       id = R.id.txt_0Segs;
       TextView txt0Segs = ViewBindings.findChildViewById(rootView, id);
       if (txt0Segs == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_0Segs2;
+      TextView txt0Segs2 = ViewBindings.findChildViewById(rootView, id);
+      if (txt0Segs2 == null) {
         break missingId;
       }
 
@@ -103,9 +148,21 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_120Seg2;
+      TextView txt120Seg2 = ViewBindings.findChildViewById(rootView, id);
+      if (txt120Seg2 == null) {
+        break missingId;
+      }
+
       id = R.id.txt_descEjerc;
       TextView txtDescEjerc = ViewBindings.findChildViewById(rootView, id);
       if (txtDescEjerc == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_descEjerc2;
+      TextView txtDescEjerc2 = ViewBindings.findChildViewById(rootView, id);
+      if (txtDescEjerc2 == null) {
         break missingId;
       }
 
@@ -115,8 +172,16 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_tiempoDescansoConfigSerie;
+      TextView txtTiempoDescansoConfigSerie = ViewBindings.findChildViewById(rootView, id);
+      if (txtTiempoDescansoConfigSerie == null) {
+        break missingId;
+      }
+
       return new FragmentConfiguracionesBinding((ConstraintLayout) rootView, btnEmpezarConfigs,
-          seekBarTiempoDescansoEjerc, txt0Segs, txt120Seg, txtDescEjerc, txtTiempoDescansoConfig);
+          seekBarTiempoDescansoEjerc, seekBarTiempoDescansoSerie, switchSonido, txt0Segs, txt0Segs2,
+          txt120Seg, txt120Seg2, txtDescEjerc, txtDescEjerc2, txtTiempoDescansoConfig,
+          txtTiempoDescansoConfigSerie);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

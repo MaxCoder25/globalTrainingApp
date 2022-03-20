@@ -34,6 +34,9 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
   public final TextView TXTNOMBRE;
 
   @NonNull
+  public final TextView TXTSERIES;
+
+  @NonNull
   public final TextView TXTTIEMPO;
 
   @NonNull
@@ -44,13 +47,15 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
 
   private ActivityEntrenamientoBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout EntrenamientoConstraintLayout, @NonNull TextView TXTMUSCULOS,
-      @NonNull TextView TXTNIVEL, @NonNull TextView TXTNOMBRE, @NonNull TextView TXTTIEMPO,
-      @NonNull Button btnAdelanteActivity, @NonNull RecyclerView reciclerEntrenamiento) {
+      @NonNull TextView TXTNIVEL, @NonNull TextView TXTNOMBRE, @NonNull TextView TXTSERIES,
+      @NonNull TextView TXTTIEMPO, @NonNull Button btnAdelanteActivity,
+      @NonNull RecyclerView reciclerEntrenamiento) {
     this.rootView = rootView;
     this.EntrenamientoConstraintLayout = EntrenamientoConstraintLayout;
     this.TXTMUSCULOS = TXTMUSCULOS;
     this.TXTNIVEL = TXTNIVEL;
     this.TXTNOMBRE = TXTNOMBRE;
+    this.TXTSERIES = TXTSERIES;
     this.TXTTIEMPO = TXTTIEMPO;
     this.btnAdelanteActivity = btnAdelanteActivity;
     this.reciclerEntrenamiento = reciclerEntrenamiento;
@@ -103,6 +108,12 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.TXT_SERIES;
+      TextView TXTSERIES = ViewBindings.findChildViewById(rootView, id);
+      if (TXTSERIES == null) {
+        break missingId;
+      }
+
       id = R.id.TXT_TIEMPO;
       TextView TXTTIEMPO = ViewBindings.findChildViewById(rootView, id);
       if (TXTTIEMPO == null) {
@@ -122,7 +133,7 @@ public final class ActivityEntrenamientoBinding implements ViewBinding {
       }
 
       return new ActivityEntrenamientoBinding((ConstraintLayout) rootView,
-          EntrenamientoConstraintLayout, TXTMUSCULOS, TXTNIVEL, TXTNOMBRE, TXTTIEMPO,
+          EntrenamientoConstraintLayout, TXTMUSCULOS, TXTNIVEL, TXTNOMBRE, TXTSERIES, TXTTIEMPO,
           btnAdelanteActivity, reciclerEntrenamiento);
     }
     String missingId = rootView.getResources().getResourceName(id);

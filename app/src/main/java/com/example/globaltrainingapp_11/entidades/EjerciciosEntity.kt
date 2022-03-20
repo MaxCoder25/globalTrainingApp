@@ -17,6 +17,7 @@ data class EjerciciosEntity (
     val nivel: String,
     val tipo_movimiento: String,
     val repeticiones: Int,
+    val tieneTiempo: String,
     val imagen : String,
     val video: String
     ) : Parcelable {
@@ -28,6 +29,7 @@ data class EjerciciosEntity (
         parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.readInt(),
+        parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.readString().toString()
     ) {
@@ -41,6 +43,7 @@ data class EjerciciosEntity (
         parcel.writeString(nivel)
         parcel.writeString(tipo_movimiento)
         parcel.writeInt(repeticiones)
+        parcel.writeString(tieneTiempo)
         parcel.writeString(imagen)
         parcel.writeString(video)
     }

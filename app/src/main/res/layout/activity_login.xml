@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginTop="87dp"
-        android:text="Email"
+        android:text="Nickname"
         android:textColorHint="@color/LoginText"
         android:theme="@style/LoginInputLayout"
         app:errorEnabled="true"
@@ -69,39 +69,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/campoPassword" />
 
-    <TextView
-        android:id="@+id/txtOlvidoPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="88dp"
-        android:text="OLVIDE MI PASSWORD"
-        android:textColor="@color/LoginText"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnLogin" />
-
-    <TextView
-        android:id="@+id/txtRegistrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="60dp"
-        android:text="REGISTRARSE"
-        android:textColor="@color/LoginText"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtOlvidoPassword" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/campoEmail"
         android:layout_width="251dp"
         android:layout_height="49dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="32dp"
-        android:hint="Ingrese su email"
+        android:hint="Ingrese su nickname"
         android:inputType="textEmailAddress"
         app:barrierMargin="@dimen/material_emphasis_medium"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +91,16 @@
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtpassword" />
+
+    <Button
+        android:id="@+id/btn_Registrarse"
+        android:layout_width="148dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="28dp"
+        android:text="REGISTRARSE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,7 +52,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__insertionAdapterOfRutinasEntity = new EntityInsertionAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `rutinas` (`id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `rutinas` (`id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`,`series`,`puntos`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -79,6 +79,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           stmt.bindString(5, value.getMusculos());
         }
         stmt.bindLong(6, value.getTiempoMin());
+        stmt.bindLong(7, value.getSeries());
+        stmt.bindLong(8, value.getPuntos());
       }
     };
     this.__deletionAdapterOfRutinasEntity = new EntityDeletionOrUpdateAdapter<RutinasEntity>(__db) {
@@ -95,7 +97,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
     this.__updateAdapterOfRutinasEntity = new EntityDeletionOrUpdateAdapter<RutinasEntity>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR REPLACE `rutinas` SET `id_rutinas` = ?,`nombre` = ?,`categoria` = ?,`nivel` = ?,`musculos` = ?,`tiempoMin` = ? WHERE `id_rutinas` = ?";
+        return "UPDATE OR REPLACE `rutinas` SET `id_rutinas` = ?,`nombre` = ?,`categoria` = ?,`nivel` = ?,`musculos` = ?,`tiempoMin` = ?,`series` = ?,`puntos` = ? WHERE `id_rutinas` = ?";
       }
 
       @Override
@@ -122,7 +124,9 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           stmt.bindString(5, value.getMusculos());
         }
         stmt.bindLong(6, value.getTiempoMin());
-        stmt.bindLong(7, value.getId_rutinas());
+        stmt.bindLong(7, value.getSeries());
+        stmt.bindLong(8, value.getPuntos());
+        stmt.bindLong(9, value.getId_rutinas());
       }
     };
     this.__preparedStmtOfDeleteRutinasById = new SharedSQLiteStatement(__db) {
@@ -261,6 +265,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
           final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
+          final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
+          final int _cursorIndexOfPuntos = CursorUtil.getColumnIndexOrThrow(_cursor, "puntos");
           final List<RutinasEntity> _result = new ArrayList<RutinasEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final RutinasEntity _item;
@@ -292,7 +298,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _item = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            final int _tmpSeries;
+            _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+            final int _tmpPuntos;
+            _tmpPuntos = _cursor.getInt(_cursorIndexOfPuntos);
+            _item = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries,_tmpPuntos);
             _result.add(_item);
           }
           return _result;
@@ -323,6 +333,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           final int _cursorIndexOfNivel = CursorUtil.getColumnIndexOrThrow(_cursor, "nivel");
           final int _cursorIndexOfMusculos = CursorUtil.getColumnIndexOrThrow(_cursor, "musculos");
           final int _cursorIndexOfTiempoMin = CursorUtil.getColumnIndexOrThrow(_cursor, "tiempoMin");
+          final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "series");
+          final int _cursorIndexOfPuntos = CursorUtil.getColumnIndexOrThrow(_cursor, "puntos");
           final RutinasEntity _result;
           if(_cursor.moveToFirst()) {
             final int _tmpId_rutinas;
@@ -353,7 +365,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
             }
             final int _tmpTiempoMin;
             _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-            _result = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+            final int _tmpSeries;
+            _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+            final int _tmpPuntos;
+            _tmpPuntos = _cursor.getInt(_cursorIndexOfPuntos);
+            _result = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries,_tmpPuntos);
           } else {
             _result = null;
           }
@@ -515,7 +531,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
       return;
     }
     StringBuilder _stringBuilder = StringUtil.newStringBuilder();
-    _stringBuilder.append("SELECT `id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin` FROM `rutinas` WHERE `id_rutinas` IN (");
+    _stringBuilder.append("SELECT `id_rutinas`,`nombre`,`categoria`,`nivel`,`musculos`,`tiempoMin`,`series`,`puntos` FROM `rutinas` WHERE `id_rutinas` IN (");
     final int _inputSize = _map.size();
     StringUtil.appendPlaceholders(_stringBuilder, _inputSize);
     _stringBuilder.append(")");
@@ -540,6 +556,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
       final int _cursorIndexOfNivel = 3;
       final int _cursorIndexOfMusculos = 4;
       final int _cursorIndexOfTiempoMin = 5;
+      final int _cursorIndexOfSeries = 6;
+      final int _cursorIndexOfPuntos = 7;
       while(_cursor.moveToNext()) {
         final long _tmpKey = _cursor.getLong(_itemKeyIndex);
         if (_map.containsKey(_tmpKey)) {
@@ -572,7 +590,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           }
           final int _tmpTiempoMin;
           _tmpTiempoMin = _cursor.getInt(_cursorIndexOfTiempoMin);
-          _item_1 = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin);
+          final int _tmpSeries;
+          _tmpSeries = _cursor.getInt(_cursorIndexOfSeries);
+          final int _tmpPuntos;
+          _tmpPuntos = _cursor.getInt(_cursorIndexOfPuntos);
+          _item_1 = new RutinasEntity(_tmpId_rutinas,_tmpNombre,_tmpCategoria,_tmpNivel,_tmpMusculos,_tmpTiempoMin,_tmpSeries,_tmpPuntos);
           _map.put(_tmpKey, _item_1);
         }
       }
