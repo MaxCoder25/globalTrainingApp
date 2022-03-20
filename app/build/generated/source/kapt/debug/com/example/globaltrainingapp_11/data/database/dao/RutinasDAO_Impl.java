@@ -28,9 +28,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
+import javax.annotation.Generated;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 
+@Generated("androidx.room.RoomProcessor")
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class RutinasDAO_Impl implements RutinasDAO {
   private final RoomDatabase __db;
@@ -140,7 +142,8 @@ public final class RutinasDAO_Impl implements RutinasDAO {
   }
 
   @Override
-  public Object insertRutinas(final RutinasEntity Rutina, final Continuation<? super Unit> arg1) {
+  public Object insertRutinas(final RutinasEntity Rutina,
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -153,12 +156,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object deleteOneRutinas(final RutinasEntity Rutina,
-      final Continuation<? super Unit> arg1) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -171,11 +174,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object updateRutinas(final RutinasEntity Rutina, final Continuation<? super Unit> arg1) {
+  public Object updateRutinas(final RutinasEntity Rutina,
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -188,11 +192,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object deleteRutinasById(final int idRutinas, final Continuation<? super Unit> arg1) {
+  public Object deleteRutinasById(final int idRutinas,
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -209,12 +214,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __preparedStmtOfDeleteRutinasById.release(_stmt);
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object updateSemanaRutinas(final int id_rutinas, final String dia,
-      final Continuation<? super Unit> arg2) {
+      final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -237,11 +242,11 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __preparedStmtOfUpdateSemanaRutinas.release(_stmt);
         }
       }
-    }, arg2);
+    }, continuation);
   }
 
   @Override
-  public Object getAllRutinas(final Continuation<? super List<RutinasEntity>> arg0) {
+  public Object getAllRutinas(final Continuation<? super List<RutinasEntity>> continuation) {
     final String _sql = "SELECT * FROM rutinas";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -296,11 +301,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           _statement.release();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
-  public Object getRutinasById(final int idRutina, final Continuation<? super RutinasEntity> arg1) {
+  public Object getRutinasById(final int idRutina,
+      final Continuation<? super RutinasEntity> continuation) {
     final String _sql = "SELECT * FROM rutinas WHERE id_rutinas = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -357,12 +363,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           _statement.release();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
   public Object getSemanaRutinas(
-      final Continuation<? super List<SemanaRutinas_Rutinas_Relaciones>> arg0) {
+      final Continuation<? super List<SemanaRutinas_Rutinas_Relaciones>> continuation) {
     final String _sql = "SELECT * FROM semana_rutinas";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -415,12 +421,12 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
   public Object getCategoriaRutinas(final String category,
-      final Continuation<? super CategoriaRutinasEntity> arg1) {
+      final Continuation<? super CategoriaRutinasEntity> continuation) {
     final String _sql = "SELECT * FROM categoria_rutinas where nombre =? ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -473,7 +479,7 @@ public final class RutinasDAO_Impl implements RutinasDAO {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   public static List<Class<?>> getRequiredConverters() {

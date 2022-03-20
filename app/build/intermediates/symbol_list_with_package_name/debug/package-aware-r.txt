@@ -1262,6 +1262,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color black_shade_1
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1321,6 +1322,8 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
+color gris_chat
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -1827,6 +1830,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2502,6 +2506,9 @@ drawable abc_vector_test
 drawable abd_colgado
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_chat_receive
+drawable bg_chat_send
+drawable border_outline
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2510,6 +2517,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable btn_send_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2520,10 +2528,12 @@ drawable fitrevlogo
 drawable flexion_normal
 drawable ic_arrow_forward_24
 drawable ic_btnavigation
+drawable ic_btnsend
 drawable ic_clock_black_24dp
 drawable ic_email_24
 drawable ic_exit_to_app_24
 drawable ic_favorite_24
+drawable ic_gticon
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2705,6 +2715,7 @@ id btnAdelante2
 id btnAdelanteActivity
 id btnLogin
 id btnRegistrarse
+id btnSend
 id btn_CambioEjercicio
 id btn_CambioRutinaSemana
 id btn_Empezar
@@ -2737,6 +2748,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatView
 id checkbox
 id checked
 id chip
@@ -2755,6 +2767,7 @@ id collapseActionView
 id compress
 id confirm_button
 id constraint
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -2801,6 +2814,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editMessage
 id edit_query
 id elastic
 id end
@@ -2852,6 +2866,19 @@ id honorRequest
 id horizontal_only
 id icon
 id icon_group
+id idBtnReadNews
+id idIVCategory
+id idIVNews
+id idPBLoading
+id idRVCategories
+id idRVNews
+id idTVCategory
+id idTVContent
+id idTVNewsHeading
+id idTVSubDesc
+id idTVSubTitle
+id idTVTitle
+id idToolbar
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2914,6 +2941,8 @@ id material_timepicker_view
 id material_value_index
 id media_actions
 id message
+id message_receive
+id message_send
 id middle
 id mini
 id mobile_navigation
@@ -3288,10 +3317,15 @@ layout activity_entrenamiento
 layout activity_entrenamiento_2
 layout activity_login
 layout activity_main
+layout activity_main_bot
+layout activity_main_noticias
+layout activity_news_detail
 layout activity_register
 layout activity_splash
 layout activity_tecnica_ejerc_youtube
+layout adapter_message_one
 layout app_bar_main
+layout categories_rv_item
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3375,6 +3409,7 @@ layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout nav_header_main
+layout news_rv_item
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -3417,6 +3452,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description
+raw credential
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3453,6 +3489,7 @@ string bottomsheet_action_expand_halfway
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string chatbot
 string chip_text
 string clear_text_end_icon_content_description
 string correo_usuario
@@ -4597,6 +4634,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style WithoutActionBar
 style bottomNavBar
 style textAppearanceCustom
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle

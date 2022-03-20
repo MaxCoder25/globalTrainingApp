@@ -64,6 +64,36 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/bottom_bar_menu.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main_activity_nav_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-anydpi/ic_sendMessage.xml" value="0.1555" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-v24/bg_chat_receive.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-v24/bg_chat_send.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-v24/border_outline.xml" value="0.1995" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/bg_chat_send.xml" value="0.2295" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/btn_send_background.xml" value="0.1555" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.1555" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/ic_btnsend.xml" value="0.2595" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/ic_gticon.xml" value="0.1555" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1555" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_entrenamiento.xml" value="0.6" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_entrenamiento_2.xml" value="0.2151268115942029" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_main.xml" value="0.2151268115942029" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_main_bot.xml" value="0.4" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_main_noticias.xml" value="0.264" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_news_detail.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/activity_register.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/adapter_message_one.xml" value="0.264" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/categories_rv_item.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/fragment_ejercicios.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/fragment_main_noticias.xml" value="0.1" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/fragment_rutinas_list.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/fragment_semana_list.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/fragment_semana_rutinas.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/nav_header_main.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/layout/news_rv_item.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/menu/main.xml" value="0.2" />
       </map>
     </option>
   </component>

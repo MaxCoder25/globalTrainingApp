@@ -23,17 +23,18 @@
         android:label="@string/menu_ejercicios"
         tools:layout="@layout/fragment_ejercicios" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_articulos"
-        android:name="com.example.globaltrainingapp_11.ui.articulos.ArticulosFragment"
+        android:name="com.example.globaltrainingapp_11.ui.articulos.MainNoticiasActivity"
         android:label="@string/menu_articulos"
-        tools:layout="@layout/fragment_articulos" />
+        tools:layout="@layout/activity_main_noticias" />
 
-    <fragment
+
+    <activity
         android:id="@+id/nav_asistente"
-        android:name="com.example.globaltrainingapp_11.ui.asistente.AsistenteFragment"
+        android:name="com.example.globaltrainingapp_11.ui.asistente.MainBotActivity"
         android:label="@string/menu_asistente"
-        tools:layout="@layout/fragment_asistente" />
+        tools:layout="@layout/activity_main_bot" />
 
     <fragment
         android:id="@+id/nav_logros"
