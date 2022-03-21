@@ -35,16 +35,20 @@ public final class FragmentRutinasListBinding implements ViewBinding {
   @NonNull
   public final TextView etiquetaTiempo;
 
+  @NonNull
+  public final TextView txtMargenxD;
+
   private FragmentRutinasListBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView cardViewRutinasEntrenamiento, @NonNull TextView etiquetaMusculos,
       @NonNull TextView etiquetaNivel, @NonNull TextView etiquetaNombre,
-      @NonNull TextView etiquetaTiempo) {
+      @NonNull TextView etiquetaTiempo, @NonNull TextView txtMargenxD) {
     this.rootView = rootView;
     this.cardViewRutinasEntrenamiento = cardViewRutinasEntrenamiento;
     this.etiquetaMusculos = etiquetaMusculos;
     this.etiquetaNivel = etiquetaNivel;
     this.etiquetaNombre = etiquetaNombre;
     this.etiquetaTiempo = etiquetaTiempo;
+    this.txtMargenxD = txtMargenxD;
   }
 
   @Override
@@ -104,9 +108,15 @@ public final class FragmentRutinasListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_MargenxD;
+      TextView txtMargenxD = ViewBindings.findChildViewById(rootView, id);
+      if (txtMargenxD == null) {
+        break missingId;
+      }
+
       return new FragmentRutinasListBinding((ConstraintLayout) rootView,
           cardViewRutinasEntrenamiento, etiquetaMusculos, etiquetaNivel, etiquetaNombre,
-          etiquetaTiempo);
+          etiquetaTiempo, txtMargenxD);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

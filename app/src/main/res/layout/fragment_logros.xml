@@ -4,29 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.logros.LogrosFragment">
+    tools:context=".ui.logros.LogrosFragment"
+    android:background="@color/black_shade_1">
 
     <TextView
         android:id="@+id/txt_PUNTOS"
         android:layout_width="161dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="PUNTOS OBTENIDOS"
-        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/rojo_Rebelde"
+
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TXT_PUNTOS_VARIABLE"
-        android:layout_width="54dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="242dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="999"
+        android:layout_width="77dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="20dp"
         android:background="@android:drawable/editbox_background"
+        android:gravity="center"
+
+        android:text="999"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txt_PUNTOS"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,20 +41,24 @@
         android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
-        android:background="@android:drawable/editbox_background"
+        android:textStyle="bold"
+        android:textColor="@color/yellow"
         android:text="TOTAL RUTINAS COMPLETADAS"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_PUNTOS" />
 
     <TextView
         android:id="@+id/TXT_RUTINAS_VARIABLE"
-        android:layout_width="72dp"
-        android:layout_height="43dp"
+        android:layout_width="76dp"
+        android:layout_height="36dp"
         android:layout_marginStart="240dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/editbox_background"
         android:gravity="center"
         android:text="99"
+
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/TXT_RUTINAS"
         app:layout_constraintTop_toBottomOf="@+id/TXT_PUNTOS_VARIABLE" />
 
@@ -61,7 +70,8 @@
         android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="NIVEL:"
-        android:background="@android:drawable/editbox_background"
+        android:textStyle="bold"
+        android:textColor="@color/rojo_Rebelde"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_RUTINAS" />
 
@@ -81,10 +91,11 @@
         android:id="@+id/TXT_PREMIOSOBTENIDOS"
         android:layout_width="261dp"
         android:layout_height="33dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
         android:text="PREMIOS OBTENIDOS:"
-        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_NIVEL_LOGROS_VARIABLE" />
 
@@ -96,19 +107,21 @@
         android:layout_marginTop="46dp"
         android:gravity="center"
         android:text="PRODUCTO                                            UBICACION"
-        android:background="@android:drawable/editbox_background"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_PREMIOSOBTENIDOS" />
 
     <TextView
         android:id="@+id/TXT_CODIGOPREMIOVARIABLE"
-        android:layout_width="277dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="141dp"
+        android:layout_width="339dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="128dp"
+        android:background="@android:drawable/editbox_background"
         android:gravity="center"
         android:text="CODIGO DE RETIRO: SDGSD- 13535-325"
-        android:background="@android:drawable/editbox_background"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_PREMIOSVARIABLE" />
 
@@ -116,10 +129,11 @@
         android:id="@+id/IMG_PREMIO"
         android:layout_width="137dp"
         android:layout_height="127dp"
-        android:layout_marginStart="206dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/domi_prona"
-        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/TXT_PREMIOSVARIABLE"
         app:layout_constraintTop_toTopOf="@+id/TXT_PREMIOSOBTENIDOS" />
 
@@ -127,11 +141,23 @@
         android:id="@+id/TXT_OTROSPREMIOS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="56dp"
         android:text="OTROS PREMIOS DISPONIBLES"
-        android:background="@android:drawable/editbox_background"
+
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_CODIGOPREMIOVARIABLE" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="203dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/otrospremios"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_OTROSPREMIOS" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

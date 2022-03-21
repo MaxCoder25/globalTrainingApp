@@ -26,6 +26,7 @@ class fragment_configuraciones : Fragment() {
 
     private lateinit var binding: FragmentConfiguracionesBinding
     var mediaPlayer =  MediaPlayer()
+    var sonidoBoolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,7 +78,7 @@ class fragment_configuraciones : Fragment() {
           //  binding.switchSonido.setOnCheckedChangeListener { buttonView, isChecked ->
 
             if( binding.switchSonido.isChecked) {
-                    var sonidoBoolean = true
+                     sonidoBoolean = true
                 saveSharedPreference(sonidoBoolean)
 
                 if (sonidoBoolean) {
@@ -109,10 +110,6 @@ class fragment_configuraciones : Fragment() {
 
                 }
 
-                    else{
-                        var sonidoBoolean = false
-                saveSharedPreference(sonidoBoolean)
-                    }
 
 
 
@@ -120,11 +117,16 @@ class fragment_configuraciones : Fragment() {
 
 
 
-               // saveSharedPreference(sonidoBoolean)
+
+
 
 
             }
 
+            else{
+                var sonidoBoolean = false
+                saveSharedPreference(sonidoBoolean)
+            }
 
 
 

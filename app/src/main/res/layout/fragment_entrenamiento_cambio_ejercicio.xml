@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black_shade_1">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reciclerEjerc_2doUso"
@@ -18,18 +19,20 @@
             android:layout_marginBottom="27dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txt_EjercSimilares" />
+            app:layout_constraintTop_toTopOf="@+id/txt_EjercSimilares"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/txt_EjercSimilares"
             android:layout_width="287dp"
             android:layout_height="172dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
             android:gravity="center"
             android:text="Escoge un ejercicio similar"
+            android:textColor="@color/white"
             android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

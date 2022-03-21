@@ -5,7 +5,8 @@
     android:id="@+id/EntrenamientoConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentacion.EntrenamientoActivity">
+    tools:context=".presentacion.EntrenamientoActivity"
+    android:background="@color/black_shade_1">
 
 
     <TextView
@@ -14,8 +15,8 @@
         android:layout_height="40dp"
         android:layout_marginStart="104dp"
         android:layout_marginTop="40dp"
-
-        android:background="@android:drawable/editbox_background"
+        android:textStyle="bold"
+        android:textColor="@color/rojo_Rebelde"
         android:text="NOMBRE ENTRENAMIENTO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,8 +27,8 @@
         android:layout_height="62dp"
         android:layout_marginStart="208dp"
         android:layout_marginTop="92dp"
-
-        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
         android:text="MUSCULOS SEPARADOS CON COMA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,8 +39,8 @@
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="92dp"
-
-        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
         android:text="NIVEL"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,6 +51,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="144dp"
         android:layout_marginTop="56dp"
+        android:textStyle="bold"
         android:text="Adelante"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_TIEMPO"
@@ -59,10 +61,11 @@
         android:id="@+id/TXT_TIEMPO"
         android:layout_width="162dp"
         android:layout_height="31dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="80dp"
-        android:background="@android:drawable/editbox_background"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
         android:text="DURACION EN MIN"
+        android:textStyle="bold"
+        android:textColor="@color/yellow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/TXT_MUSCULOS" />
 
@@ -70,18 +73,19 @@
         android:id="@+id/TXT_SERIES"
         android:layout_width="166dp"
         android:layout_height="42dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="172dp"
-
-        android:background="@android:drawable/editbox_background"
-        android:text="NIVEL"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="168dp"
+        android:text="Series: n"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recicler_entrenamiento"
-        android:layout_width="404dp"
-        android:layout_height="409dp"
+        android:layout_width="399dp"
+        android:layout_height="393dp"
         android:layout_marginTop="64dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -81,10 +81,10 @@ class EntrenamientoActivity : AppCompatActivity() {
     }
 
         private fun loadRutinas(rutinasEntity: RutinasEntity) {
-            binding.TXTNOMBRE.text = "Nombre: "+ rutinasEntity.nombre
-            binding.TXTNIVEL.text = "Nivel: "+ rutinasEntity.nivel
-            binding.TXTMUSCULOS.text = "Musculos: " +rutinasEntity.musculos
-            binding.TXTTIEMPO.text = "Duración: "+rutinasEntity.tiempoMin.toString() + " min"
+            binding.TXTNOMBRE.text = "NOMBRE: "+ rutinasEntity.nombre
+            binding.TXTNIVEL.text = "NIVEL: "+ rutinasEntity.nivel
+            binding.TXTMUSCULOS.text = "MÚSCULOS: " +rutinasEntity.musculos
+            binding.TXTTIEMPO.text = "DURACIÓN: "+rutinasEntity.tiempoMin.toString() + " min"
             binding.TXTSERIES.text = "SERIES: " + rutinasEntity.series.toString()
         }
 

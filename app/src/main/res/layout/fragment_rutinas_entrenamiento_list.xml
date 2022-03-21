@@ -8,22 +8,24 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewRutinas_Entrenamiento"
         android:layout_width="400dp"
-        android:layout_height="150dp"
+        android:layout_height="146dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="390dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/black_shade_1">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/btn_CambioEjercicio"
-                android:layout_width="64dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="128dp"
-                android:layout_marginTop="24dp"
+                android:layout_width="57dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="20dp"
                 android:backgroundTint="#E00A0A"
                 android:clickable="true"
+                android:theme="@style/LoginBoton"
                 android:tint="#FFFFFF"
                 app:layout_constraintStart_toStartOf="@+id/etiquetaRepeticiones"
                 app:layout_constraintTop_toTopOf="parent"
@@ -33,13 +35,14 @@
 
             <TextView
                 android:id="@+id/etiquetaEjercicio"
-                android:layout_width="246dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="76dp"
-                android:background="@android:drawable/editbox_background"
-
+                android:layout_width="232dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="144dp"
+                android:layout_marginTop="88dp"
                 android:text="Ejercicio"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/img_Ejerc"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,18 +50,19 @@
                 android:id="@+id/etiquetaRepeticiones"
                 android:layout_width="94dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="160dp"
-
-                android:layout_marginTop="32dp"
-                android:background="@android:drawable/editbox_background"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="36dp"
                 android:text="Repeticiones"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/img_Ejerc"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/img_Ejerc"
-                android:layout_width="115dp"
-                android:layout_height="107dp"
+                android:layout_width="130dp"
+                android:layout_height="118dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +73,12 @@
                 android:id="@+id/txtCambioEjerc"
                 android:layout_width="121dp"
                 android:layout_height="17dp"
-                android:layout_marginStart="264dp"
+                android:layout_marginStart="252dp"
                 android:layout_marginTop="4dp"
                 android:text="Cambiar ejercicio"
+
+                android:textStyle="bold"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

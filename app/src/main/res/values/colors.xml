@@ -10,7 +10,7 @@
     <!-- Colores para la sección del Asistente Virtual -->
     <color name="rojo_Rebelde">#B50D0D</color>
     <color name="gris_chat">#ECE7E9</color>
-
+    <color name="azulSemana">#072DC7</color>
 
 
     <!-- Colores para la sección de Noticias -->
@@ -28,7 +28,6 @@
     shrine_blue_900
     <color name="shrine_blue_900">#2B1FBC</color>
     <color name="shrine_blue_100">#564EBD</color>
-
 
 
 

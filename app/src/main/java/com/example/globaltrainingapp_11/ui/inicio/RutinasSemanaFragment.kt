@@ -3,6 +3,7 @@ package com.example.globaltrainingapp_11.ui.inicio
 import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,7 @@ import com.example.globaltrainingapp_11.entidades.SemanaRutinas_Rutinas_Relacion
 import com.example.globaltrainingapp_11.logica.RutinasBL
 import com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
 import com.example.globaltrainingapp_11.utils.EnumRutinas
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -35,7 +37,7 @@ class RutinasSemanaFragment : Fragment() {
 
 
     private lateinit var binding: FragmentRutinasSemanaBinding
-    private var category: String = EnumRutinas.SelectionCategoryRutinas.FULL_BODY.toString()
+    private var category: String = EnumRutinas.SelectionCategoryRutinasSemana.FULL_BODY.toString()
 
 
 
@@ -66,7 +68,7 @@ class RutinasSemanaFragment : Fragment() {
             object : TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab?) {
                     val idCat = tab?.position!!
-                    category = EnumRutinas.SelectionCategoryRutinas.fromPosition(idCat)
+                    category = EnumRutinas.SelectionCategoryRutinasSemana.fromPosition(idCat)
                     clear()
 
 
@@ -102,6 +104,8 @@ class RutinasSemanaFragment : Fragment() {
                 RutinasBL().getCategoriaRutinas(category)
 
             }
+
+
             binding.txtDescripCategoria.text = items1.descripcion
             binding.txtNumRutinas.text = items1.cantidad.toString()
 
@@ -109,7 +113,6 @@ class RutinasSemanaFragment : Fragment() {
                 LinearLayoutManager(binding.RutinasRecyclerView.context)
 
 
-          //  binding.RutinasRecyclerView.adapter = getRutinaItem(it)
             binding.RutinasRecyclerView.adapter =   ListRutinasAdapter(items) { RutinasEntity -> ItemClickOnRecycledView(RutinasEntity) }
 
         }
@@ -140,9 +143,14 @@ class RutinasSemanaFragment : Fragment() {
                         RutinasEntity.id_rutinas,
                         rutinaSemana.dia
                     )
+
+
                 }
 
             }
+
+            saveSharedPreferenceRutinaLunes(RutinasEntity.nivel,
+                RutinasEntity.nombre)
 
 
             var frag_A_Enviar = SemanaRutinasFragment()
@@ -168,6 +176,22 @@ class RutinasSemanaFragment : Fragment() {
         }
 
     }
+
+
+
+    fun saveSharedPreferenceRutinaLunes(nivel :String, nombre:String) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putString("nivelRutinaLunes", nivel)
+        editorSP.putString("nombreRutinaLunes", nombre)
+
+
+        editorSP.commit()
+
+
+
+    }
+
+
 
     fun clear() {
         binding.RutinasRecyclerView.adapter = ListRutinasAdapter(emptyList()) { }

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1">
 
     <SeekBar
         android:id="@+id/seekBar_tiempoDescansoSerie"
@@ -13,6 +14,10 @@
         android:layout_marginTop="224dp"
         android:max="120"
         android:progress="30"
+        android:textStyle="bold"
+        android:progressTint="#C90909"
+        android:thumbTint="@color/rojo_Rebelde"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_descEjerc" />
 
@@ -24,6 +29,7 @@
         android:layout_marginTop="176dp"
         android:gravity="center"
         android:text="120"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +42,7 @@
         android:layout_marginTop="332dp"
         android:gravity="center"
         android:text="0"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,6 +55,7 @@
         android:layout_marginTop="116dp"
         android:gravity="center"
         android:text="30 segundos"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_descEjerc" />
@@ -60,6 +68,7 @@
         android:layout_marginTop="344dp"
         android:gravity="center"
         android:text="120"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,6 +81,7 @@
         android:layout_marginTop="280dp"
         android:gravity="center"
         android:text="30 segundos"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_descEjerc" />
@@ -84,6 +94,8 @@
         android:layout_marginTop="240dp"
         android:text="DESCANSO ENTRE SERIES"
         android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,6 +107,7 @@
         android:layout_marginTop="160dp"
         android:gravity="center"
         android:text="0"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -107,6 +120,8 @@
         android:layout_marginTop="64dp"
         android:text="DESCANSO ENTRE EJERCICIOS"
         android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,8 +131,12 @@
         android:layout_height="92dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
+        android:backgroundTint="#595B5F"
+        android:foregroundTint="#FFFFFF"
         android:max="120"
         android:progress="30"
+        android:progressTint="#C90909"
+        android:thumbTint="@color/rojo_Rebelde"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_descEjerc" />
 
@@ -131,14 +150,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seekBar_tiempoDescansoEjerc" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchSonido"
-        android:layout_width="133dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="52dp"
         android:text="¿Activar Sonido?"
+        android:textColor="#FFFFFF"
+        app:trackTint="@color/switch_track_selector"
+        app:thumbTint="@color/switch_thumb_selector"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar_tiempoDescansoSerie" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_tiempoDescansoSerie"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

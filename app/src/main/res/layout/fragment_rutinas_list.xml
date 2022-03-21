@@ -3,20 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="200dp"
+    android:background="@android:drawable/editbox_background">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewRutinas_Entrenamiento"
         android:layout_width="409dp"
         android:layout_height="210dp"
+        android:background="@android:drawable/editbox_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55">
+        app:layout_constraintVertical_bias="0.55"
+
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="205dp">
+            android:layout_width="397dp"
+            android:layout_height="205dp"
+            android:background="@color/black_shade_1">
 
             <TextView
                 android:id="@+id/etiquetaNivel"
@@ -24,21 +29,23 @@
                 android:layout_height="31dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@android:drawable/editbox_background"
-
                 android:text="Nivel"
+                android:textColor="@color/rojo_Rebelde"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/etiquetaNombre"
-                android:layout_width="247dp"
-                android:layout_height="35dp"
+                android:layout_width="362dp"
+                android:layout_height="53dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
-                android:background="@android:drawable/editbox_background"
-
                 android:text="Nombre"
+                android:textColor="@color/yellow"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/etiquetaNivel" />
 
@@ -47,24 +54,36 @@
                 android:layout_width="174dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="44dp"
-                android:background="@android:drawable/editbox_background"
-
+                android:layout_marginTop="48dp"
                 android:text="Tiempo"
+                android:textColor="@color/yellow"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/etiquetaMusculos" />
 
             <TextView
                 android:id="@+id/etiquetaMusculos"
-                android:layout_width="374dp"
-                android:layout_height="35dp"
+                android:layout_width="371dp"
+                android:layout_height="43dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="40dp"
-                android:background="@android:drawable/editbox_background"
-
+                android:layout_marginTop="60dp"
                 android:text="Musculos"
+                android:textColor="@color/yellow"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/etiquetaNombre" />
+
+            <TextView
+                android:id="@+id/txt_MargenxD"
+                android:layout_width="413dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="23dp"
+                android:background="@android:drawable/editbox_background"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etiquetaTiempo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

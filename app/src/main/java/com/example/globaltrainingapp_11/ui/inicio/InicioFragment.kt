@@ -14,7 +14,9 @@ import com.example.globaltrainingapp_11.TecnicaYoutubeActivity
 import com.example.globaltrainingapp_11.databinding.FragmentInicioBinding
 import com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity
 import com.example.globaltrainingapp_11.presentacion.LoginActivity
+import com.example.globaltrainingapp_11.ui.asistente.MainBotActivity
 import com.example.globaltrainingapp_11.ui.ejercicios.EjerciciosFragment
+import com.example.globaltrainingapp_11.utils.globalTrainingApp
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
@@ -45,6 +47,14 @@ class InicioFragment : Fragment() {
         })*/
        // return root
 
+
+        binding.etiquetaNivel2.text = getSharedPreferenceNivelRutinaLunes()
+        binding.etiquetaNombre3.text = getSharedPreferenceNombreRutinaLunes()
+
+
+
+
+
         binding.btbSalirSesion.setOnClickListener() {
 
             var intent = Intent(context, LoginActivity::class.java)
@@ -53,21 +63,14 @@ class InicioFragment : Fragment() {
 
         }
 
-        binding.btnAdelante.setOnClickListener() {
+
+        binding.btnAdelante2.setOnClickListener() {
 
 
-           /* val fragment2 = EjerciciosFragment()
-            val fragmentManager: FragmentManager? = parentFragmentManager
-            val fragmentTransaction = fragmentManager!!.beginTransaction()
-            fragmentTransaction.replace(R.id.nav_host_fragment_content_main , fragment2)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+             var i = Intent(activity, MainBotActivity::class.java)
 
-            */
-           // var i = Intent(activity, TecnicaYoutubeActivity::class.java)
-          //  val jsonString = Json.encodeToString(RutinasEntity)
-         //   i.putExtra("rutina", jsonString)
-          //  startActivity(i)
+
+              startActivity(i)
 
 
         }
@@ -92,8 +95,30 @@ class InicioFragment : Fragment() {
     }
 
 
+    fun getSharedPreferenceNivelRutinaLunes(): String? {
+        var editorSP = globalTrainingApp.getShareDB()
+        var nivelRutinaLunes =   editorSP.getString("nivelRutinaLunes","nivelRutinaLunes")
 
 
+        return nivelRutinaLunes
+
+
+
+    }
+
+    fun getSharedPreferenceNombreRutinaLunes(): String? {
+        var editorSP = globalTrainingApp.getShareDB()
+        var nombreRutinaLunes = editorSP.getString("nombreRutinaLunes", "nombreRutinaLunes")
+
+        return nombreRutinaLunes
+    }
+
+    fun getSharedPreferenceTiempoRutinaLunes(): Int {
+
+        var editorSP = globalTrainingApp.getShareDB()
+        var tiempoRutinaLunes = editorSP.getInt("tiempoRutinaLunes", 1)
+        return tiempoRutinaLunes
+    }
 
 
     override fun onDestroyView() {

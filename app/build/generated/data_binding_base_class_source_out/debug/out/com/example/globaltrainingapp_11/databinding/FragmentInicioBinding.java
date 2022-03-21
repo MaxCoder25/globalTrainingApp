@@ -28,9 +28,6 @@ public final class FragmentInicioBinding implements ViewBinding {
   public final Button btbSalirSesion;
 
   @NonNull
-  public final Button btnAdelante;
-
-  @NonNull
   public final Button btnAdelante2;
 
   @NonNull
@@ -40,16 +37,16 @@ public final class FragmentInicioBinding implements ViewBinding {
   public final CalendarView calendarView;
 
   @NonNull
-  public final ImageView imageView3;
+  public final TextView etiquetaNivel2;
+
+  @NonNull
+  public final TextView etiquetaNombre3;
+
+  @NonNull
+  public final ImageView imgChatbot;
 
   @NonNull
   public final TextView textView2;
-
-  @NonNull
-  public final TextView textView3;
-
-  @NonNull
-  public final ImageView tituloEntrenam;
 
   @NonNull
   public final TextView txtCorreoUsuarioNAVHEADER;
@@ -57,24 +54,45 @@ public final class FragmentInicioBinding implements ViewBinding {
   @NonNull
   public final EditText txtDesafio;
 
+  @NonNull
+  public final TextView txtEditar;
+
+  @NonNull
+  public final TextView txtMargenBottom;
+
+  @NonNull
+  public final TextView txtMargenBottom2;
+
+  @NonNull
+  public final TextView txtMargenBottom3;
+
+  @NonNull
+  public final TextView txtMargenBottom5;
+
   private FragmentInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button btbSalirSesion,
-      @NonNull Button btnAdelante, @NonNull Button btnAdelante2,
-      @NonNull FloatingActionButton btnSemanaInicioFrag, @NonNull CalendarView calendarView,
-      @NonNull ImageView imageView3, @NonNull TextView textView2, @NonNull TextView textView3,
-      @NonNull ImageView tituloEntrenam, @NonNull TextView txtCorreoUsuarioNAVHEADER,
-      @NonNull EditText txtDesafio) {
+      @NonNull Button btnAdelante2, @NonNull FloatingActionButton btnSemanaInicioFrag,
+      @NonNull CalendarView calendarView, @NonNull TextView etiquetaNivel2,
+      @NonNull TextView etiquetaNombre3, @NonNull ImageView imgChatbot, @NonNull TextView textView2,
+      @NonNull TextView txtCorreoUsuarioNAVHEADER, @NonNull EditText txtDesafio,
+      @NonNull TextView txtEditar, @NonNull TextView txtMargenBottom,
+      @NonNull TextView txtMargenBottom2, @NonNull TextView txtMargenBottom3,
+      @NonNull TextView txtMargenBottom5) {
     this.rootView = rootView;
     this.btbSalirSesion = btbSalirSesion;
-    this.btnAdelante = btnAdelante;
     this.btnAdelante2 = btnAdelante2;
     this.btnSemanaInicioFrag = btnSemanaInicioFrag;
     this.calendarView = calendarView;
-    this.imageView3 = imageView3;
+    this.etiquetaNivel2 = etiquetaNivel2;
+    this.etiquetaNombre3 = etiquetaNombre3;
+    this.imgChatbot = imgChatbot;
     this.textView2 = textView2;
-    this.textView3 = textView3;
-    this.tituloEntrenam = tituloEntrenam;
     this.txtCorreoUsuarioNAVHEADER = txtCorreoUsuarioNAVHEADER;
     this.txtDesafio = txtDesafio;
+    this.txtEditar = txtEditar;
+    this.txtMargenBottom = txtMargenBottom;
+    this.txtMargenBottom2 = txtMargenBottom2;
+    this.txtMargenBottom3 = txtMargenBottom3;
+    this.txtMargenBottom5 = txtMargenBottom5;
   }
 
   @Override
@@ -110,12 +128,6 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnAdelante;
-      Button btnAdelante = ViewBindings.findChildViewById(rootView, id);
-      if (btnAdelante == null) {
-        break missingId;
-      }
-
       id = R.id.btnAdelante2;
       Button btnAdelante2 = ViewBindings.findChildViewById(rootView, id);
       if (btnAdelante2 == null) {
@@ -134,27 +146,27 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView3;
-      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView3 == null) {
+      id = R.id.etiquetaNivel2;
+      TextView etiquetaNivel2 = ViewBindings.findChildViewById(rootView, id);
+      if (etiquetaNivel2 == null) {
+        break missingId;
+      }
+
+      id = R.id.etiquetaNombre3;
+      TextView etiquetaNombre3 = ViewBindings.findChildViewById(rootView, id);
+      if (etiquetaNombre3 == null) {
+        break missingId;
+      }
+
+      id = R.id.img_chatbot;
+      ImageView imgChatbot = ViewBindings.findChildViewById(rootView, id);
+      if (imgChatbot == null) {
         break missingId;
       }
 
       id = R.id.textView2;
       TextView textView2 = ViewBindings.findChildViewById(rootView, id);
       if (textView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView3;
-      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
-      if (textView3 == null) {
-        break missingId;
-      }
-
-      id = R.id.tituloEntrenam;
-      ImageView tituloEntrenam = ViewBindings.findChildViewById(rootView, id);
-      if (tituloEntrenam == null) {
         break missingId;
       }
 
@@ -170,9 +182,40 @@ public final class FragmentInicioBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentInicioBinding((ConstraintLayout) rootView, btbSalirSesion, btnAdelante,
-          btnAdelante2, btnSemanaInicioFrag, calendarView, imageView3, textView2, textView3,
-          tituloEntrenam, txtCorreoUsuarioNAVHEADER, txtDesafio);
+      id = R.id.txt_editar;
+      TextView txtEditar = ViewBindings.findChildViewById(rootView, id);
+      if (txtEditar == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_margenBottom;
+      TextView txtMargenBottom = ViewBindings.findChildViewById(rootView, id);
+      if (txtMargenBottom == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_margenBottom2;
+      TextView txtMargenBottom2 = ViewBindings.findChildViewById(rootView, id);
+      if (txtMargenBottom2 == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_margenBottom3;
+      TextView txtMargenBottom3 = ViewBindings.findChildViewById(rootView, id);
+      if (txtMargenBottom3 == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_margenBottom5;
+      TextView txtMargenBottom5 = ViewBindings.findChildViewById(rootView, id);
+      if (txtMargenBottom5 == null) {
+        break missingId;
+      }
+
+      return new FragmentInicioBinding((ConstraintLayout) rootView, btbSalirSesion, btnAdelante2,
+          btnSemanaInicioFrag, calendarView, etiquetaNivel2, etiquetaNombre3, imgChatbot, textView2,
+          txtCorreoUsuarioNAVHEADER, txtDesafio, txtEditar, txtMargenBottom, txtMargenBottom2,
+          txtMargenBottom3, txtMargenBottom5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

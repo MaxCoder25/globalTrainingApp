@@ -6,129 +6,206 @@
     android:layout_height="match_parent"
     tools:context=".ui.inicio.InicioFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_shade_1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="365dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="36dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txt_margenBottom5"
+            android:layout_width="4dp"
+            android:layout_height="109dp"
+            android:layout_marginStart="352dp"
+            android:layout_marginTop="125dp"
+            android:background="@android:drawable/editbox_background"
 
-            <TextView
-                android:id="@+id/txt_correoUsuarioNAVHEADER"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="156dp"
-                android:text="ENTRENAMIENTO DE HOY"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:textStyle="bold"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_SemanaInicioFrag" />
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/calendarView" />
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="339dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="36dp"
+            android:dateTextAppearance="@style/LoginBoton"
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="216dp"
-                android:layout_marginTop="156dp"
-                android:text="L 28/03/2022"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/txt_correoUsuarioNAVHEADER"
-                app:layout_constraintTop_toTopOf="@+id/calendarView" />
+            android:focusedMonthDateColor="@color/white"
+            android:selectedWeekBackgroundColor="@color/white"
 
-            <ImageView
-                android:id="@+id/tituloEntrenam"
-                android:layout_width="298dp"
-                android:layout_height="119dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="180dp"
-                android:src="@drawable/rutinaejem1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/calendarView" />
+            android:textColorPrimary="@color/white"
+            android:unfocusedMonthDateColor="@color/white"
+            android:weekDayTextAppearance="@style/LoginBoton"
+            android:weekNumberColor="@color/white"
+            android:weekSeparatorLineColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
-            <Button
-                android:id="@+id/btnAdelante"
-                android:layout_width="297dp"
-                android:layout_height="49dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="136dp"
-                android:text="ADELANTE"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tituloEntrenam" />
+            />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btn_SemanaInicioFrag"
-                android:layout_width="56dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="272dp"
-                android:layout_marginTop="36dp"
-                android:clickable="true"
-                android:src="@android:drawable/ic_popup_sync"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.818"
-                app:layout_constraintStart_toStartOf="@+id/calendarView"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txt_correoUsuarioNAVHEADER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="156dp"
+            android:text="ENTRENAMIENTO DE HOY"
+            android:textColor="@color/white"
 
-            <EditText
-                android:id="@+id/txtDesafio"
-                android:layout_width="291dp"
-                android:layout_height="65dp"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="60dp"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="                        DESAFIO                                                           Pon a prueba tus capacidades"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btnAdelante" />
+            android:textSize="15sp"
+            android:textStyle="bold"
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="306dp"
-                android:layout_height="118dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="72dp"
-                android:src="@drawable/plancha1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/txtDesafio" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
-            <Button
-                android:id="@+id/btnAdelante2"
-                android:layout_width="287dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="128dp"
-                android:text="ACEPTO EL RETO"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="156dp"
+            android:text="L 21/03/2022"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txt_correoUsuarioNAVHEADER"
+            app:layout_constraintTop_toTopOf="@+id/calendarView" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="336dp"
-                android:layout_marginTop="4dp"
-                android:text="Editar"
-                app:layout_constraintStart_toStartOf="@+id/calendarView"
-                app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_SemanaInicioFrag"
+            android:layout_width="56dp"
+            android:layout_height="51dp"
+            app:fabCustomSize="55dp"
+            android:layout_marginStart="272dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#E00A0A"
+            android:clickable="true"
+            android:src="@android:drawable/ic_popup_sync"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="@+id/calendarView"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btb_salirSesion"
-                android:layout_width="113dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:text="CERRAR SESION"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="4dp" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/txtDesafio"
+            android:layout_width="296dp"
+            android:layout_height="104dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center|start|top"
+            android:inputType="textMultiLine"
+            android:text="¿TE INTERESA UN TEST PARA MEDIR TUS CAPACIDADES O QUIERES RECOMENDACIONES DE RUTINAS?"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_margenBottom" />
+
+        <ImageView
+            android:id="@+id/img_chatbot"
+            android:layout_width="301dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/chatbot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtDesafio" />
+
+        <Button
+            android:id="@+id/btnAdelante2"
+            android:layout_width="287dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="prueba nuestro chatbot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_chatbot" />
+
+        <TextView
+            android:id="@+id/txt_editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="336dp"
+            android:layout_marginTop="4dp"
+            android:text="Editar"
+            android:textColor="@color/white"
+
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/calendarView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btb_salirSesion"
+            android:layout_width="113dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:text="CERRAR SESION"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="4dp" />
+
+        <TextView
+            android:id="@+id/etiquetaNivel2"
+            android:layout_width="159dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="16dp"
+            android:text="Nivel"
+            android:textColor="@color/rojo_Rebelde"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_correoUsuarioNAVHEADER" />
+
+        <TextView
+            android:id="@+id/etiquetaNombre3"
+            android:layout_width="327dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="1dp"
+            android:text="Nombre"
+            android:textColor="@color/yellow"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etiquetaNivel2" />
+
+        <TextView
+            android:id="@+id/txt_margenBottom"
+            android:layout_width="338dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:drawable/editbox_background"
+
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_margenBottom5" />
+
+        <TextView
+            android:id="@+id/txt_margenBottom2"
+            android:layout_width="338dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:drawable/editbox_background"
+
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_correoUsuarioNAVHEADER" />
+
+        <TextView
+            android:id="@+id/txt_margenBottom3"
+            android:layout_width="4dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="38dp"
+            android:background="@android:drawable/editbox_background"
+
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

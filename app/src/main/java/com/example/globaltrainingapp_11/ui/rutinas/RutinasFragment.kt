@@ -97,7 +97,8 @@ class RutinasFragment : Fragment() {
 
 
             binding.RutinasRecyclerView.adapter = ListRutinasAdapter(items) {
-                getRutinaItem(it) }
+                getRutinaItem(it)
+            }
 
         }
 

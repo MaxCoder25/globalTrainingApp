@@ -12,6 +12,19 @@ class EnumRutinas {
         }
 
     }
+
+    enum class SelectionCategoryRutinasSemana {
+        FULL_BODY,  CUERPO_SUPERIOR, DESCANSO,PIERNAS, KETTLEBELLS, ANILLAS ;
+
+        companion object {
+            fun fromPosition(pos: Int) = SelectionCategoryRutinasSemana.values().firstOrNull {
+                it.ordinal == pos
+            }.toString()
+        }
+
+    }
+
+
 }
 
 

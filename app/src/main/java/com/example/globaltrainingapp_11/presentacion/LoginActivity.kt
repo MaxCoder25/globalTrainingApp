@@ -74,6 +74,10 @@ class LoginActivity : AppCompatActivity() {
                     //mando el id del usuario a un shard prefe para controlar los datos de logros y guardar rutinas
                     // y rutinas guardadas
                     saveSharedPreference(items)
+                    saveSharedPreferenceRutinaLunes("DESCANSO","NO HAY ENTRENAMIENTO PROGRAMADO")
+
+
+
 
 
                     var intent = Intent(this@LoginActivity,MainActivityNavDrawer::class.java)
@@ -106,6 +110,20 @@ class LoginActivity : AppCompatActivity() {
         var editorSP = globalTrainingApp.getShareDB().edit()
         editorSP.putInt("idUsuarioLogin", Usuario.idUsuario )
        editorSP.commit()
+    }
+
+
+
+    fun saveSharedPreferenceRutinaLunes(nivel :String, nombre:String) {
+        var editorSP = globalTrainingApp.getShareDB().edit()
+        editorSP.putString("nivelRutinaLunes", nivel)
+        editorSP.putString("nombreRutinaLunes", nombre)
+
+
+        editorSP.commit()
+
+
+
     }
 
 }

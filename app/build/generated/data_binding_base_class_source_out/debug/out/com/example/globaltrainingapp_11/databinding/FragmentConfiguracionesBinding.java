@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.Switch;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -32,7 +32,7 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
   public final SeekBar seekBarTiempoDescansoSerie;
 
   @NonNull
-  public final Switch switchSonido;
+  public final SwitchCompat switchSonido;
 
   @NonNull
   public final TextView txt0Segs;
@@ -60,7 +60,7 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
 
   private FragmentConfiguracionesBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnEmpezarConfigs, @NonNull SeekBar seekBarTiempoDescansoEjerc,
-      @NonNull SeekBar seekBarTiempoDescansoSerie, @NonNull Switch switchSonido,
+      @NonNull SeekBar seekBarTiempoDescansoSerie, @NonNull SwitchCompat switchSonido,
       @NonNull TextView txt0Segs, @NonNull TextView txt0Segs2, @NonNull TextView txt120Seg,
       @NonNull TextView txt120Seg2, @NonNull TextView txtDescEjerc, @NonNull TextView txtDescEjerc2,
       @NonNull TextView txtTiempoDescansoConfig, @NonNull TextView txtTiempoDescansoConfigSerie) {
@@ -125,7 +125,7 @@ public final class FragmentConfiguracionesBinding implements ViewBinding {
       }
 
       id = R.id.switchSonido;
-      Switch switchSonido = ViewBindings.findChildViewById(rootView, id);
+      SwitchCompat switchSonido = ViewBindings.findChildViewById(rootView, id);
       if (switchSonido == null) {
         break missingId;
       }

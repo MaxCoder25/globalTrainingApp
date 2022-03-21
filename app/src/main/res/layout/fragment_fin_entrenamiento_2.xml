@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black_shade_1">
 
         <ImageView
             android:id="@+id/img_FinEntrenamiento2"
@@ -28,6 +29,8 @@
             android:layout_marginTop="84dp"
             android:gravity="center_horizontal"
             android:text="TERMINASTE EL ENTRENAMIENTO, ¡BIEN HECHO!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,6 +42,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="136dp"
             android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="No importa lo lento que vayas mientras no te detengas    -Confucio"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"

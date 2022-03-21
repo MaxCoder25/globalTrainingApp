@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black_shade_1">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reciclerEjerc_2doUso"
@@ -27,8 +28,8 @@
             android:id="@+id/img_Ejerc_Frag"
             android:layout_width="256dp"
             android:layout_height="137dp"
-            android:layout_marginStart="112dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="72dp"
             android:src="@drawable/domi_prona"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,10 +40,12 @@
             android:layout_height="58dp"
             android:layout_marginStart="92dp"
             android:layout_marginTop="152dp"
-            android:background="@android:drawable/editbox_background"
-
             android:gravity="center"
             android:text="Ejercicio"
+
+            android:textColor="@color/rojo_Rebelde"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/img_Ejerc_Frag" />
 
@@ -52,10 +55,12 @@
             android:layout_height="31dp"
             android:layout_marginStart="156dp"
             android:layout_marginTop="224dp"
-            android:background="@android:drawable/editbox_background"
-
             android:gravity="center"
             android:text="Reps"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/img_Ejerc_Frag" />
 
@@ -66,6 +71,8 @@
             android:layout_marginStart="168dp"
             android:layout_marginTop="12dp"
             android:text="TOCA CUANDO TERMINES"
+            android:textStyle="bold"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_Reps" />
 
@@ -85,7 +92,8 @@
             android:layout_height="84dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="236dp"
-            android:text="iniciar cuenta"
+            android:text="Iniciar cuenta"
+            android:textStyle="bold"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btn_tecnica" />
@@ -96,9 +104,10 @@
             android:layout_height="48dp"
             android:layout_marginStart="140dp"
             android:layout_marginTop="60dp"
-            android:background="@android:drawable/editbox_background"
             android:gravity="center"
             android:text="20 "
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +120,9 @@
             android:layout_marginStart="60dp"
             android:layout_marginTop="72dp"
             android:text="segundos"
+            android:textStyle="bold"
             android:textSize="25sp"
+            android:textColor="@color/rojo_Rebelde"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/txt_Reps"
             app:layout_constraintTop_toTopOf="@+id/txt_NombreEjerc" />
@@ -124,7 +135,9 @@
             android:layout_marginTop="92dp"
             android:gravity="center"
             android:text="SERIE: 1"
-            android:background="@android:drawable/editbox_background"
+            android:textStyle="bold"
+
+            android:textColor="@color/yellow"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btn_tecnica" />
@@ -133,8 +146,8 @@
             android:id="@+id/btn_salirEntrenam"
             android:layout_width="37dp"
             android:layout_height="38dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
             android:src="@android:drawable/presence_offline"
             app:layout_constraintStart_toEndOf="@+id/txt_salirEntrenamiento"
             app:layout_constraintTop_toTopOf="parent" />
@@ -143,9 +156,11 @@
             android:id="@+id/txt_salirEntrenamiento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
-            android:layout_marginTop="62dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="48dp"
             android:text="Salir Entrenamiento"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/btn_tecnica"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,17 +9,20 @@ import com.example.globaltrainingapp_11.databinding.FragmentSemanaListBinding
 import com.example.globaltrainingapp_11.entidades.SemanaRutinas_Rutinas_Relaciones
 
 
-class ListSemanaRutinasAdapter(val listSemanaRutinas: List<SemanaRutinas_Rutinas_Relaciones>,private val onClickItemSelected: (SemanaRutinas_Rutinas_Relaciones) -> Unit) : RecyclerView.Adapter<SemanaRutinasViewHolder>() {
+class ListSemanaRutinasAdapter(val listSemanaRutinas: List<SemanaRutinas_Rutinas_Relaciones>,private val onClickItemSelected: (SemanaRutinas_Rutinas_Relaciones) -> Unit): RecyclerView.Adapter<SemanaRutinasViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SemanaRutinasViewHolder {
         var layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.fragment_semana_list , parent, false)
+        val view = layoutInflater.inflate(R.layout.fragment_semana_list, parent, false)
+
+
+
         return SemanaRutinasViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: SemanaRutinasViewHolder, position: Int) {
-        val item =  listSemanaRutinas[position]
+        val item = listSemanaRutinas[position]
         holder.render(item, onClickItemSelected)
     }
 
@@ -37,9 +40,23 @@ class SemanaRutinasViewHolder(SemanaRutinasViewHolder: View) : RecyclerView.View
 
 
 
+
+        if (item.rutinas.id_rutinas == 0) {
+
+            binding.etiquetaNivelSemana.setBackgroundResource(R.color.azulSemana)
+        }
+        else{
+            binding.etiquetaNivelSemana.setBackgroundResource(R.color.rojo_Rebelde)
+
+        }
+
+
+
+
         binding.btnCambioRutinaSemana.setOnClickListener {
             onClickItemSelected(item)
         }
+
 
 
     }

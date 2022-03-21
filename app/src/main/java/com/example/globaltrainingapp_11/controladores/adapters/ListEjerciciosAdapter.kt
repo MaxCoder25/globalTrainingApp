@@ -46,8 +46,5 @@ class EjerciciosViewHolder (EjerciciosViewHolder: View) : RecyclerView.ViewHolde
 
 
     }
-   /* fun render2(item : CategoriaRutinasEntity) {
 
-        binding2.txtTitulo2.text=item.nombre
-    }*/
 }

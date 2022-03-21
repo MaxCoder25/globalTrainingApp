@@ -7,43 +7,47 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewRutinas_Entrenamiento"
-        android:layout_width="405dp"
-        android:layout_height="150dp"
+        android:layout_width="408dp"
+        android:layout_height="143dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="392dp"
-            android:layout_height="140dp">
+            android:layout_height="140dp"
+            android:background="@color/black_shade_1">
 
             <TextView
                 android:id="@+id/etiquetaEjercicio"
-                android:layout_width="246dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="120dp"
+                android:layout_width="235dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="136dp"
                 android:layout_marginTop="76dp"
-                android:background="@android:drawable/editbox_background"
-
                 android:text="Ejercicio"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/img_Ejerc"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/etiquetaRepeticiones"
-                android:layout_width="94dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="160dp"
-
+                android:layout_width="113dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="148dp"
                 android:layout_marginTop="32dp"
-                android:background="@android:drawable/editbox_background"
                 android:text="Repeticiones"
+                android:textColor="@color/white"
+
+                android:textSize="17sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/img_Ejerc"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/img_Ejerc"
-                android:layout_width="115dp"
-                android:layout_height="107dp"
+                android:layout_width="127dp"
+                android:layout_height="118dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toStartOf="parent"
