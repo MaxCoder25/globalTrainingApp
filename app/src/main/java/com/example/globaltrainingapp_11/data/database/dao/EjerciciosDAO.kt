@@ -3,6 +3,7 @@ package com.example.globaltrainingapp_11.data.database.dao
 import androidx.room.*
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones
+import com.example.globaltrainingapp_11.entidades.tipo_movimientoEntity
 
 @Dao
 interface EjerciciosDAO {
@@ -18,6 +19,13 @@ interface EjerciciosDAO {
 
     @Query("SELECT * FROM ejercicios WHERE tipo_movimiento = :EjerciciosTipoMovimiento")
     suspend fun getEjerciciosByTipoMovimiento(EjerciciosTipoMovimiento: String): List<EjerciciosEntity>
+
+
+    //Query para La lista de Ejercicios segun su tipo de movimiento
+    @Query("SELECT * FROM tipo_movimiento")
+    suspend fun getAllCategoriesbyMovement(): List<tipo_movimientoEntity>
+
+
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

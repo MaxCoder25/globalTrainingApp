@@ -27,8 +27,8 @@
                 android:text="Sección de noticias de Deportes y Salud"
                 android:textAlignment="center"
                 android:textColor="@color/yellow"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>

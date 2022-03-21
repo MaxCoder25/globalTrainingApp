@@ -8,7 +8,7 @@ import com.example.globaltrainingapp_11.data.database.dao.UsuariosDAO
 import com.example.globaltrainingapp_11.entidades.*
 
 @Database(
-    entities = [RutinasEntity::class, EjerciciosEntity::class, Rutinas_Ejercicios_CrossRef::class, SemanaRutinasEntity::class, CategoriaRutinasEntity::class, Usuarios::class, PremiosEntity::class, NivelesEntity::class ],
+    entities = [RutinasEntity::class,tipo_movimientoEntity::class, EjerciciosEntity::class, Rutinas_Ejercicios_CrossRef::class, SemanaRutinasEntity::class, CategoriaRutinasEntity::class, Usuarios::class, PremiosEntity::class, NivelesEntity::class ],
     version = 1, exportSchema = false
 )
 abstract class RutinasDataBase : RoomDatabase() {
