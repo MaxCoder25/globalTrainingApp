@@ -66,6 +66,19 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/bottom_bar_menu.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/globalTrainingApp/app/src/main/res/menu/main_activity_nav_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout-v28/activity_exercisesby_movement.xml" value="0.2" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout-v28/exercises_by_movement_type_rv_item.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout-v28/fragment_asistente.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout-v28/movement_type_rv_item.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/activity_register.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/fragment_asistente.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/fragment_ejercicios.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/fragment_ejercicios_list.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/fragment_inicio.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/fragment_logros.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/Usuario/Downloads/globalTrainingApp/globalTrainingApp/app/src/main/res/layout/fragment_rutinas_list.xml" value="0.1" />
         <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-anydpi/ic_sendMessage.xml" value="0.1555" />
         <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-v24/bg_chat_receive.xml" value="0.1" />
         <entry key="..\:/Users/mat-e/Desktop/AppAndroid/globalTrainingApp/app/src/main/res/drawable-v24/bg_chat_send.xml" value="0.1" />

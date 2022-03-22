@@ -51,6 +51,9 @@ public final class FragmentLogrosBinding implements ViewBinding {
   public final TextView TXTRUTINASVARIABLE;
 
   @NonNull
+  public final ImageView imageView3;
+
+  @NonNull
   public final TextView txtPUNTOS;
 
   private FragmentLogrosBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView IMGPREMIO,
@@ -58,7 +61,8 @@ public final class FragmentLogrosBinding implements ViewBinding {
       @NonNull TextView TXTNIVELLOGROSVARIABLE, @NonNull TextView TXTOTROSPREMIOS,
       @NonNull TextView TXTPREMIOSOBTENIDOS, @NonNull TextView TXTPREMIOSVARIABLE,
       @NonNull TextView TXTPUNTOSVARIABLE, @NonNull TextView TXTRUTINAS,
-      @NonNull TextView TXTRUTINASVARIABLE, @NonNull TextView txtPUNTOS) {
+      @NonNull TextView TXTRUTINASVARIABLE, @NonNull ImageView imageView3,
+      @NonNull TextView txtPUNTOS) {
     this.rootView = rootView;
     this.IMGPREMIO = IMGPREMIO;
     this.TXTCODIGOPREMIOVARIABLE = TXTCODIGOPREMIOVARIABLE;
@@ -70,6 +74,7 @@ public final class FragmentLogrosBinding implements ViewBinding {
     this.TXTPUNTOSVARIABLE = TXTPUNTOSVARIABLE;
     this.TXTRUTINAS = TXTRUTINAS;
     this.TXTRUTINASVARIABLE = TXTRUTINASVARIABLE;
+    this.imageView3 = imageView3;
     this.txtPUNTOS = txtPUNTOS;
   }
 
@@ -160,6 +165,12 @@ public final class FragmentLogrosBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView3;
+      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView3 == null) {
+        break missingId;
+      }
+
       id = R.id.txt_PUNTOS;
       TextView txtPUNTOS = ViewBindings.findChildViewById(rootView, id);
       if (txtPUNTOS == null) {
@@ -169,7 +180,7 @@ public final class FragmentLogrosBinding implements ViewBinding {
       return new FragmentLogrosBinding((ConstraintLayout) rootView, IMGPREMIO,
           TXTCODIGOPREMIOVARIABLE, TXTNIVELLOGROS, TXTNIVELLOGROSVARIABLE, TXTOTROSPREMIOS,
           TXTPREMIOSOBTENIDOS, TXTPREMIOSVARIABLE, TXTPUNTOSVARIABLE, TXTRUTINAS,
-          TXTRUTINASVARIABLE, txtPUNTOS);
+          TXTRUTINASVARIABLE, imageView3, txtPUNTOS);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

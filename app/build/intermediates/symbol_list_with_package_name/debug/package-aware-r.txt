@@ -2749,6 +2749,7 @@ id btn_iniSesionRegistrarse
 id btn_salirEntrenam
 id btn_salirEntrenam_Desc
 id btn_tecnica
+id button2
 id buttonPanel
 id cache_measures
 id calendarView
@@ -2892,17 +2893,25 @@ id icon
 id icon_group
 id idBtnReadNews
 id idIVCategory
+id idIVExerciseBymovementType
 id idIVNews
+id idIVmovementType
 id idPBLoading
 id idRVCategories
+id idRVExercisesByMovement
 id idRVNews
+id idRVcategoryMovementType
 id idTVCategory
 id idTVContent
+id idTVExerciseBymovementTypeLevel
 id idTVNewsHeading
 id idTVSubDesc
 id idTVSubTitle
 id idTVTitle
+id idTVdescriptionbyMovement
+id idTVmovementType
 id idToolbar
+id idToolbarListExercisesByMovement
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3057,7 +3066,6 @@ id ratio
 id reciclerDiasSemana
 id reciclerEjerc_2doUso
 id reciclerEjerc_3erUso
-id reciclerEjerciciosTodos
 id recicler_entrenamiento
 id rectangles
 id reverseSawtooth
@@ -3162,6 +3170,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView2
+id text_articulos
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3350,6 +3359,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_entrenamiento
 layout activity_entrenamiento_2
+layout activity_exercisesby_movement
 layout activity_login
 layout activity_main
 layout activity_main_bot
@@ -3378,7 +3388,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout exercises_by_movement_type_rv_item
 layout fragment_articulos
+layout fragment_asistente
 layout fragment_configuraciones
 layout fragment_ejercicios
 layout fragment_ejercicios_list
@@ -3413,6 +3425,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout movement_type_rv_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

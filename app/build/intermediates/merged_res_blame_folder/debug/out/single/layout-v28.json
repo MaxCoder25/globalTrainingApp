@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-v28\\movement_type_rv_item.xml",
+        "source": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\src\\main\\res\\layout-v28\\movement_type_rv_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-v28\\exercises_by_movement_type_rv_item.xml",
+        "source": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\src\\main\\res\\layout-v28\\exercises_by_movement_type_rv_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-v28\\activity_exercisesby_movement.xml",
+        "source": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\src\\main\\res\\layout-v28\\activity_exercisesby_movement.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-v28\\fragment_asistente.xml",
+        "source": "C:\\Users\\Usuario\\Downloads\\globalTrainingApp\\globalTrainingApp\\app\\src\\main\\res\\layout-v28\\fragment_asistente.xml"
+    }
+]

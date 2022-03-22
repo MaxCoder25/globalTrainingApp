@@ -34,7 +34,7 @@
             android:name="com.example.globaltrainingapp_11.ui.articulos.NewsDetailActivity"
             android:exported="false"
             android:theme="@style/WithoutActionBar" />
-        <!--
+
         <activity
             android:name="com.example.globaltrainingapp_11.SplashActivity"
             android:exported="true">
@@ -44,12 +44,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        -->
+
 
         <activity
             android:name="com.example.globaltrainingapp_11.TecnicaYoutubeActivity"
             android:exported="false" />
-
+        <activity
+            android:name="com.example.globaltrainingapp_11.ui.ejercicios.ExercisesbyMovementActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.globaltrainingapp_11.presentacion.EntrenamientoActivity"
             android:exported="false" />

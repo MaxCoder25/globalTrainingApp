@@ -15,6 +15,7 @@ import androidx.sqlite.db.SupportSQLiteStatement;
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity;
 import com.example.globaltrainingapp_11.entidades.RutinasEntity;
 import com.example.globaltrainingapp_11.entidades.Rutinas_Ejercicios_Relaciones;
+import com.example.globaltrainingapp_11.entidades.tipo_movimientoEntity;
 import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Object;
@@ -538,6 +539,49 @@ public final class EjerciciosDAO_Impl implements EjerciciosDAO {
               _tmpVideo = _cursor.getString(_cursorIndexOfVideo);
             }
             _item = new EjerciciosEntity(_tmpId_ejercicios,_tmpNombreEjercicio,_tmpDescripcion,_tmpCategoria,_tmpNivel,_tmpTipo_movimiento,_tmpRepeticiones,_tmpTieneTiempo,_tmpImagen,_tmpVideo);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object getAllCategoriesbyMovement(
+      final Continuation<? super List<tipo_movimientoEntity>> continuation) {
+    final String _sql = "SELECT * FROM tipo_movimiento";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<tipo_movimientoEntity>>() {
+      @Override
+      public List<tipo_movimientoEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfIdTipoMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "id_tipo_movimiento");
+          final int _cursorIndexOfMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "movimiento");
+          final int _cursorIndexOfUrlImageMovimiento = CursorUtil.getColumnIndexOrThrow(_cursor, "url_image_movimiento");
+          final List<tipo_movimientoEntity> _result = new ArrayList<tipo_movimientoEntity>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final tipo_movimientoEntity _item;
+            final int _tmpId_tipo_movimiento;
+            _tmpId_tipo_movimiento = _cursor.getInt(_cursorIndexOfIdTipoMovimiento);
+            final String _tmpMovimiento;
+            if (_cursor.isNull(_cursorIndexOfMovimiento)) {
+              _tmpMovimiento = null;
+            } else {
+              _tmpMovimiento = _cursor.getString(_cursorIndexOfMovimiento);
+            }
+            final String _tmpUrl_image_movimiento;
+            if (_cursor.isNull(_cursorIndexOfUrlImageMovimiento)) {
+              _tmpUrl_image_movimiento = null;
+            } else {
+              _tmpUrl_image_movimiento = _cursor.getString(_cursorIndexOfUrlImageMovimiento);
+            }
+            _item = new tipo_movimientoEntity(_tmpId_tipo_movimiento,_tmpMovimiento,_tmpUrl_image_movimiento);
             _result.add(_item);
           }
           return _result;

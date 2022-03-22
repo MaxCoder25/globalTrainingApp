@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.globaltrainingapp_11.R
+import com.example.globaltrainingapp_11.databinding.ExercisesByMovementTypeRvItemBinding
 import com.example.globaltrainingapp_11.databinding.FragmentEjerciciosListBinding
 import com.example.globaltrainingapp_11.entidades.EjerciciosEntity
 import com.squareup.picasso.Picasso
@@ -15,7 +16,7 @@ class ListEjerciciosAdapter(val listEjercicios: List<EjerciciosEntity>,private v
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EjerciciosViewHolder {
         var layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.fragment_ejercicios_list , parent, false)
+        val view = layoutInflater.inflate(R.layout.exercises_by_movement_type_rv_item , parent, false)
         return EjerciciosViewHolder(view)
     }
 
@@ -29,15 +30,16 @@ class ListEjerciciosAdapter(val listEjercicios: List<EjerciciosEntity>,private v
 
 class EjerciciosViewHolder (EjerciciosViewHolder: View) : RecyclerView.ViewHolder(EjerciciosViewHolder) {
 
-    val binding = FragmentEjerciciosListBinding.bind(EjerciciosViewHolder)
-//    val binding2 = FragmentRutinasBinding.bind(RutinasViewHolder)
+    val binding = ExercisesByMovementTypeRvItemBinding.bind(EjerciciosViewHolder)
+
 
     fun render(item : EjerciciosEntity , onClickItemSelected: (EjerciciosEntity) -> Unit) {
 
-        binding.etiquetaNombre2.text = item.nombreEjercicio
-        binding.etiquetaCategoria.text = "Categoria: "+item.categoria
-        binding.etiquetaTipoMov.text = "Tipo de movimiento: "+ item.tipo_movimiento
-        Picasso.get().load(item.imagen).into(binding.imageView2)
+
+
+        Picasso.get().load(item.imagen).into(binding.idIVExerciseBymovementType)
+        binding.idTVExerciseBymovementTypeLevel.text =  item.nivel
+        binding.idTVExerciseBymovementTypeLevel.text =  item.nombreEjercicio
 
 
         itemView.setOnClickListener {

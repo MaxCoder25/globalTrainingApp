@@ -4,10 +4,10 @@ package com.example.globaltrainingapp_11.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -18,24 +18,29 @@ import java.lang.String;
 
 public final class FragmentEjerciciosBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView reciclerEjerciciosTodos;
+  public final RecyclerView idRVcategoryMovementType;
+
+  @NonNull
+  public final TextView idTVdescriptionbyMovement;
 
   @NonNull
   public final TextView txtBiblioEjerc;
 
-  private FragmentEjerciciosBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView reciclerEjerciciosTodos, @NonNull TextView txtBiblioEjerc) {
+  private FragmentEjerciciosBinding(@NonNull ConstraintLayout rootView,
+      @NonNull RecyclerView idRVcategoryMovementType, @NonNull TextView idTVdescriptionbyMovement,
+      @NonNull TextView txtBiblioEjerc) {
     this.rootView = rootView;
-    this.reciclerEjerciciosTodos = reciclerEjerciciosTodos;
+    this.idRVcategoryMovementType = idRVcategoryMovementType;
+    this.idTVdescriptionbyMovement = idTVdescriptionbyMovement;
     this.txtBiblioEjerc = txtBiblioEjerc;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -60,9 +65,15 @@ public final class FragmentEjerciciosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.reciclerEjerciciosTodos;
-      RecyclerView reciclerEjerciciosTodos = ViewBindings.findChildViewById(rootView, id);
-      if (reciclerEjerciciosTodos == null) {
+      id = R.id.idRVcategoryMovementType;
+      RecyclerView idRVcategoryMovementType = ViewBindings.findChildViewById(rootView, id);
+      if (idRVcategoryMovementType == null) {
+        break missingId;
+      }
+
+      id = R.id.idTVdescriptionbyMovement;
+      TextView idTVdescriptionbyMovement = ViewBindings.findChildViewById(rootView, id);
+      if (idTVdescriptionbyMovement == null) {
         break missingId;
       }
 
@@ -72,8 +83,8 @@ public final class FragmentEjerciciosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentEjerciciosBinding((FrameLayout) rootView, reciclerEjerciciosTodos,
-          txtBiblioEjerc);
+      return new FragmentEjerciciosBinding((ConstraintLayout) rootView, idRVcategoryMovementType,
+          idTVdescriptionbyMovement, txtBiblioEjerc);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
