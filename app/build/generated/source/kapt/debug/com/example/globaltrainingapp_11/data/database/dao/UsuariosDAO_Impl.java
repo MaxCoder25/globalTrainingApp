@@ -82,7 +82,7 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
 
   @Override
   public Object updateNivel_IN_UsuarioById(final int id_nivel, final int idUsuario,
-      final Continuation<? super Unit> continuation) {
+      final Continuation<? super Unit> arg2) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -101,12 +101,12 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __preparedStmtOfUpdateNivel_IN_UsuarioById.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg2);
   }
 
   @Override
   public Object updatePremio_IN_UsuarioById(final int id_premio, final int idUsuario,
-      final Continuation<? super Unit> continuation) {
+      final Continuation<? super Unit> arg2) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -125,12 +125,12 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __preparedStmtOfUpdatePremio_IN_UsuarioById.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg2);
   }
 
   @Override
   public Object updateRutinasCompletadas_IN_UsuarioById(final int rutinasCompletadas,
-      final int idUsuario, final Continuation<? super Unit> continuation) {
+      final int idUsuario, final Continuation<? super Unit> arg2) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -149,12 +149,12 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __preparedStmtOfUpdateRutinasCompletadas_IN_UsuarioById.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg2);
   }
 
   @Override
   public Object updatePuntos_IN_UsuarioById(final int puntos, final int idUsuario,
-      final Continuation<? super Unit> continuation) {
+      final Continuation<? super Unit> arg2) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -173,14 +173,14 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __preparedStmtOfUpdatePuntos_IN_UsuarioById.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg2);
   }
 
   @Override
   public Object insertNuevoUsuario_Register(final String nombreUsuario, final int edadUsuario,
       final String emailUsuario, final String nicknameUsuario, final String passwordUsuario,
       final int rutinasCompletadas, final int puntos, final int nivel, final int premios,
-      final Continuation<? super Unit> continuation) {
+      final Continuation<? super Unit> arg9) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -229,11 +229,11 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __preparedStmtOfInsertNuevoUsuario_Register.release(_stmt);
         }
       }
-    }, continuation);
+    }, arg9);
   }
 
   @Override
-  public Object getAllUsuarios(final Continuation<? super List<Usuarios>> continuation) {
+  public Object getAllUsuarios(final Continuation<? super List<Usuarios>> arg0) {
     final String _sql = "SELECT * FROM usuarios";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -300,12 +300,11 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg0);
   }
 
   @Override
-  public Object getOneUsuario(final int idUsuario,
-      final Continuation<? super Usuarios> continuation) {
+  public Object getOneUsuario(final int idUsuario, final Continuation<? super Usuarios> arg1) {
     final String _sql = "SELECT * FROM usuarios WHERE idUsuario = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -374,12 +373,11 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           _statement.release();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object getNivelById(final int id_nivel,
-      final Continuation<? super NivelesEntity> continuation) {
+  public Object getNivelById(final int id_nivel, final Continuation<? super NivelesEntity> arg1) {
     final String _sql = "SELECT * FROM niveles where id_nivel =? ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -418,12 +416,11 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   @Override
-  public Object getPremioById(final int id_premio,
-      final Continuation<? super PremiosEntity> continuation) {
+  public Object getPremioById(final int id_premio, final Continuation<? super PremiosEntity> arg1) {
     final String _sql = "SELECT * FROM premios where id_premio =? ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -483,7 +480,7 @@ public final class UsuariosDAO_Impl implements UsuariosDAO {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   public static List<Class<?>> getRequiredConverters() {

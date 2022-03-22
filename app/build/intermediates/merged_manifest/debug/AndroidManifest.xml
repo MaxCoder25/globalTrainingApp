@@ -29,6 +29,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.GlobalTrainingApp_11" >
         <activity
+            android:name="com.example.globaltrainingapp_11.ui.ejercicios.ExercisesbyMovementActivity"
+            android:exported="false"
+            android:theme="@style/WithoutActionBar" />
+        <activity
             android:name="com.example.globaltrainingapp_11.ui.asistente.MainBotActivity"
             android:exported="false"
             android:label="@string/chatbot" />
